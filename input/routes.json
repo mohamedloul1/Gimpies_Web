@@ -1,0 +1,13 @@
+[
+	{
+		"module_name":	"",
+		"routesArray":	[
+			{
+				"RouteName":	"login",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			}
+		]
+	}
+]

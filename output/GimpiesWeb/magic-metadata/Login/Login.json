@@ -1,0 +1,109 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"Login",
+		"component_path":	"Login/",
+		"component_uniquename":	"Login_Login"
+	},
+	"coordinates":	{
+		"x":	309,
+		"y":	161,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_UserName",
+				"text":	"UserName",
+				"common_line_id":	"line82"
+			},
+			"coordinates":	{
+				"x":	62,
+				"y":	82,
+				"width":	52,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_UserName",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line82"
+			},
+			"coordinates":	{
+				"x":	119,
+				"y":	82,
+				"width":	181,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_Password",
+				"text":	"Password",
+				"common_line_id":	"line164"
+			},
+			"coordinates":	{
+				"x":	62,
+				"y":	164,
+				"width":	48,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_Password",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line164"
+			},
+			"coordinates":	{
+				"x":	115,
+				"y":	164,
+				"width":	181,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Button5",
+				"format":	"Button",
+				"common_line_id":	"line230"
+			},
+			"coordinates":	{
+				"x":	131,
+				"y":	230,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

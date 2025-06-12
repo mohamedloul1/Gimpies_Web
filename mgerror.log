@@ -1,0 +1,56 @@
+﻿ <141961755148259168> 10/06/2025 15:58:55.288     [Error  ] - EndTaskRequest(): Error: "The startup program is not found or it is not specified correctly" (-277) : " [WebC session started.]" ("GimpiesWeb")  (msgid "244")
+ <158764930142078624> 10/06/2025 15:58:58.349     [Error  ] - EndTaskRequest(): Error: "The startup program is not found or it is not specified correctly" (-277) : " [WebC session started.]" ("GimpiesWeb")  (msgid "247")
+ <441849276640216512> 10/06/2025 15:59:04.674     [Error  ] - EndTaskRequest(): Error: "The startup program is not found or it is not specified correctly" (-277) : " [WebC session started.]" ("GimpiesWeb")  (msgid "250")
+ <419703216522254592> 10/06/2025 16:04:05.945     [Error  ] - Aborting context 419703216522254592, Program: "Main Program".
+ <516603918858191360> 10/06/2025 16:06:07.334     [Error  ] - Aborting context 516603918858191360, Program: "Main Program".
+ <29420735504008148> 10/06/2025 16:10:10.672     [Error  ] - Aborting context 29420735504008148, Program: "Main Program".
+ <244132955811543392> 10/06/2025 16:17:04.120     [Error  ] - Aborting context 244132955811543392, Program: "Main Program".
+ <93614132929239520> 10/06/2025 16:20:08.860     [Error  ] - Aborting context 93614132929239520, Program: "Main Program".
+ <447790476196132992> 10/06/2025 16:22:09.708     [Error  ] - Aborting context 447790476196132992, Program: "Main Program".
+ <529783159604692224> 10/06/2025 16:23:33.332     [Error  ] - Aborting context 529783159604692224, Program: "Main Program".
+ <557760383712642688> 12/06/2025 08:17:42.482     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "3"), Program: "Main Program".
+ <386591067631223872> 12/06/2025 08:17:53.555     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "6"), Program: "Main Program".
+ <198847826081027488> 12/06/2025 08:18:04.217     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "9"), Program: "Main Program".
+ <528144200213023168> 12/06/2025 08:18:27.468     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "12"), Program: "Main Program".
+ <459727042307858048> 12/06/2025 08:18:42.399     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "15"), Program: "Main Program".
+ <452364133974154112> 12/06/2025 08:20:55.963     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "18"), Program: "Main Program".
+ <188194945524529568> 12/06/2025 08:22:14.584     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "21"), Program: "Main Program".
+ <248626225874644800> 12/06/2025 08:23:58.807     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "25"), Program: "Main Program".
+ <392533972058195712> 12/06/2025 08:24:24.316     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "28"), Program: "Main Program".
+ <32302825157044408> 12/06/2025 08:28:56.219     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "32"), Program: "Main Program".
+ <167946437685312096> 12/06/2025 08:29:02.035     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "35"), Program: "Main Program".
+ <512467195955676416> 12/06/2025 08:31:10.615     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "38"), Program: "Main Program".
+ <356315639524436992> 12/06/2025 08:32:18.818     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "41"), Program: "Main Program".
+ <-1> 12/06/2025 08:37:45.754     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <531030140819782144> 12/06/2025 08:39:44.854     [Error  ] - Execution Path: Routing, Program: "Routing".
+ <531030140819782144> 12/06/2025 08:39:44.856     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Routing".
+ <531030140819782144> 12/06/2025 08:39:44.858     [Error  ] -  Task Name: Routing, Tag: 3, Parent Tag: 2, Program: "Routing".
+ <531030140819782144> 12/06/2025 08:39:44.860     [Error  ] - End Task Tree, Program: "Routing".
+ <531030140819782144> 12/06/2025 08:39:44.866     [Error  ] - EndTaskRequest(): RoutingERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "45")
+ <475926900819701056> 12/06/2025 08:40:05.320     [Error  ] - Execution Path: Routing, Program: "Routing".
+ <475926900819701056> 12/06/2025 08:40:05.322     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Routing".
+ <475926900819701056> 12/06/2025 08:40:05.335     [Error  ] -  Task Name: Routing, Tag: 3, Parent Tag: 2, Program: "Routing".
+ <475926900819701056> 12/06/2025 08:40:05.340     [Error  ] - End Task Tree, Program: "Routing".
+ <475926900819701056> 12/06/2025 08:40:05.345     [Error  ] - EndTaskRequest(): RoutingERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "48")
+ <495525443199480832> 12/06/2025 08:40:15.606     [Error  ] - Execution Path: Routing, Program: "Routing".
+ <495525443199480832> 12/06/2025 08:40:15.609     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Routing".
+ <495525443199480832> 12/06/2025 08:40:15.611     [Error  ] -  Task Name: Routing, Tag: 3, Parent Tag: 2, Program: "Routing".
+ <495525443199480832> 12/06/2025 08:40:15.614     [Error  ] - End Task Tree, Program: "Routing".
+ <495525443199480832> 12/06/2025 08:40:15.617     [Error  ] - EndTaskRequest(): RoutingERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "51")
+ <230038226501402848> 12/06/2025 08:41:26.335     [Error  ] - Execution Path: Routing, Program: "Routing".
+ <230038226501402848> 12/06/2025 08:41:26.338     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Routing".
+ <230038226501402848> 12/06/2025 08:41:26.341     [Error  ] -  Task Name: Routing, Tag: 3, Parent Tag: 2, Program: "Routing".
+ <230038226501402848> 12/06/2025 08:41:26.343     [Error  ] - End Task Tree, Program: "Routing".
+ <230038226501402848> 12/06/2025 08:41:26.349     [Error  ] - EndTaskRequest(): RoutingERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "54")
+ <418322204936263168> 12/06/2025 08:41:59.384     [Error  ] - Execution Path: Routing, Program: "Routing".
+ <418322204936263168> 12/06/2025 08:41:59.386     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Routing".
+ <418322204936263168> 12/06/2025 08:41:59.389     [Error  ] -  Task Name: Routing, Tag: 3, Parent Tag: 2, Program: "Routing".
+ <418322204936263168> 12/06/2025 08:41:59.393     [Error  ] - End Task Tree, Program: "Routing".
+ <418322204936263168> 12/06/2025 08:41:59.399     [Error  ] - EndTaskRequest(): RoutingERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "57")
+ <60743447657734296> 12/06/2025 08:49:00.434     [Error  ] - Aborting context 60743447657734296, Program: "Main Program".
+ <558632811219574528> 12/06/2025 08:52:38.398     [Error  ] - Aborting context 558632811219574528, Program: "Main Program".
+ <41275386505860624> 12/06/2025 08:56:24.890     [Error  ] - Aborting context 41275386505860624, Program: "Main Program".
+ <88766341419579296> 12/06/2025 11:37:21.338     [Error  ] - Request's Session Counter #3 <> Server's Session Counter #4, Program: "Main Program".
+ <57896053321367056> 12/06/2025 13:38:46.003     [Error  ] - Aborting context 57896053321367056
+ <88766341419579296> 12/06/2025 13:38:46.007     [Error  ] - Aborting context 88766341419579296, Program: "Main Program".
+ <374076064178675968> 12/06/2025 13:38:46.011     [Error  ] - Aborting context 374076064178675968, Program: "Main Program".

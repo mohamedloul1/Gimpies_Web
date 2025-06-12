@@ -1,0 +1,31 @@
+import {
+    FormControl,
+    FormGroup
+} from "@angular/forms";
+import {
+    MagicServices
+} from "@magic-xpa/angular";
+export enum MgControlName {
+    Login = "Login",
+        Lb_UserName = "Lb_UserName",
+        V_UserName = "V_UserName",
+        Lb_Password = "Lb_Password",
+        V_Password = "V_Password",
+        Button5 = "Button5",
+}
+export enum MgCustomProperties {}
+export class MgFormControlsAccessor {
+    constructor(private fg: FormGroup, private magicServices: MagicServices) {}
+
+    get V_UserName(): FormControl {
+        return this.fg.controls[MgControlName.V_UserName] as FormControl;
+    }
+
+    get V_Password(): FormControl {
+        return this.fg.controls[MgControlName.V_Password] as FormControl;
+    }
+
+    getTableChildFormControl(name: MgControlName): FormControl {
+        return this.magicServices.mgAccessorService.getFormGroupByRow(this.magicServices.tableService.getSelectedRow()).controls[name] as FormControl;
+    }
+}

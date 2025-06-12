@@ -1,0 +1,11 @@
+{
+   "protocol": "http",
+   "server": "StageServer.foxict.local",
+   "requester": "MagicScripts48/MGrqispi.dll",
+   "appname": "GimpiesWeb",
+   "LogClientSequenceForActivityMonitor": "N",
+   "InternalLogLevel": "",
+   "InternalLogSync": "Message",
+   "DisplayGenericError": "N",
+   "FirstHTTPRequestTimeout": "5"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Application>
+
+  <Header>
+    <Version val="14081.00"/>
+    <WithIsn val="Y"/>
+    <LastIsn val="0"/>
+  </Header>
+
+  <ProjectProperties>
+    <ProjectData>
+      <GUID val="{01720DE2-93CC-4DA8-9C8E-B62C58B4C0A3}"/>
+      <RemoteFlowMonitorRight comp="-1"/>
+      <NulArithmetic val="N"/>
+      <WindowSortBy val="R"/>
+      <_SystemPulldownMenu comp="-1" obj="1"/>
+      <_SystemContextMenu comp="-1"/>
+      <ExposeComment val="N"/>
+      <ProjectName val="GimpiesWeb"/>
+    </ProjectData>
+    <WebClientData>
+      <OutputFolder val=".\output"/>
+      <SourceImagesFolder val=".\images"/>
+      <Theme val="Material Design"/>
+      <GenerateMetadataOnly val="N"/>
+      <MultiLingualSupport val="N"/>
+      <StartupProgramISN val="3"/>
+      <UseWorkspace val="N"/>
+    </WebClientData>
+  </ProjectProperties>
+
+</Application>

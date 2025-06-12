@@ -1,0 +1,131 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.align_center {
+    text-align: center;
+}
+
+.align_right {
+    text-align: right;
+}
+
+.multiline {
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+.edit_multiline {
+    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.thin_border {
+    border: 1px solid #F00;
+}
+
+.thick_border {
+    border: 2px solid #F00;
+}
+
+.hidden_border {
+    border-style: hidden;
+}
+
+.emboss_border {
+    border: 1px solid;
+}
+
+.threed_border {
+    border-style: outset;
+}
+
+.threedsunken_border {
+    border-style: inset;
+}
+
+.twod_border {
+    border: 2px solid;
+}
+
+.windows_border {
+    border: 2px solid;
+}
+
+.tab_control {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab_button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.tab_button_active {
+  background-color: #ccc;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+}
+
+.tab_button:hover {
+  background-color: #ddd;
+}
+
+.tab_content {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  clear:both;
+}
+
+/* style for input on table*/
+.InputPropsForRowEditing {
+  text-decoration: underline;
+}
+
+.button_image_background_size{
+  background-size: 100% 100%;
+}
+
+.lable_overflow{
+  overflow: hidden;
+}
+
+.table_scrollBar{
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.container_border{
+  border: lightskyblue solid 1px;
+}
+
+.selected {
+  background: #F5F5F5;
+}
+
+.table_row:hover {
+  background-color: #EEEEEE;
+}
+/* remark : we decided to give the end user the normal list box without you update the behavior*/
+/*for material list box control*/
+/*hide the check box*/
+/*mat-list-option mat-pseudo-checkbox.mat-pseudo-checkbox{*/
+/*display: none;*/
+/*}*/
+/*!*for material list box control*!*/
+/*!* for selected item that is true the style will be by following *!*/
+/*mat-list-option[aria-selected = "true"]*/
+/*{*/
+  /*background-color: blue;*/
+/*}*/

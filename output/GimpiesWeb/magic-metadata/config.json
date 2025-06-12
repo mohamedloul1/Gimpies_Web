@@ -1,0 +1,24 @@
+{
+	"create_route_map":	true,
+	"create_new_project":	false,
+	"created_menu":	false,
+	"created_views":	true,
+	"theme":	"material",
+	"output_folder":	"C:\\Projects\\GimpiesWeb\\output",
+	"backup_current":	false,
+	"source_images_folder":	"C:\\Projects\\GimpiesWeb\\images",
+	"copy_images":	false,
+	"exposed_functionality":	true,
+	"allow_testing":	false,
+	"project_name":	"GimpiesWeb",
+	"web_modules":	[
+		{
+			"module_name":	"",
+			"load_on_demand":	false,
+			"form_files":	[
+				"Routing/Routing"
+			]
+		}
+	],
+	"controls_accessor_only":	false
+}

@@ -1,0 +1,14 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.Routing"
+    >
+        <div style="display: flex; flex-direction: row">
+            <router-outlet [magic]="mgc.Sub_Routing">
+            </router-outlet>
+        </div>
+    </div>
+</div>

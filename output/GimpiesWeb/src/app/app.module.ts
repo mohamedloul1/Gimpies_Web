@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MagicModule, MagicLazyLoaderService } from '@magic-xpa/angular';
+import { MagicAngularMaterialModule } from '@magic-xpa/angular-material-core';
+import { MagicGenLibModule } from './magic/magic.gen.lib.module';
+import { MagicRoutingModule } from './app.routes';
+import { LazyLoaderService } from './magic/lazy-loader.service';
+import { MatIconModule } from '@angular/material/icon';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MagicModule,
+    MagicAngularMaterialModule,
+    MagicGenLibModule,
+    MagicRoutingModule,
+    MatIconModule
+  ],
+  providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

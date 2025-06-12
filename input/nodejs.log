@@ -1,0 +1,51 @@
+Generation output:
+Generate Route Map
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+generating routes map
+    routes length: 1
+genRouteFile : []  createRootRoute = true
+    generating 1 root routes
+UPDATE src/app/app.routes.ts (488 bytes)
+
+
+ Generate Modules
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+copying files
+
+
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+generating modules
+[V-CLI] cmd.exe /c ng g @magic-xpa/cli:modules
+   Number of modules to be check for generate: 1
+Nothing to be done.
+
+Generate Components
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+copying files
+
+
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+generating components
+[V-CLI] cmd.exe /c ng g @magic-xpa/cli:magic
+[>]  ********************************* START    GENERATE *********************************
+   Number of modules to be check for generate: 1
+[>]           ******    Start Web Module name : []    *******
+*** Step 1: Loading JSON files ***
+[>] Loading JSON file .//magic-metadata/Routing/Routing.json
+*** Step 2: Processing JSON files -  (1 components) ***
+[>] Processing JSON file for component Routing
+*** Step 3: generate components. (1 components) ***
+[>] generate component Routing
+[>] Step 4: components-list.
+[>]  ********************************* E N D    GENERATE *********************************
+UPDATE src/app/magic/Routing/Routing.mg.controls.g.ts (589 bytes)
+UPDATE src/app/magic/Routing/Routing.component.ts (691 bytes)
+UPDATE src/app/magic/Routing/Routing.component.html (327 bytes)
+
+
+

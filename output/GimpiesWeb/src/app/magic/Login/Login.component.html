@@ -1,0 +1,73 @@
+<div class="login-page">
+  <form novalidate [formGroup]="screenFormGroup" class="login-form-container">
+  <!-- Header -->
+  <h2 class="text-center text-2xl font-bold text-blue-700 mb-6">Login</h2>
+
+  <div [magic]="mgc.Login" class="form-wrapper">
+    <!-- Username -->
+    <div class="form-row">
+      <div class="input-field">
+        <label [magic]="mgc.Lb_UserName" class="label block mb-1">
+          {{ mg.getText(mgc.Lb_UserName) }}
+        </label>
+
+        <mat-form-field appearance="outline" class="w-full">
+          <input
+            matInput
+            [magic]="mgc.V_UserName"
+            [formControlName]="mgc.V_UserName"
+            mgFormat
+          />
+          <mgError [magic]="mgc.V_UserName"></mgError>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-row">
+      <div class="input-field">
+        <label [magic]="mgc.Lb_Password" class="label block mb-1">
+          {{ mg.getText(mgc.Lb_Password) }}
+        </label>
+
+        <mat-form-field appearance="outline" class="w-full">
+          <input
+            matInput
+            [type]="showPassword ? 'text' : 'password'"
+            [magic]="mgc.V_Password"
+            [formControlName]="mgc.V_Password"
+            mgFormat
+          />
+
+          <button
+            mat-icon-button
+            matSuffix
+            type="button"
+            (click)="togglePasswordVisibility()"
+            [attr.aria-label]="'Toon/verberg wachtwoord'"
+            [attr.aria-pressed]="showPassword"
+          >
+            <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+          </button>
+
+          <mgError [magic]="mgc.V_Password"></mgError>
+        </mat-form-field>
+      </div>
+    </div>
+
+
+
+    <!-- Button -->
+    <div class="button-row">
+      <button
+        mat-raised-button
+        color="primary"
+        [magic]="mgc.Button5"
+        class="login-button"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+  </form>
+</div>
