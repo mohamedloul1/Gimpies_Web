@@ -36,11 +36,96 @@
 
   <Position val="D"/>
 
-  <PositionIndex val="-1"/>
+  <PositionIndex val="-2"/>
 
   <MetaTreeRTIndex val="-1"/>
 
-  <Columns/>
+  <Columns>
+    <Column id="33554433" name="UserID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="9"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="UserID"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="9"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="UserID" PIC_U="9" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554434" name="UserName">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="UserName"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="UserName" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554435" name="Password">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <Picture id="157" valUnicode="30"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174" val="30"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Password"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Password" PIC_U="30" Size="30" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554436" name="Rol">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Rol"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Rol" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554437" name="Active">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Active"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Active" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554438" name="Created_On_Time">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Created_On_Time"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Created_On_Time" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="33554439" name="Created_On_Date">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_ALPHA" id="1"/>
+        <StoredAs id="173" val="3"/>
+        <Size id="174"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="Created_On_Date"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="Created_On_Date" allowed_null="N" attribute="A" context_cookies="Y" database_definition="2" id="231" storage="3" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
 
   <Indexes/>
 

@@ -55,3 +55,11 @@
  <88766341419579296> 12/06/2025 13:38:46.007     [Error  ] - Aborting context 88766341419579296, Program: "Main Program".
  <374076064178675968> 12/06/2025 13:38:46.011     [Error  ] - Aborting context 374076064178675968, Program: "Main Program".
  <-1> 12/06/2025 15:39:48.845     [Error  ] - Data Sources full open of "C:\Projects\GimpiesWeb\Source\DataSources.xml" ("C:\Projects\GimpiesWeb\Source\DataSourcesIndex.xml" is outdated! It is recommended to regenerate the project's 'Source' folder from an up-to-date export file.)
+ <229209049579986496> 12/06/2025 15:58:08.327     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <301897443701059136> 12/06/2025 15:58:16.582     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <467874754895160448> 12/06/2025 15:58:38.991     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <525581888531278912> 12/06/2025 15:59:01.765     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <370648854883698304> 12/06/2025 15:59:32.133     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <-1> 12/06/2025 16:18:08.914     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <444867137740315520> 12/06/2025 16:21:07.146     [Error  ] - Aborting context 444867137740315520, Program: "Main Program".
+ <241961161800006432> 13/06/2025 08:21:14.262     [Error  ] - Aborting context 241961161800006432, Program: "Main Program".

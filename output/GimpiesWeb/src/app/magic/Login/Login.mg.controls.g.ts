@@ -11,7 +11,9 @@ export enum MgControlName {
         V_UserName = "V_UserName",
         Lb_Password = "Lb_Password",
         V_Password = "V_Password",
+        pb_test = "pb_test",
         Button5 = "Button5",
+        V_vPoep = "V_vPoep",
 }
 export enum MgCustomProperties {}
 export class MgFormControlsAccessor {
@@ -23,6 +25,10 @@ export class MgFormControlsAccessor {
 
     get V_Password(): FormControl {
         return this.fg.controls[MgControlName.V_Password] as FormControl;
+    }
+
+    get V_vPoep(): FormControl {
+        return this.fg.controls[MgControlName.V_vPoep] as FormControl;
     }
 
     getTableChildFormControl(name: MgControlName): FormControl {

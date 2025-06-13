@@ -91,6 +91,23 @@
 		{
 			"style":	null,
 			"props":	{
+				"id":	"pb_test",
+				"format":	"Button",
+				"common_line_id":	"line220"
+			},
+			"coordinates":	{
+				"x":	319,
+				"y":	220,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
 				"id":	"Button5",
 				"format":	"Button",
 				"common_line_id":	"line230"
@@ -103,6 +120,24 @@
 			},
 			"hint":	null,
 			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vPoep",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line230"
+			},
+			"coordinates":	{
+				"x":	248,
+				"y":	244,
+				"width":	6,
+				"height":	7
+			},
+			"hint":	null,
+			"controlType":	"T",
 			"children":	null
 		}
 	]

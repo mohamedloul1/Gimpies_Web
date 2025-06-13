@@ -9,7 +9,7 @@
 		"x":	309,
 		"y":	161,
 		"width":	0,
-		"height":	325
+		"height":	0
 	},
 	"hint":	null,
 	"controlType":	null,
@@ -91,6 +91,23 @@
 		{
 			"style":	null,
 			"props":	{
+				"id":	"pb_test",
+				"format":	"Button",
+				"common_line_id":	"line220"
+			},
+			"coordinates":	{
+				"x":	319,
+				"y":	220,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
 				"id":	"Button5",
 				"format":	"Button",
 				"common_line_id":	"line230"
@@ -108,61 +125,19 @@
 		{
 			"style":	null,
 			"props":	{
-				"id":	"lb_message",
-				"text":	{
-					"value":	null,
-					"has_exp":	true
-				},
-				"common_line_id":	"line259"
+				"id":	"V_vPoep",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line230"
 			},
 			"coordinates":	{
-				"x":	119,
-				"y":	259,
-				"width":	118,
-				"height":	15
+				"x":	248,
+				"y":	244,
+				"width":	6,
+				"height":	7
 			},
 			"hint":	null,
-			"controlType":	"L",
-			"children":	null
-		},
-		{
-			"style":	null,
-			"props":	{
-				"id":	"lb_mesaage",
-				"text":	{
-					"value":	null,
-					"has_exp":	true
-				},
-				"common_line_id":	"line270"
-			},
-			"coordinates":	{
-				"x":	80,
-				"y":	270,
-				"width":	216,
-				"height":	15
-			},
-			"hint":	null,
-			"controlType":	"L",
-			"children":	null
-		},
-		{
-			"style":	null,
-			"props":	{
-				"id":	"lb_message",
-				"text":	{
-					"value":	"Text",
-					"has_exp":	true
-				},
-				"common_line_id":	"line270"
-			},
-			"coordinates":	{
-				"x":	131,
-				"y":	278,
-				"width":	23,
-				"height":	15
-			},
-			"hint":	null,
-			"controlType":	"L",
+			"controlType":	"T",
 			"children":	null
 		}
 	]
