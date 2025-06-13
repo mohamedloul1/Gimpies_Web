@@ -12,6 +12,7 @@
           {{ mg.getText(mgc.Lb_UserName) }}
         </label>
 
+
         <mat-form-field appearance="outline" class="w-full">
           <input
             matInput
@@ -53,9 +54,13 @@
 
           <mgError [magic]="mgc.V_Password"></mgError>
         </mat-form-field>
+        <label [magic]="mgc.v_ErrorMessage" class="error-label ">
+          {{ mg.getText(mgc.v_ErrorMessage) }}
+        </label>
+
+
       </div>
     </div>
-
 
 
     <!-- Button -->

@@ -6,3 +6,9 @@
 // Eigen SCSS-bestanden importeren
 @import "app/shared/styles/variables";
 @import "app/shared/styles/mixins";
+
+//Error message styleing
+.error-label {
+  @apply text-red-600 text-sm font-medium mb-1 block;
+}
+

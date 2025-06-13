@@ -11,9 +11,11 @@ export enum MgControlName {
         V_UserName = "V_UserName",
         Lb_Password = "Lb_Password",
         V_Password = "V_Password",
+        cMessage_Error = "cMessage_Error",
         pb_test = "pb_test",
         Button5 = "Button5",
         V_vPoep = "V_vPoep",
+        v_ErrorMessage = "v_ErrorMessage",
 }
 export enum MgCustomProperties {}
 export class MgFormControlsAccessor {

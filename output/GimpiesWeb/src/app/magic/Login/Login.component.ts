@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-
 import { FormGroup } from "@angular/forms";
 import { MgFormControlsAccessor, MgControlName, MgCustomProperties } from "./Login.mg.controls.g";
-
-
 import { TaskBaseMagicComponent, magicProviders } from "@magic-xpa/angular";
+
 
 
 @Component({
@@ -18,7 +16,7 @@ export class Login extends TaskBaseMagicComponent {
     mgc = MgControlName;
     mgcp = MgCustomProperties;
     mgfc!: MgFormControlsAccessor;
-  // ✅ Voeg dit toe
+
   data: any[] = [];
   showPassword: boolean = false;
 
@@ -38,4 +36,5 @@ export class Login extends TaskBaseMagicComponent {
       this.mg.setValueToControl(this.mgc.V_vPoep, 'Dit stinkt');
       this.mg.simulateClick(this.mgc.pb_test);
     }
+
 }

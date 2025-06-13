@@ -8,8 +8,8 @@
 	"coordinates":	{
 		"x":	309,
 		"y":	161,
-		"width":	0,
-		"height":	0
+		"width":	1136,
+		"height":	325
 	},
 	"hint":	null,
 	"controlType":	null,
@@ -91,6 +91,26 @@
 		{
 			"style":	null,
 			"props":	{
+				"id":	"cMessage_Error",
+				"text":	{
+					"value":	null,
+					"has_exp":	true
+				},
+				"common_line_id":	"line191"
+			},
+			"coordinates":	{
+				"x":	119,
+				"y":	191,
+				"width":	23,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
 				"id":	"pb_test",
 				"format":	"Button",
 				"common_line_id":	"line220"
@@ -138,6 +158,26 @@
 			},
 			"hint":	null,
 			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"v_ErrorMessage",
+				"text":	{
+					"value":	null,
+					"has_exp":	true
+				},
+				"common_line_id":	"line273"
+			},
+			"coordinates":	{
+				"x":	44,
+				"y":	273,
+				"width":	164,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
 			"children":	null
 		}
 	]

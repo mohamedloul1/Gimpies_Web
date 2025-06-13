@@ -7,6 +7,12 @@
 				"ModuleName":	"",
 				"OutletName":	"",
 				"children":	null
+			},
+			{
+				"RouteName":	"admin",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
 			}
 		]
 	}

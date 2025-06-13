@@ -1,0 +1,10 @@
+<!-- src/app/layout/layout.component.html -->
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav #drawer mode="side" opened class="w-64 bg-gray-100">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="p-4">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

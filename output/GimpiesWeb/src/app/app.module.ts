@@ -10,11 +10,17 @@ import { MagicGenLibModule } from './magic/magic.gen.lib.module';
 import { MagicRoutingModule } from './app.routes';
 import { LazyLoaderService } from './magic/lazy-loader.service';
 import { MatIconModule } from '@angular/material/icon';
+import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
+import { LayoutComponent } from './layout/layout.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidebarComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +30,8 @@ import { MatIconModule } from '@angular/material/icon';
     MagicAngularMaterialModule,
     MagicGenLibModule,
     MagicRoutingModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],
   bootstrap: [AppComponent]
