@@ -1,7 +1,21 @@
-<!-- Sidebar links -->
-<nav class="p-4 space-y-4 bg-gray-100 h-full">
-  <a routerLink="/dashboard" routerLinkActive="font-bold" class="block">Dashboard</a>
-  <a routerLink="/voorraad" routerLinkActive="font-bold" class="block">Voorraad</a>
-  <a routerLink="/verkopen" routerLinkActive="font-bold" class="block">Verkopen</a>
-  <a routerLink="/inkopen" routerLinkActive="font-bold" class="block">Inkopen</a>
+<nav class="flex flex-col space-y-4">
+  <a routerLink="/admin/dashboard" routerLinkActive="font-bold" class="flex items-center space-x-2" (click)="onLinkClick()">
+    <span>📊</span>
+    <span *ngIf="!collapsed">Dashboard</span>
+  </a>
+
+  <a routerLink="/admin/voorraad" routerLinkActive="font-bold" class="flex items-center space-x-2" (click)="onLinkClick()">
+    <span>📦</span>
+    <span *ngIf="!collapsed">Voorraad</span>
+  </a>
+
+  <a routerLink="/admin/verkopen" routerLinkActive="font-bold" class="flex items-center space-x-2" (click)="onLinkClick()">
+    <span>🛒</span>
+    <span *ngIf="!collapsed">Verkopen</span>
+  </a>
+
+  <a routerLink="/admin/inkopen" routerLinkActive="font-bold" class="flex items-center space-x-2" (click)="onLinkClick()">
+    <span>📥</span>
+    <span *ngIf="!collapsed">Inkopen</span>
+  </a>
 </nav>

@@ -16,9 +16,9 @@
 			"module_name":	"",
 			"load_on_demand":	false,
 			"form_files":	[
-				"Login/Login"
+				"Sales/Sales"
 			]
 		}
 	],
-	"controls_accessor_only":	true
+	"controls_accessor_only":	false
 }

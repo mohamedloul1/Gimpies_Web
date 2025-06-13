@@ -13,6 +13,12 @@
 				"ModuleName":	"",
 				"OutletName":	"",
 				"children":	null
+			},
+			{
+				"RouteName":	"sales",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
 			}
 		]
 	}

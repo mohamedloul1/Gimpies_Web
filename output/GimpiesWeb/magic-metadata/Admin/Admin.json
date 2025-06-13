@@ -1,0 +1,55 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"Admin",
+		"component_path":	"Admin/",
+		"component_uniquename":	"Admin_Admin"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"lb_test",
+				"text":	"test",
+				"common_line_id":	"line71"
+			},
+			"coordinates":	{
+				"x":	129,
+				"y":	71,
+				"width":	19,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_test",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line71"
+			},
+			"coordinates":	{
+				"x":	189,
+				"y":	71,
+				"width":	110,
+				"height":	28
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		}
+	]
+}
