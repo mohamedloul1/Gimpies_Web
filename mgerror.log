@@ -63,3 +63,31 @@
  <-1> 12/06/2025 16:18:08.914     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
  <444867137740315520> 12/06/2025 16:21:07.146     [Error  ] - Aborting context 444867137740315520, Program: "Main Program".
  <241961161800006432> 13/06/2025 08:21:14.262     [Error  ] - Aborting context 241961161800006432, Program: "Main Program".
+ <-1> 13/06/2025 08:29:48.777     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <434029722380926144> 13/06/2025 08:32:57.648     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <518067005016549120> 13/06/2025 08:34:16.105     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <350375237230089088> 13/06/2025 08:35:27.210     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <296996136428540288> 13/06/2025 08:36:37.695     [Error  ] - Failed to open, data source: Users, Program: "Browse - Users".
+ <487608511653128768> 13/06/2025 08:57:37.713     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "38"), Program: "Main Program".
+ <506949923965446976> 13/06/2025 08:57:45.909     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "41"), Program: "Main Program".
+ <194449416912335552> 13/06/2025 08:57:50.396     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "44"), Program: "Main Program".
+ <77507305302974624> 13/06/2025 08:57:53.017     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "47"), Program: "Main Program".
+ <463225661684615552> 13/06/2025 08:57:55.725     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "50"), Program: "Main Program".
+ <465206798496684544> 13/06/2025 08:58:45.681     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "53"), Program: "Main Program".
+ <221519860513144480> 13/06/2025 09:04:14.341     [Error  ] - Aborting context 221519860513144480, Program: "Main Program".
+ <550408057697500096> 13/06/2025 09:20:23.279     [Error  ] - Aborting context 550408057697500096, Program: "Main Program".
+ <270849945282973664> 13/06/2025 09:50:51.991     [Error  ] - Aborting context 270849945282973664, Program: "Main Program".
+ <322545051602526912> 13/06/2025 09:59:50.001     [Error  ] - Aborting context 322545051602526912, Program: "Main Program".
+ <130057759068019584> 13/06/2025 11:17:56.688     [Error  ] - Aborting context 130057759068019584, Program: "Main Program".
+ <127945641994844144> 13/06/2025 11:41:23.156     [Error  ] - Aborting context 127945641994844144, Program: "Main Program".
+ <392325490157386560> 13/06/2025 11:46:22.676     [Error  ] - Aborting context 392325490157386560, Program: "Main Program".
+ <250408223743159008> 13/06/2025 11:50:30.506     [Error  ] - Aborting context 250408223743159008, Program: "Main Program".
+ <202636833905684224> 13/06/2025 11:51:45.315     [Error  ] - Aborting context 202636833905684224, Program: "Main Program".
+ <246663778633274880> 13/06/2025 12:57:12.470     [Error  ] - Aborting context 246663778633274880, Program: "Main Program".
+ <189483001555886016> 13/06/2025 13:09:39.852     [Error  ] - Aborting context 189483001555886016, Program: "Main Program".
+ <114705775251066288> 13/06/2025 13:13:57.296     [Error  ] - Aborting context 114705775251066288, Program: "Main Program".
+ <562880083005885824> 13/06/2025 13:19:53.948     [Error  ] - Aborting context 562880083005885824, Program: "Main Program".
+ <171515516109891744> 13/06/2025 13:29:07.940     [Error  ] - Aborting context 171515516109891744, Program: "Main Program".
+ <107026874863047376> 13/06/2025 14:20:22.694     [Error  ] - Aborting context 107026874863047376, Program: "Main Program".
+ <106567826703124896> 13/06/2025 16:20:47.394     [Error  ] - Aborting context 106567826703124896, Program: "Main Program".
+ <152040920003309888> 13/06/2025 16:24:58.210     [Error  ] - Aborting context 152040920003309888, Program: "Main Program".

@@ -10,18 +10,16 @@
       <change beforePath="$PROJECT_DIR$/Source/DataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Prg_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_33554437.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_33554437.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/Login/Login.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/Login/Login.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/Routing/Routing.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Progs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Progs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/Login/Login.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/input/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input/nodejs.log" beforeDir="false" afterPath="$PROJECT_DIR$/input/nodejs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/routes.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/Login/Login.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/Login/Login.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.mg.controls.g.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.mg.controls.g.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2yPGs0agGJBNDpaQw740vF7fDGt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,7 +50,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Projects\\GimpiesWeb\\output\\GimpiesWeb\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -71,7 +72,10 @@
       <updated>1749728998115</updated>
       <workItem from="1749728999584" duration="65000" />
       <workItem from="1749735813281" duration="3122000" />
-      <workItem from="1749795209301" duration="322000" />
+      <workItem from="1749795209301" duration="26152000" />
+      <workItem from="1750007368254" duration="4076000" />
+      <workItem from="1750020674835" duration="2167000" />
+      <workItem from="1750054669421" duration="334000" />
     </task>
     <servers />
   </component>

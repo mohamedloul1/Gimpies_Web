@@ -13,7 +13,7 @@
   <ProgramsRepository>
     <Programs>
       <Task MainProgram="N">
-        <Header Description="Sales" ISN_2="1" LastIsn="1" id="33554437">
+        <Header Description="Admin" ISN_2="1" LastIsn="1" id="33554436">
           <ExecutionRight comp="-1"/>
           <Resident val="N"/>
           <SQL val="N"/>
@@ -24,12 +24,12 @@
           <SqlWhereExist val="N"/>
           <TaskType val="W"/>
           <Interactive val="Y"/>
-          <RoutePath val="sales"/>
+          <RoutePath val="admin"/>
           <External val="N"/>
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739415" _time="51709" date="13/06/2025" time="14:21:49"/>
+          <LastModified _date="739415" _time="46831" date="13/06/2025" time="13:00:31"/>
         </Header>
         <ItemIsn val="1"/>
         <Resource>
@@ -37,9 +37,9 @@
             <Column id="33554433" name="test">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_ALPHA" id="1"/>
-                <Picture id="157" valUnicode="25"/>
+                <Picture id="157" valUnicode="20"/>
                 <StoredAs id="173" val="1"/>
-                <Size id="174" val="25"/>
+                <Size id="174" val="20"/>
                 <_Flip id="194"/>
               </PropertyList>
             </Column>
@@ -113,6 +113,7 @@
             <Event>
               <EventType val="S"/>
             </Event>
+            <ExecuteOn_ val="O"/>
             <LogicLines>
               <LogicLine>
                 <DATAVIEW_SRC FlowIsn="33554433" Type="M">
@@ -142,13 +143,13 @@
             <PropertyList model="FORM_WEB_CLIENT">
               <FormUnits id="33" val="4"/>
               <_Comment id="218"/>
-              <FormName id="311" valUnicode="Sales"/>
+              <FormName id="311" valUnicode="Admin"/>
             </PropertyList>
             <Control _test_id="2" id="33554434">
               <PropertyList model="CTRL_WEB_CLIENT_LABEL">
                 <Text id="19" valUnicode="test"/>
-                <X id="21" val="153"/>
-                <Y id="22" val="98"/>
+                <X id="21" val="129"/>
+                <Y id="22" val="71"/>
                 <Width id="23" val="19"/>
                 <Height id="24" val="15"/>
                 <ControlName id="46" val="lb_test"/>
@@ -160,10 +161,10 @@
                 <Model ID="MODEL_WEB_CLIENT" id="1">
                   <Var FieldID="33554433"/>
                 </Model>
-                <X id="21" val="177"/>
-                <Y id="22" val="98"/>
-                <Width id="23" val="181"/>
-                <Height id="24" val="20"/>
+                <X id="21" val="189"/>
+                <Y id="22" val="71"/>
+                <Width id="23" val="110"/>
+                <Height id="24" val="28"/>
                 <Data FieldID="33554433" id="43"/>
                 <ControlName id="46" val="V_test"/>
               </PropertyList>

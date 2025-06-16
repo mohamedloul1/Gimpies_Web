@@ -12,14 +12,18 @@ generating components
    Number of modules to be check for generate: 1
 [>]           ******    Start Web Module name : []    *******
 *** Step 1: Loading JSON files ***
-[>] Loading JSON file .//magic-metadata/Login/Login.json
+[>] Loading JSON file .//magic-metadata/Sales/Sales.json
 *** Step 2: Processing JSON files -  (1 components) ***
-[>] Processing JSON file for component Login
+[>] Processing JSON file for component Sales
 *** Step 3: generate components. (1 components) ***
-[>] generate component Login
+[>] generate component Sales
 [>] Step 4: components-list.
+ Total old components: 3, added components: 1. 
 [>]  ********************************* E N D    GENERATE *********************************
-UPDATE src/app/magic/Login/Login.mg.controls.g.ts (1124 bytes)
+CREATE src/app/magic/Sales/Sales.mg.controls.g.ts (713 bytes)
+CREATE src/app/magic/Sales/Sales.component.ts (683 bytes)
+CREATE src/app/magic/Sales/Sales.component.html (862 bytes)
+UPDATE src/app/magic/component-list.g.ts (668 bytes)
 
 
 
