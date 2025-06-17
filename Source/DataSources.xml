@@ -38,6 +38,8 @@
 
   <PositionIndex val="-2"/>
 
+  <IndexesLastIsn val="2"/>
+
   <MetaTreeRTIndex val="-1"/>
 
   <Columns>
@@ -105,7 +107,44 @@
     </Column>
   </Columns>
 
-  <Indexes/>
+  <Indexes>
+    <Index id="33554433" name="UserID_PK">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="UserID_PK"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="Y"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="33554433"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+    <Index id="33554434" name="UserName">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="UserName"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="30"/>
+          <Column val="33554434"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
 
   <ForeignKeys/>
 

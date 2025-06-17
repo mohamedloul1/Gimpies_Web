@@ -1,0 +1,31 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.Testo"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_testo"
+                class="lable_overflow mgFont1"
+            >
+                V_Testo
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.V_V_Testo"
+                            [formControlName]="mgc.V_V_Testo"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_V_Testo> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>

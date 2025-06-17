@@ -7,13 +7,11 @@
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/DataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_33554436.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_33554436.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.mg.controls.g.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.mg.controls.g.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

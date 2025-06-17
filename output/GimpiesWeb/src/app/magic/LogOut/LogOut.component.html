@@ -1,0 +1,31 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.LogOut"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_UserName"
+                class="lable_overflow mgFont1"
+            >
+                V_UserName
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.V_V_UserName"
+                            [formControlName]="mgc.V_V_UserName"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_V_UserName> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
