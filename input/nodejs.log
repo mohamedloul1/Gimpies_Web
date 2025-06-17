@@ -1,4 +1,28 @@
 Generation output:
+Generate Route Map
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+generating routes map
+    routes length: 1
+genRouteFile : []  createRootRoute = true
+    generating 4 root routes
+UPDATE src/app/app.routes.ts (750 bytes)
+
+
+ Generate Modules
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+copying files
+
+
+
+C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
+generating modules
+[V-CLI] cmd.exe /c ng g @magic-xpa/cli:modules
+   Number of modules to be check for generate: 1
+Nothing to be done.
+
+Generate Components
 
 C:\Projects\GimpiesWeb\output\GimpiesWeb>echo off 
 copying files
@@ -12,19 +36,18 @@ generating components
    Number of modules to be check for generate: 1
 [>]           ******    Start Web Module name : []    *******
 *** Step 1: Loading JSON files ***
-[>] Loading JSON file .//magic-metadata/Sales/Sales.json
+[>] Loading JSON file .//magic-metadata/LogOut/LogOut.json
 *** Step 2: Processing JSON files -  (1 components) ***
-[>] Processing JSON file for component Sales
+[>] Processing JSON file for component LogOut
 *** Step 3: generate components. (1 components) ***
-[>] generate component Sales
+[>] generate component LogOut
 [>] Step 4: components-list.
- Total old components: 3, added components: 1. 
+ Total old components: 4, added components: 1. 
 [>]  ********************************* E N D    GENERATE *********************************
-CREATE src/app/magic/Sales/Sales.mg.controls.g.ts (713 bytes)
-CREATE src/app/magic/Sales/Sales.component.ts (683 bytes)
-CREATE src/app/magic/Sales/Sales.component.html (862 bytes)
-UPDATE src/app/magic/component-list.g.ts (668 bytes)
+UPDATE src/app/magic/LogOut/LogOut.mg.controls.g.ts (723 bytes)
+UPDATE src/app/magic/LogOut/LogOut.component.ts (687 bytes)
+UPDATE src/app/magic/LogOut/LogOut.component.html (871 bytes)
+UPDATE src/app/magic/component-list.g.ts (822 bytes)
 
 
 
-Generation warnings/errors:

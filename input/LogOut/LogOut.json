@@ -9,44 +9,24 @@
 		"x":	0,
 		"y":	0,
 		"width":	0,
-		"height":	325
+		"height":	0
 	},
 	"hint":	null,
 	"controlType":	null,
 	"children":	[
 		{
-			"style":	null,
-			"props":	{
-				"id":	"lb_UserName",
-				"text":	{
-					"value":	null,
-					"has_exp":	true
-				},
-				"common_line_id":	"line79"
-			},
-			"coordinates":	{
-				"x":	128,
-				"y":	79,
-				"width":	144,
-				"height":	16
-			},
-			"hint":	null,
-			"controlType":	"L",
-			"children":	null
-		},
-		{
 			"style":	{
 				"font":	1
 			},
 			"props":	{
-				"id":	"Label33554435",
-				"text":	"vUserName",
-				"common_line_id":	"line119"
+				"id":	"Lb_Test",
+				"text":	"V_Test",
+				"common_line_id":	"line77"
 			},
 			"coordinates":	{
-				"x":	65,
-				"y":	119,
-				"width":	58,
+				"x":	49,
+				"y":	77,
+				"width":	36,
 				"height":	15
 			},
 			"hint":	null,
@@ -56,14 +36,14 @@
 		{
 			"style":	null,
 			"props":	{
-				"id":	"V_vUserName",
+				"id":	"V_V_Test",
 				"mgformat":	"mgFormat",
 				"attribute":	"A",
-				"common_line_id":	"line119"
+				"common_line_id":	"line77"
 			},
 			"coordinates":	{
-				"x":	128,
-				"y":	119,
+				"x":	90,
+				"y":	77,
 				"width":	216,
 				"height":	20
 			},

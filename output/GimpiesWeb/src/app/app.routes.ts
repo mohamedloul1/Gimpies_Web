@@ -2,43 +2,48 @@ import { Routes, RouterModule } from '@angular/router';
 import { RouterContainerMagicComponent } from "@magic-xpa/angular";
 import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
-import { LayoutComponent } from './layout/layout.component'; // voeg dit toe
+import { LayoutComponent } from './layout/layout.component'; // Zorg dat dit pad klopt
 
 export const routes: Routes = [
   // Login zonder layout
   {
     path: 'login',
-    component: RouterContainerMagicComponent,
+    component: RouterContainerMagicComponent
   },
 
-  // Routes met layout (sidebar, header, etc.)
+  // Routes met layout (admin en sales)
   {
     path: '',
-    component: LayoutComponent,
+    component: LayoutComponent, // Bevat sidebar, header, etc.
     children: [
       {
         path: 'admin',
-        component: RouterContainerMagicComponent,
+        component: RouterContainerMagicComponent
       },
       {
         path: 'sales',
-        component: RouterContainerMagicComponent,
+        component: RouterContainerMagicComponent
       },
+      {
+        path: 'logout',
+        component: RouterContainerMagicComponent
+      },
+      {
+        path: '**',
+        component: RouterContainerMagicComponent // fallback binnen layout
+      }
     ]
   },
 
-  // fallback
+  // Fallback buiten layout
   {
     path: '**',
-    redirectTo: 'login',
+    redirectTo: 'login'
   }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class MagicRoutingModule {}

@@ -7,15 +7,15 @@ import {
 } from "@magic-xpa/angular";
 export enum MgControlName {
     LogOut = "LogOut",
-        Lb_UserName = "Lb_UserName",
-        V_V_UserName = "V_V_UserName",
+        Lb_Test = "Lb_Test",
+        V_V_Test = "V_V_Test",
 }
 export enum MgCustomProperties {}
 export class MgFormControlsAccessor {
     constructor(private fg: FormGroup, private magicServices: MagicServices) {}
 
-    get V_V_UserName(): FormControl {
-        return this.fg.controls[MgControlName.V_V_UserName] as FormControl;
+    get V_V_Test(): FormControl {
+        return this.fg.controls[MgControlName.V_V_Test] as FormControl;
     }
 
     getTableChildFormControl(name: MgControlName): FormControl {

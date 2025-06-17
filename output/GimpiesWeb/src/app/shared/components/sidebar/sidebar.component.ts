@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef } from '@angular/core';
+import { UserSessionService } from "../../../services/user-session.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -9,16 +10,26 @@ export class SidebarComponent implements OnInit {
 
   @Input() collapsed = false;
   @Output() closeSidebar = new EventEmitter<void>();
-  logout(): void {
-    // 👉 Hier kun je logica toevoegen om in de toekomst echt uit te loggen
-    console.log('Logging out...');
-    // Bijvoorbeeld navigeren naar loginpagina:
-    // this.router.navigate(['/login']);
+
+  username: string = '';
+
+  constructor(
+    private userSession: UserSessionService,
+    private cdRef: ChangeDetectorRef
+  ) {}
+
+  ngOnInit(): void {
+    // Geef het wat tijd zodat LogOut de naam kan instellen
+    setTimeout(() => {
+      this.username = this.userSession.username;
+      this.cdRef.detectChanges(); // Forceer hertekening
+      console.log('Username opgehaald in SideBar:', this.username);
+    }, 200); // eventueel hoger als Magic langzaam init is
   }
 
-  constructor() {}
-
-  ngOnInit(): void {}
+  logout(): void {
+    console.log('Logging out...');
+  }
 
   onLinkClick(): void {
     this.closeSidebar.emit();
