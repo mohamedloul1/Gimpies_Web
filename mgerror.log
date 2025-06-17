@@ -54,3 +54,4 @@
  <57896053321367056> 12/06/2025 13:38:46.003     [Error  ] - Aborting context 57896053321367056
  <88766341419579296> 12/06/2025 13:38:46.007     [Error  ] - Aborting context 88766341419579296, Program: "Main Program".
  <374076064178675968> 12/06/2025 13:38:46.011     [Error  ] - Aborting context 374076064178675968, Program: "Main Program".
+ <-1> 17/06/2025 15:54:07.405     [Error  ] - Data Sources full open of "C:\Projects\GimpiesWeb\Source\DataSources.xml" ("C:\Projects\GimpiesWeb\Source\DataSourcesIndex.xml" is outdated! It is recommended to regenerate the project's 'Source' folder from an up-to-date export file.)
