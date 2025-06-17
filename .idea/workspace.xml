@@ -7,19 +7,13 @@
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/DataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_33554437.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_33554437.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_33554436.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_33554436.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Progs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Progs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/Login/Login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/nodejs.log" beforeDir="false" afterPath="$PROJECT_DIR$/input/nodejs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.mg.controls.g.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Admin/Admin.mg.controls.g.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +70,7 @@
       <workItem from="1750007368254" duration="4076000" />
       <workItem from="1750020674835" duration="2167000" />
       <workItem from="1750054669421" duration="334000" />
+      <workItem from="1750140434753" duration="725000" />
     </task>
     <servers />
   </component>

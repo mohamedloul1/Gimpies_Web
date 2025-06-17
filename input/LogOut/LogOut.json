@@ -1,0 +1,75 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"LogOut",
+		"component_path":	"LogOut/",
+		"component_uniquename":	"LogOut_LogOut"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	325
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"lb_UserName",
+				"text":	{
+					"value":	null,
+					"has_exp":	true
+				},
+				"common_line_id":	"line79"
+			},
+			"coordinates":	{
+				"x":	128,
+				"y":	79,
+				"width":	144,
+				"height":	16
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label33554435",
+				"text":	"vUserName",
+				"common_line_id":	"line119"
+			},
+			"coordinates":	{
+				"x":	65,
+				"y":	119,
+				"width":	58,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_vUserName",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line119"
+			},
+			"coordinates":	{
+				"x":	128,
+				"y":	119,
+				"width":	216,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		}
+	]
+}

@@ -6,6 +6,7 @@
       <label [magic]="mgc.lb_test" class="mgFont1">
         test
       </label>
+
       <mat-form-field>
         <input
           matInput
@@ -13,9 +14,14 @@
           [formControlName]="mgc.V_test"
           mgFormat
         />
+
         <mgError [magic]="mgc.V_test"></mgError>
       </mat-form-field>
     </div>
+    <label class="mgFont1">
+      {{ vTestValue }}
+    </label>
+
   </div>
 </div>
 

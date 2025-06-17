@@ -1,0 +1,129 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"SideBar",
+		"component_path":	"SideBar/",
+		"component_uniquename":	"SideBar_SideBar"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	325
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_UserID",
+				"text":	"UserID",
+				"common_line_id":	"line26"
+			},
+			"coordinates":	{
+				"x":	90,
+				"y":	26,
+				"width":	35,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Users_UserID",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line26"
+			},
+			"coordinates":	{
+				"x":	130,
+				"y":	26,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_UserName",
+				"text":	"UserName",
+				"common_line_id":	"line71"
+			},
+			"coordinates":	{
+				"x":	73,
+				"y":	71,
+				"width":	52,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Users_UserName",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line71"
+			},
+			"coordinates":	{
+				"x":	130,
+				"y":	71,
+				"width":	216,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_UserRol",
+				"text":	"Rol",
+				"common_line_id":	"line124"
+			},
+			"coordinates":	{
+				"x":	107,
+				"y":	124,
+				"width":	18,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Users_Rol",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line124"
+			},
+			"coordinates":	{
+				"x":	130,
+				"y":	124,
+				"width":	216,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		}
+	]
+}

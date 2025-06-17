@@ -20,4 +20,8 @@ export class Admin extends TaskBaseMagicComponent {
     override createFormControlsAccessor(formGroup: FormGroup) {
         this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
     }
+  get vTestValue(): string {
+    return this.mgfc?.V_test?.value;
+  }
+
 }

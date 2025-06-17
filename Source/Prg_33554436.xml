@@ -29,7 +29,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739415" _time="46831" date="13/06/2025" time="13:00:31"/>
+          <LastModified _date="739418" _time="80721" date="16/06/2025" time="22:25:21"/>
         </Header>
         <ItemIsn val="1"/>
         <Resource>
@@ -124,6 +124,7 @@
               </LogicLine>
               <LogicLine>
                 <Select FieldID="33554433" FlowIsn="33554435" id="33554433">
+                  <ASS val="33554433"/>
                   <Column val="33554433"/>
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
@@ -171,6 +172,12 @@
             </Control>
           </FormEntry>
         </TaskForms>
+        <Expressions>
+          <Expression id="33554433">
+            <ExpSyntax val="'waarde van xpa'"/>
+            <ExpAttribute val="A"/>
+          </Expression>
+        </Expressions>
       </Task>
     </Programs>
   </ProgramsRepository>
