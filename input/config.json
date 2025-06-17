@@ -1,8 +1,8 @@
 {
-	"create_route_map":	true,
+	"create_route_map":	false,
 	"create_new_project":	false,
 	"created_menu":	false,
-	"created_views":	true,
+	"created_views":	false,
 	"theme":	"material",
 	"output_folder":	"C:\\Projects\\GimpiesWeb\\output",
 	"backup_current":	false,
@@ -16,9 +16,9 @@
 			"module_name":	"",
 			"load_on_demand":	false,
 			"form_files":	[
-				"LogOut/LogOut"
+				"Login/Login"
 			]
 		}
 	],
-	"controls_accessor_only":	false
+	"controls_accessor_only":	true
 }

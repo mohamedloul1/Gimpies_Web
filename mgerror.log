@@ -102,3 +102,36 @@
  <350114687402511936> 17/06/2025 11:08:22.843     [Error  ] - Aborting context 350114687402511936, Program: "Main Program".
  <569102430831446080> 17/06/2025 11:09:34.419     [Error  ] - Aborting context 569102430831446080, Program: "Main Program".
  <105643281007873776> 17/06/2025 11:33:30.284     [Error  ] - Aborting context 105643281007873776, Program: "Main Program".
+ <218532764404303360> 17/06/2025 12:20:59.460     [Error  ] - Aborting context 218532764404303360, Program: "Main Program".
+ <381858477795130560> 17/06/2025 12:58:15.026     [Error  ] - Aborting context 381858477795130560, Program: "Main Program".
+ <263346731106409056> 17/06/2025 13:11:07.619     [Error  ] - Aborting context 263346731106409056, Program: "Main Program".
+ <96904891003427696> 17/06/2025 13:12:34.979     [Error  ] - Aborting context 96904891003427696, Program: "Main Program".
+ <216458372027718528> 17/06/2025 13:14:17.016     [Error  ] - Aborting context 216458372027718528, Program: "Main Program".
+ <565228780463324032> 17/06/2025 13:18:09.591     [Error  ] - Aborting context 565228780463324032, Program: "Main Program".
+ <50424100885161880> 17/06/2025 13:39:49.467     [Error  ] - Aborting context 50424100885161880, Program: "Main Program".
+ <498807914992277312> 17/06/2025 13:59:00.401     [Error  ] - Aborting context 498807914992277312, Program: "Main Program".
+ <159099508555343040> 17/06/2025 14:22:33.990     [Error  ] - Aborting context 159099508555343040, Program: "Main Program".
+ <67005507325778832> 17/06/2025 14:39:29.676     [Error  ] - Aborting context 67005507325778832, Program: "Main Program".
+ <476506078835682560> 17/06/2025 14:44:50.517     [Error  ] - Aborting context 476506078835682560, Program: "Main Program".
+ <49438375132899080> 17/06/2025 14:45:13.558     [Error  ] - Aborting context 49438375132899080, Program: "Main Program".
+ <541930948442587520> 17/06/2025 14:46:23.324     [Error  ] - Aborting context 541930948442587520, Program: "Main Program".
+ <168815347478343712> 17/06/2025 14:50:02.872     [Error  ] - Aborting context 168815347478343712, Program: "Main Program".
+ <319438538326665088> 17/06/2025 14:55:49.786     [Error  ] - Aborting context 319438538326665088, Program: "Main Program".
+ <346537230418636800> 17/06/2025 14:58:02.529     [Error  ] - Aborting context 346537230418636800, Program: "Main Program".
+ <335471898337196288> 17/06/2025 14:59:56.318     [Error  ] - Aborting context 335471898337196288, Program: "Main Program".
+ <556313155792817792> 17/06/2025 15:02:20.493     [Error  ] - Aborting context 556313155792817792, Program: "Main Program".
+ <333263151614259456> 17/06/2025 15:22:28.278     [Error  ] - Aborting context 333263151614259456, Program: "Main Program".
+ <159986040639079904> 17/06/2025 15:24:24.270     [Error  ] - Aborting context 159986040639079904, Program: "Main Program".
+ <283361594780682528> 17/06/2025 15:27:18.112     [Error  ] - Aborting context 283361594780682528, Program: "Main Program".
+ <99967683473020656> 17/06/2025 15:33:09.603     [Error  ] - Aborting context 99967683473020656, Program: "Main Program".
+ <280630264276841664> 17/06/2025 15:35:32.142     [Error  ] - Aborting context 280630264276841664, Program: "Main Program".
+ <563840239241337088> 17/06/2025 15:37:02.845     [Error  ] - Aborting context 563840239241337088, Program: "Main Program".
+ <394242362017507456> 17/06/2025 15:41:28.387     [Error  ] - Aborting context 394242362017507456, Program: "Main Program".
+ <396841904656947968> 17/06/2025 15:47:07.428     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <396841904656947968> 17/06/2025 15:47:10.576     [Error  ] - Execution Path: Login;CollectData, Program: "Login.CollectData".
+ <396841904656947968> 17/06/2025 15:47:10.580     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Login.CollectData".
+ <396841904656947968> 17/06/2025 15:47:10.583     [Error  ] -  Task Name: Login, Tag: 3, Parent Tag: 2, Program: "Login.CollectData".
+ <396841904656947968> 17/06/2025 15:47:10.587     [Error  ] -  Task Name: CollectData, Tag: 4, Parent Tag: 3, Program: "Login.CollectData".
+ <396841904656947968> 17/06/2025 15:47:10.590     [Error  ] - End Task Tree, Program: "Login.CollectData".
+ <396841904656947968> 17/06/2025 15:47:10.595     [Error  ] - EndTaskRequest(): Login;CollectDataERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "728")
+ <146585085897755968> 17/06/2025 15:48:25.932     [Error  ] - Aborting context 146585085897755968, Program: "Main Program".

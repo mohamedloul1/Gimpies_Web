@@ -9,11 +9,12 @@ export enum MgControlName {
     Login = "Login",
         Lb_UserName = "Lb_UserName",
         V_UserName = "V_UserName",
+        pb_TriggerRoute = "pb_TriggerRoute",
         Lb_Password = "Lb_Password",
         V_Password = "V_Password",
         cMessage_Error = "cMessage_Error",
         pb_test = "pb_test",
-        Button5 = "Button5",
+        pb_Login = "pb_Login",
         V_vPoep = "V_vPoep",
         v_ErrorMessage = "v_ErrorMessage",
 }
