@@ -138,3 +138,5 @@
  <158307289730868896> 18/06/2025 22:43:33.330     [Error  ] - Failed to open lock file, data source: Users, Program: "Browse - Users_".
  <-1> 18/06/2025 22:49:52.799     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
  <205037478872460800> 19/06/2025 08:24:38.756     [Error  ] - Aborting context 205037478872460800, Program: "Main Program".
+ <-1> 19/06/2025 11:57:51.798     [Error  ] - Data Sources full open of "C:\Projects\GimpiesWeb\Source\DataSources.xml" ("C:\Projects\GimpiesWeb\Source\DataSourcesIndex.xml" is outdated! It is recommended to regenerate the project's 'Source' folder from an up-to-date export file.)
+ <207891465298505984> 19/06/2025 12:00:46.891     [Error  ] - Aborting context 207891465298505984, Program: "Main Program".

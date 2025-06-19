@@ -2,3 +2,6 @@ MagicIDs/branchIDs*.*
 GimpiesWeb.lock
 Data/
 output/node_modules
+.idea/
+mgerror.log
+
