@@ -3,12 +3,8 @@
   <div class="flex items-center space-x-3 mb-6">
     <img src="https://as2.ftcdn.net/v2/jpg/02/45/56/35/1000_F_245563558_XH9Pe5LJI2kr7VQuzQKAjAbz9PAyejG1.jpg" class="w-10 h-10 rounded-full" />
     <div *ngIf="!collapsed">
-      <div class="font-semibold text-gray-800">Ahmed Gimpie</div>
-      <div class="text-sm text-gray-500">Admin</div>
-      <p class="text-sm text-gray-600">
-        Ingelogd als: <strong>{{ username }}</strong> ({{ userRole }})
-      </p>
-
+      <div class="font-semibold text-gray-800">{{username}}</div>
+      <div class="text-sm text-gray-500">{{userRole}}</div>
     </div>
   </div>
 <nav class="flex flex-col space-y-4 flex-grow">

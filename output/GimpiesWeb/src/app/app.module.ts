@@ -14,6 +14,9 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { LayoutComponent } from './layout/layout.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { SessionBridgeComponent } from './shared/components/session-bridge/session-bridge.component';
+import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 
 
@@ -23,6 +26,7 @@ import { SessionBridgeComponent } from './shared/components/session-bridge/sessi
     SidebarComponent,
     LayoutComponent,
     SessionBridgeComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { SessionBridgeComponent } from './shared/components/session-bridge/sessi
     MagicGenLibModule,
     MagicRoutingModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule,
+
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],
   bootstrap: [AppComponent]

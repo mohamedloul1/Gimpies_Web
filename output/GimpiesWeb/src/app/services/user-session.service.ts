@@ -13,11 +13,16 @@ export class UserSessionService {
     this._userRole$.next(userRole);
   }
 
+
   get userName$() {
     return this._userName$.asObservable();
   }
 
   get userRole$() {
     return this._userRole$.asObservable();
+  }
+  clearSession(): void {
+    this._userName$.next('');
+    this._userRole$.next('');
   }
 }
