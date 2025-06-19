@@ -3,6 +3,10 @@ import { RouterContainerMagicComponent } from "@magic-xpa/angular";
 import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
 import { LayoutComponent } from './layout/layout.component'; // Zorg dat dit pad klopt
+import { AuthGuard } from './auth/auth.guard';
+import {UnauthorizedComponent} from "./components/unauthorized/unauthorized.component";
+import {RedirectHomeComponent} from "./components/redirect-home/redirect-home.component";
+
 
 export const routes: Routes = [
   // Login zonder layout
@@ -17,12 +21,26 @@ export const routes: Routes = [
     component: LayoutComponent, // Bevat sidebar, header, etc.
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        canActivate: [AuthGuard],
+        component: RedirectHomeComponent
+      },
+      {
         path: 'admin',
-        component: RouterContainerMagicComponent
+        component: RouterContainerMagicComponent,
+        canActivate: [AuthGuard],
+        data: { roles: ['admin'] }
+      },
+      {
+        path: 'unauthorized',
+        component: UnauthorizedComponent
       },
       {
         path: 'sales',
-        component: RouterContainerMagicComponent
+        component: RouterContainerMagicComponent,
+        canActivate: [AuthGuard],
+        data: { roles: ['sales'] }
       },
       {
         path: 'logout',

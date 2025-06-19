@@ -16,6 +16,11 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { SessionBridgeComponent } from './shared/components/session-bridge/session-bridge.component';
 import { ConfirmDialogComponent } from './shared/components/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { UnauthorizedComponent } from './components/unauthorized/unauthorized.component';
+import {MatCardModule} from "@angular/material/card";
+import { MatButtonModule } from '@angular/material/button';
+import { RedirectHomeComponent } from './components/redirect-home/redirect-home.component';
+
 
 
 
@@ -27,6 +32,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     LayoutComponent,
     SessionBridgeComponent,
     ConfirmDialogComponent,
+    UnauthorizedComponent,
+    RedirectHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +46,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     MatSidenavModule,
     MatDialogModule,
+    MatCardModule,
+    MatButtonModule,
 
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],

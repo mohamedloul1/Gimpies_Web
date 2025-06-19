@@ -58,10 +58,13 @@
 <div class="mt-10 flex justify-center">
   <button
     (click)="logout()"
-    class="flex items-center justify-center space-x-2 p-2 rounded hover:bg-red-100 text-red-600 transition"
-    [ngClass]="collapsed ? 'w-10 h-10' : 'w-full'"
+    mat-raised-button
+    color="warn"
+    class="flex items-center justify-center gap-2 w-full px-3 py-2"
+    [ngClass]="collapsed ? 'w-10 h-10 p-0' : 'w-full'"
   >
-    <span>🚪</span>
-    <span *ngIf="!collapsed">Logout</span>
+    <mat-icon>logout</mat-icon>
+    <span *ngIf="!collapsed" class="font-medium">Uitloggen</span>
   </button>
+
 </div>

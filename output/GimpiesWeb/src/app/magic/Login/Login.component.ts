@@ -59,7 +59,14 @@ export class Login extends TaskBaseMagicComponent {
     this.sessionService.setSession(userName, userRole);
 
     // Navigatie
-    this.router.navigateByUrl('/admin');
+    if (userRole === 'admin') {
+      this.router.navigateByUrl('/admin');
+    } else if (userRole === 'sales') {
+      this.router.navigateByUrl('/sales');
+    } else {
+      this.router.navigateByUrl('/unauthorized');
+    }
+
   }
 
   testFunction(): void {

@@ -21,6 +21,13 @@ export class UserSessionService {
   get userRole$() {
     return this._userRole$.asObservable();
   }
+  getUserName(): string {
+    return this._userName$.getValue();
+  }
+
+  getUserRole(): string {
+    return this._userRole$.getValue();
+  }
   clearSession(): void {
     this._userName$.next('');
     this._userRole$.next('');
