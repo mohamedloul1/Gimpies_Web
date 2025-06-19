@@ -1,6 +1,6 @@
 <h2 class="text-center text-2xl font-bold text-blue-700 mb-6">admin</h2>
 
-<div class="flex justify-center" novalidate [formGroup]="screenFormGroup">
+<div class="flex justify-center" *ngIf="screenFormGroup && mgfc" novalidate [formGroup]="screenFormGroup">
   <div [magic]="mgc.Admin">
     <div>
       <label [magic]="mgc.lb_test" class="mgFont1">
@@ -14,19 +14,14 @@
           [formControlName]="mgc.V_test"
           mgFormat
         />
-
         <mgError [magic]="mgc.V_test"></mgError>
       </mat-form-field>
+
     </div>
+
     <label class="mgFont1">
       {{ vTestValue }}
     </label>
-    <label class="mgFont1">
-      {{ userName }}
-      {{userRole}}
-    </label>
-
-
   </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { UserSessionService } from "../../../services/user-session.service";
 
 @Component({
@@ -12,19 +12,13 @@ export class SidebarComponent implements OnInit {
   @Output() closeSidebar = new EventEmitter<void>();
 
   username: string = '';
+  userRole: string = '';
 
-  constructor(
-    private userSession: UserSessionService,
-    private cdRef: ChangeDetectorRef
-  ) {}
+  constructor(private userSession: UserSessionService) {}
 
   ngOnInit(): void {
-    // Geef het wat tijd zodat LogOut de naam kan instellen
-    setTimeout(() => {
-      this.username = this.userSession.username;
-      this.cdRef.detectChanges(); // Forceer hertekening
-      console.log('Username opgehaald in SideBar:', this.username);
-    }, 200); // eventueel hoger als Magic langzaam init is
+    this.userSession.userName$.subscribe(name => this.username = name);
+    this.userSession.userRole$.subscribe(role => this.userRole = role);
   }
 
   logout(): void {

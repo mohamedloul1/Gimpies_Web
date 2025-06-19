@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { LayoutComponent } from './layout/layout.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { SessionBridgeComponent } from './shared/components/session-bridge/session-bridge.component';
 
 
 
@@ -21,6 +22,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     AppComponent,
     SidebarComponent,
     LayoutComponent,
+    SessionBridgeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,23 @@
 import { Injectable } from '@angular/core';
-//Dit is een Angular @Injectable service.
-//
-// Deze service bewaart gebruikersdata, zoals de gebruikersnaam.
-//
-// Singleton: beschikbaar in de hele app.
+import { BehaviorSubject } from 'rxjs';
+
 @Injectable({
-  providedIn: 'root' // dit zorgt dat de service overal beschikbaar is
+  providedIn: 'root'
 })
 export class UserSessionService {
-  private _username: string = '';
+  private _userName$ = new BehaviorSubject<string>('');
+  private _userRole$ = new BehaviorSubject<string>('');
 
-  set username(name: string) {
-    this._username = name;
+  setSession(userName: string, userRole: string) {
+    this._userName$.next(userName);
+    this._userRole$.next(userRole);
   }
 
-  get username(): string {
-    return this._username;
+  get userName$() {
+    return this._userName$.asObservable();
+  }
+
+  get userRole$() {
+    return this._userRole$.asObservable();
   }
 }

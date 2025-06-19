@@ -4,6 +4,8 @@ import {MgFormControlsAccessor, MgControlName, MgCustomProperties} from "./Login
 import {TaskBaseMagicComponent, magicProviders, MagicServices} from "@magic-xpa/angular";
 import {data} from "autoprefixer";
 import {Router} from "@angular/router";
+import { UserSessionService } from '../../services/user-session.service';
+
 
 
 @Component({
@@ -23,7 +25,7 @@ export class Login extends TaskBaseMagicComponent {
   showPassword: boolean = false;
 
 
-  constructor(ref: ChangeDetectorRef, magicServices: MagicServices, private router: Router) {
+  constructor(ref: ChangeDetectorRef, magicServices: MagicServices, private router: Router,private sessionService: UserSessionService) {
     super(ref, magicServices);
   }
 
@@ -46,20 +48,18 @@ export class Login extends TaskBaseMagicComponent {
   }
 
   succesFullLogin(userRole: string, userName: string): void {
-    console.log("succesfulllogin")
     const expiryDate: Date = new Date();
     expiryDate.setTime(expiryDate.getTime() + 1000 * 60 * 30);
-    this.mg.SetCookie(
-      'userRole',
-      userRole,
-      expiryDate
-    )
-    this.mg.SetCookie(
-      'userName',
-      userName,
-      expiryDate
-    )
-    this.router.navigateByUrl('/admin')
+
+    // Cookies voor Magic
+    this.mg.SetCookie('userRole', userRole, expiryDate);
+    this.mg.SetCookie('userName', userName, expiryDate);
+
+    // Sessie voor Angular
+    this.sessionService.setSession(userName, userRole);
+
+    // Navigatie
+    this.router.navigateByUrl('/admin');
   }
 
   testFunction(): void {

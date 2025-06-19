@@ -33,9 +33,9 @@ export class LogOut extends TaskBaseMagicComponent {
 
     // Daarna lees jij de waarde uit het formulier
     const username = this.screenFormGroup.get('V_V_Test')?.value;
-    if (username) {
-      this.userSession.username = username;
-      console.log('Gebruikersnaam ingesteld:', username);
-    }
+    // if (username) {
+    //   this.userSession.username = username;
+    //   console.log('Gebruikersnaam ingesteld:', username);
+    // }
   }
 }
