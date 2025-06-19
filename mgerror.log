@@ -135,3 +135,6 @@
  <396841904656947968> 17/06/2025 15:47:10.590     [Error  ] - End Task Tree, Program: "Login.CollectData".
  <396841904656947968> 17/06/2025 15:47:10.595     [Error  ] - EndTaskRequest(): Login;CollectDataERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "728")
  <146585085897755968> 17/06/2025 15:48:25.932     [Error  ] - Aborting context 146585085897755968, Program: "Main Program".
+ <158307289730868896> 18/06/2025 22:43:33.330     [Error  ] - Failed to open lock file, data source: Users, Program: "Browse - Users_".
+ <-1> 18/06/2025 22:49:52.799     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <205037478872460800> 19/06/2025 08:24:38.756     [Error  ] - Aborting context 205037478872460800, Program: "Main Program".
