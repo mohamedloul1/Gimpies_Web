@@ -6,15 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/components/unauthorized/unauthorized.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/components/unauthorized/unauthorized.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/components/unauthorized/unauthorized.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/components/unauthorized/unauthorized.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/services/user-session.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/services/user-session.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/sidebar/sidebar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +77,7 @@
       <workItem from="1750140434753" duration="725000" />
       <workItem from="1750313499734" duration="762000" />
       <workItem from="1750363269321" duration="2350000" />
-      <workItem from="1750399764191" duration="5286000" />
+      <workItem from="1750399764191" duration="13160000" />
     </task>
     <servers />
   </component>

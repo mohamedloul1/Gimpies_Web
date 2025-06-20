@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
   collapsed = false;
 
   @HostBinding('class') get hostClasses(): string {
-    return `transition-all duration-300 h-full ${this.collapsed ? 'w-10' : 'w-56'}`;
+    return `transition-all duration-300 h-full ${this.collapsed ? 'w-16' : 'w-56'}`;
   }
 
 

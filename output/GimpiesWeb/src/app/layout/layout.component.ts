@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
+  mobileSidebarOpen = false;
 
+  closeMobileSidebar() {
+    this.mobileSidebarOpen = false;
+  }
 
-
-
+  openMobileSidebar() {
+    this.mobileSidebarOpen = true;
+  }
 
 }
 

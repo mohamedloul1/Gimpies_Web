@@ -29,9 +29,9 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739419" _time="56927" date="17/06/2025" time="15:48:47"/>
+          <LastModified _date="739422" _time="43231" date="20/06/2025" time="12:00:31"/>
         </Header>
-        <ItemIsn val="26"/>
+        <ItemIsn val="27"/>
         <Resource>
           <DB id="33554434">
             <DataObject comp="-1" obj="33554433"/>
@@ -49,6 +49,16 @@
                 <StoredAs id="173" val="1"/>
                 <Size id="174" val="12"/>
                 <_Flip id="194"/>
+              </PropertyList>
+            </Column>
+            <Column id="33554442" name="UsersData">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_BLOB" id="1"/>
+                <StoredAs id="173" val="33"/>
+                <Size id="174" val="28"/>
+                <Definition id="175" val="1"/>
+                <_FieldStyle id="276" val="1"/>
+                <Content id="434" val="1"/>
               </PropertyList>
             </Column>
             <Column id="33554439" name="vUser_Name_Input">
@@ -171,6 +181,18 @@
                 </Select>
               </LogicLine>
               <LogicLine>
+                <Select FieldID="33554459" FlowIsn="33554545" id="33554459">
+                  <Column val="33554442"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
                 <Remark FlowIsn="33554458">
                   <Type val="1"/>
                   <Text val=" "/>
@@ -230,7 +252,7 @@
                 </Remark>
               </LogicLine>
               <LogicLine>
-                <LNK Direction="A" EVL_CND="R" FlowIsn="33554501" Key="33554434" Mode="R" SortType="33554502" VIEW="5" VIEWS="5">
+                <LNK Direction="A" EVL_CND="R" FlowIsn="33554501" Key="33554434" Mode="R" SortType="33554502" VIEW="6" VIEWS="5">
                   <DB comp="-1" obj="33554433"/>
                   <Condition val="Y"/>
                 </LNK>
@@ -311,7 +333,6 @@
             <Event>
               <EventType val="S"/>
             </Event>
-            <Disabled val="1"/>
             <ExecuteOn_ val="S"/>
             <LogicLines>
               <LogicLine>
@@ -326,7 +347,6 @@
                   <SyncData val="N"/>
                   <IsRoute val="N"/>
                   <RetainFocus val="N"/>
-                  <Disabled val="1"/>
                   <Condition val="Y"/>
                   <Modifier val="S"/>
                   <Direction val="C"/>
@@ -344,13 +364,11 @@
             <Event>
               <EventType val="S"/>
             </Event>
-            <Disabled val="1"/>
             <ExecuteOn_ val="O"/>
             <LogicLines>
               <LogicLine>
                 <Evaluate FlowIsn="33554440">
                   <Expression val="33554433"/>
-                  <Disabled val="1"/>
                   <Condition Exp="33554435"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
@@ -654,7 +672,7 @@
         </TaskForms>
         <Expressions>
           <Expression id="33554433">
-            <ExpSyntax val="CallJS('getData',???)"/>
+            <ExpSyntax val="CallJS('getData',{0,33554459})"/>
             <ExpAttribute val="A"/>
           </Expression>
           <Expression id="33554441">
@@ -725,7 +743,7 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739419" _time="55618" date="17/06/2025" time="15:26:58"/>
+            <LastModified _date="739422" _time="43083" date="20/06/2025" time="11:58:03"/>
           </Header>
           <ItemIsn val="3"/>
           <Resource>
@@ -866,6 +884,8 @@
               <LogicLines>
                 <LogicLine>
                   <Update FlowIsn="33554437">
+                    <Parent val="1"/>
+                    <FieldID val="33554459"/>
                     <WithValue val="33554433"/>
                     <Incremental val="N"/>
                     <ForcedUpdate val="Y"/>

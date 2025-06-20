@@ -140,3 +140,8 @@
  <205037478872460800> 19/06/2025 08:24:38.756     [Error  ] - Aborting context 205037478872460800, Program: "Main Program".
  <-1> 19/06/2025 11:57:51.798     [Error  ] - Data Sources full open of "C:\Projects\GimpiesWeb\Source\DataSources.xml" ("C:\Projects\GimpiesWeb\Source\DataSourcesIndex.xml" is outdated! It is recommended to regenerate the project's 'Source' folder from an up-to-date export file.)
  <207891465298505984> 19/06/2025 12:00:46.891     [Error  ] - Aborting context 207891465298505984, Program: "Main Program".
+ <348505131648788864> 20/06/2025 11:54:49.890     [Error  ] - Aborting context 348505131648788864, Program: "Main Program".
+ <428513382286285248> 20/06/2025 11:54:49.897     [Error  ] - Aborting context 428513382286285248, Program: "Main Program".
+ <532054642466024128> 20/06/2025 11:58:53.987     [Error  ] - Aborting context 532054642466024128, Program: "Main Program".
+ <287685923449973952> 20/06/2025 11:59:49.403     [Error  ] - Aborting context 287685923449973952, Program: "Main Program".
+ <134468428331119552> 20/06/2025 12:59:01.702     [Error  ] - Request's Session Counter #3 <> Server's Session Counter #4, Program: "Main Program".

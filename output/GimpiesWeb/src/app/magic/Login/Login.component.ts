@@ -50,23 +50,13 @@ export class Login extends TaskBaseMagicComponent {
   succesFullLogin(userRole: string, userName: string): void {
     const expiryDate: Date = new Date();
     expiryDate.setTime(expiryDate.getTime() + 1000 * 60 * 30);
-
     // Cookies voor Magic
     this.mg.SetCookie('userRole', userRole, expiryDate);
     this.mg.SetCookie('userName', userName, expiryDate);
-
     // Sessie voor Angular
     this.sessionService.setSession(userName, userRole);
-
     // Navigatie
-    if (userRole === 'admin') {
-      this.router.navigateByUrl('/admin');
-    } else if (userRole === 'sales') {
-      this.router.navigateByUrl('/sales');
-    } else {
-      this.router.navigateByUrl('/unauthorized');
-    }
-
+    this.sessionService.redirectToHome()
   }
 
   testFunction(): void {
