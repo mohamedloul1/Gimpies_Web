@@ -20,6 +20,7 @@ import { UnauthorizedComponent } from './components/unauthorized/unauthorized.co
 import {MatCardModule} from "@angular/material/card";
 import { MatButtonModule } from '@angular/material/button';
 import { RedirectHomeComponent } from './components/redirect-home/redirect-home.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 
 
@@ -48,6 +49,7 @@ import { RedirectHomeComponent } from './components/redirect-home/redirect-home.
     MatDialogModule,
     MatCardModule,
     MatButtonModule,
+    MatTooltipModule,
 
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],

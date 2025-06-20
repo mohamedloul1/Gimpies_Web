@@ -40,7 +40,7 @@ export const routes: Routes = [
         path: 'sales',
         component: RouterContainerMagicComponent,
         canActivate: [AuthGuard],
-        data: { roles: ['sales'] }
+        data: { roles: ['sales','admin'] }
       },
       {
         path: 'logout',

@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef} from '@angular/core';
+import {Component, EventEmitter, Output, Input, OnInit, ChangeDetectorRef, HostBinding} from '@angular/core';
 import {UserSessionService} from "../../../services/user-session.service";
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
@@ -11,18 +11,24 @@ import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component
 })
 export class SidebarComponent implements OnInit {
 
-  @Input() collapsed = false;
+  // @Input() collapsed = false;
+  // @Output() toggleSidebar = new EventEmitter<void>(); // ✅ Hier toevoegen!
   @Output() closeSidebar = new EventEmitter<void>();
 
   username: string = '';
   userRole: string = '';
+  collapsed = false;
+
+  @HostBinding('class') get hostClasses(): string {
+    return `transition-all duration-300 h-full ${this.collapsed ? 'w-10' : 'w-56'}`;
+  }
+
 
   constructor(
     private userSession: UserSessionService,
     private cdRef: ChangeDetectorRef,
     private dialog: MatDialog
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.userSession.userName$.subscribe(name => this.username = name);
@@ -57,4 +63,8 @@ export class SidebarComponent implements OnInit {
   onLinkClick(): void {
     this.closeSidebar.emit();
   }
+  toggleSidebar() {
+    this.collapsed = !this.collapsed;
+  }
+
 }
