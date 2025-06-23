@@ -29,7 +29,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739422" _time="43231" date="20/06/2025" time="12:00:31"/>
+          <LastModified _date="739425" _time="29952" date="23/06/2025" time="08:19:12"/>
         </Header>
         <ItemIsn val="27"/>
         <Resource>
@@ -475,14 +475,6 @@
             <ExecuteOn_ val="O"/>
             <LogicLines>
               <LogicLine>
-                <STP Buttons="O" DefaultButton="1" ERR_LOG_DEF_CHG="N" FlowIsn="33554533" IMG_DEF_CHG="N" Image="E" Mode="W" TTL_DEF_CHG="N" TXT="modafakah" TitleTxt="Warning" VR_DISP="B">
-                  <AppendToErrorLog val="N"/>
-                  <Condition val="Y"/>
-                  <Modifier val="B"/>
-                  <Direction val="C"/>
-                </STP>
-              </LogicLine>
-              <LogicLine>
                 <STP Buttons="O" DefaultButton="1" ERR_LOG_DEF_CHG="N" FlowIsn="33554447" IMG_DEF_CHG="N" Image="E" Mode="W" TTL_DEF_CHG="N" TXT="je account is niet actief" TitleTxt="Warning" VR_DISP="B">
                   <AppendToErrorLog val="N"/>
                   <Condition Exp="33554436"/>
@@ -496,14 +488,6 @@
                   <Modifier val="B"/>
                   <Direction val="C"/>
                 </BLOCK>
-              </LogicLine>
-              <LogicLine>
-                <STP Buttons="O" DefaultButton="1" ERR_LOG_DEF_CHG="N" FlowIsn="33554540" IMG_DEF_CHG="N" Image="E" Mode="W" TTL_DEF_CHG="N" TXT="test" TitleTxt="Warning" VR_DISP="B">
-                  <AppendToErrorLog val="N"/>
-                  <Condition val="Y"/>
-                  <Modifier val="B"/>
-                  <Direction val="C"/>
-                </STP>
               </LogicLine>
               <LogicLine>
                 <Evaluate FlowIsn="33554527">
