@@ -1,38 +1,55 @@
-import {ChangeDetectorRef, Component} from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormGroup } from "@angular/forms";
 import { MgFormControlsAccessor, MgControlName, MgCustomProperties } from "./Shoe_View.mg.controls.g";
 import { Shoe } from '../../models/shoe.model';
-import {TaskBaseMagicComponent, magicProviders, MagicServices} from "@magic-xpa/angular";
-import {Router} from "@angular/router";
-import {UserSessionService} from "../../services/user-session.service";
-
+import { TaskBaseMagicComponent, magicProviders, MagicServices } from "@magic-xpa/angular";
+import { Router } from "@angular/router";
+import { UserSessionService } from "../../services/user-session.service";
 
 @Component({
-    selector: 'mga-Shoe_View',
-    providers: [...magicProviders],
-    templateUrl: './Shoe_View.component.html',
-    styleUrls: ['./Shoe_View.component.scss']
-
+  selector: 'mga-Shoe_View',
+  providers: [...magicProviders],
+  templateUrl: './Shoe_View.component.html',
+  styleUrls: ['./Shoe_View.component.scss']
 })
 export class Shoe_View extends TaskBaseMagicComponent {
 
-    mgc = MgControlName;
-    mgcp = MgCustomProperties;
-    mgfc!: MgFormControlsAccessor;
+  // 🔗 Magic xpa controls
+  mgc = MgControlName;
+  mgcp = MgCustomProperties;
+  mgfc!: MgFormControlsAccessor;
 
+  // 📦 Schoenendata + filters
   Shoe_Data: any[] = [];
   selectedImage: string | null = null;
+
+  // 🔍 Zoekterm
   searchTerm: string = '';
 
+  // 📋 Merkenfilter
+  selectedBrand: string = '';
+  uniqueBrands: string[] = [];
 
+  // 🎨 Kleurfilter
+  selectedColor: string = '';
+  uniqueColors: string[] = [];
+  colorDropdownOpen = false;
 
-  constructor(ref: ChangeDetectorRef, magicServices: MagicServices, private router: Router,private sessionService: UserSessionService) {
+  constructor(
+    ref: ChangeDetectorRef,
+    magicServices: MagicServices,
+    private router: Router,
+    private sessionService: UserSessionService
+  ) {
     super(ref, magicServices);
   }
 
+  // 🔧 Magic xpa formcontrols koppelen
   override createFormControlsAccessor(formGroup: FormGroup) {
-        this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
-    }
+    this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
+  }
+
+  // 📥 Schoenendata binnenhalen en verrijken met afbeelding + unieke filters
   getShoeData(Shoe_Data: string): void {
     try {
       const parsed = JSON.parse(Shoe_Data);
@@ -49,33 +66,72 @@ export class Shoe_View extends TaskBaseMagicComponent {
         };
       });
 
+      // 🔄 Unieke waarden ophalen voor dropdowns
+      this.extractUniqueBrands();
+      this.extractUniqueColors();
+
       console.log("✅ Shoes met ImageUrl:", this.Shoe_Data);
     } catch (e) {
       console.error("JSON parse error:", e);
     }
   }
 
+  // 🔍 Vergrote afbeelding tonen
   openImage(imageUrl: string): void {
     this.selectedImage = imageUrl;
   }
 
+  // ❌ Overlay sluiten
   closeImage(): void {
     this.selectedImage = null;
   }
-  get filteredShoes() {
-    if (!this.searchTerm) return this.Shoe_Data;
 
-    const terms = this.searchTerm.toLowerCase().split(' ').filter(t => t);
+  // 🔍 Combineer alle actieve filters (tekst, merk, kleur)
+  get filteredShoes() {
+    const term = this.searchTerm.toLowerCase();
+    const terms = term.split(' ').filter(t => t);
 
     return this.Shoe_Data.filter(shoe => {
+      // 🔤 Tekst zoeken op merk, type, kleur
       const combined = [
         shoe.Brand_Name,
         shoe.Type_Name,
         shoe.Color_Name
       ].join(' ').toLowerCase();
 
-      return terms.every(term => combined.includes(term));
+      const matchesSearch = terms.every(t => combined.includes(t));
+      const matchesBrand = this.selectedBrand ? shoe.Brand_Name === this.selectedBrand : true;
+      const matchesColor = this.selectedColor ? shoe.Color_Name === this.selectedColor : true;
+
+      return matchesSearch && matchesBrand && matchesColor;
     });
   }
 
+  // 🚀 Start lifecycle (optioneel uitbreidbaar)
+  override ngOnInit(): void {
+    super.ngOnInit(); // Belangrijk voor Magic xpa
+  }
+
+  // 📋 Merken verzamelen voor dropdown
+  extractUniqueBrands(): void {
+    const brands = this.Shoe_Data.map(shoe => shoe.Brand_Name);
+    this.uniqueBrands = Array.from(new Set(brands)).sort();
+  }
+
+  // 🎨 Kleuren verzamelen voor dropdown
+  extractUniqueColors(): void {
+    const colors = this.Shoe_Data.map(shoe => shoe.Color_Name);
+    this.uniqueColors = Array.from(new Set(colors)).sort();
+  }
+
+  // 🎛️ Custom dropdown toggle
+  toggleColorDropdown(): void {
+    this.colorDropdownOpen = !this.colorDropdownOpen;
+  }
+
+  // 🎯 Kleur selecteren
+  selectColor(color: string): void {
+    this.selectedColor = color;
+    this.colorDropdownOpen = false;
+  }
 }

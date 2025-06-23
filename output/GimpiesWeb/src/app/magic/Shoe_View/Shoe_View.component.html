@@ -1,30 +1,91 @@
+<!-- Magic xpa formuliercontainer -->
 <div novalidate [formGroup]="screenFormGroup">
-    <div  [magic]="mgc.Shoe_View">
-
-    </div>
+  <div [magic]="mgc.Shoe_View">
+    <!-- Magic gegenereerde inhoud komt hier binnen -->
+  </div>
 </div>
-<!-- Zoekveld voor filter -->
-<div class="mb-6 flex justify-center">
+
+<!-- 🔍 Zoekveld + filters -->
+<div class="mb-6 flex flex-col sm:flex-row gap-4 items-center justify-center">
+
+  <!-- 🔤 Zoekveld voor merk, type of kleur -->
   <input
     type="text"
     [(ngModel)]="searchTerm"
     placeholder="Zoek op merk, type of kleur..."
     class="search-input w-full sm:w-96 px-4 py-2 rounded-full shadow-sm transition"
   >
+
+  <!-- 📋 Dropdown voor merkfilter -->
+  <select
+    [(ngModel)]="selectedBrand"
+    class="filter-select px-4 py-2 rounded-full shadow-sm transition w-full sm:w-60"
+  >
+    <option value="">Alle merken</option>
+    <option *ngFor="let brand of uniqueBrands" [value]="brand">{{ brand }}</option>
+  </select>
+
+  <!-- 🎨 Custom dropdown voor kleurenfilter (met visuele blokjes) -->
+  <div class="relative w-full sm:w-60">
+    <button
+      (click)="toggleColorDropdown()"
+      class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
+    >
+      <!-- Geselecteerde kleur weergeven met blokje -->
+      <span class="flex items-center gap-2">
+        <span
+          class="inline-block w-4 h-4 rounded-full"
+          [style.backgroundColor]="selectedColor?.toLowerCase() || '#e5e7eb'"
+        ></span>
+        {{ selectedColor || 'Alle kleuren' }}
+      </span>
+      <span>▼</span>
+    </button>
+
+    <!-- 📦 Dropdownlijst met kleuren -->
+    <div
+      *ngIf="colorDropdownOpen"
+      class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
+    >
+      <!-- Optie: alle kleuren -->
+      <div
+        class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+        (click)="selectColor('')"
+      >
+        <span class="inline-block w-4 h-4 rounded-full bg-gray-200"></span>
+        <span>Alle kleuren</span>
+      </div>
+
+      <!-- Dynamisch gegenereerde kleuropties -->
+      <div
+        *ngFor="let color of uniqueColors"
+        class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+        (click)="selectColor(color)"
+      >
+        <span
+          class="inline-block w-4 h-4 rounded-full"
+          [style.backgroundColor]="color.toLowerCase()"
+        ></span>
+        <span>{{ color }}</span>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-
-
-<!-- Schoenencards, netjes onder Magic layout -->
+<!-- 👟 Schoenen-cards overzicht -->
 <div *ngIf="Shoe_Data.length > 0" class="mt-6">
-  <!-- Responsive grid: tot 4 naast elkaar -->
+
+  <!-- 📐 Responsieve grid layout: max 4 per rij -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+    <!-- 🔁 Itereer over gefilterde schoenen -->
     <div *ngFor="let shoe of filteredShoes" class="shoe-card p-4 bg-white rounded-xl shadow">
 
-      <!-- Flex layout: tekst links, afbeelding rechts -->
+      <!-- 📦 Card-inhoud: tekst links, afbeelding rechts -->
       <div class="flex items-center justify-between w-full gap-4">
 
-        <!-- Tekstblok helemaal links -->
+        <!-- 📃 Schoeninformatie links -->
         <div class="text-left flex-1">
           <h3 class="text-lg font-bold">{{ shoe.Brand_Name }} - {{ shoe.Type_Name }}</h3>
           <p>Maat: {{ shoe.Value }}</p>
@@ -33,7 +94,7 @@
           <p class="font-semibold">€{{ shoe.Price }}</p>
         </div>
 
-        <!-- Afbeelding helemaal rechts -->
+        <!-- 🖼️ Afbeelding rechts -->
         <div class="flex-shrink-0">
           <img
             [src]="shoe.ImageUrl"
@@ -41,7 +102,6 @@
             class="w-32 h-32 object-contain rounded bg-white p-1 hover:scale-105 transition"
             (click)="openImage(shoe.ImageUrl)"
           >
-
         </div>
 
       </div>
@@ -49,7 +109,7 @@
     </div>
   </div>
 
-  <!-- Overlay met vergrote afbeelding -->
+  <!-- 🔍 Vergrote afbeelding in overlay -->
   <div
     *ngIf="selectedImage"
     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"

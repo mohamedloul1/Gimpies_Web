@@ -1,16 +1,37 @@
-@import '../../shared/styles/variables';
+@import '../../shared/styles/variables'; // 🎨 Kleurvariabelen importeren
 
+// 👟 Styling voor de schoenencard
 .shoe-card {
   padding: 1rem;
   border-radius: 0.75rem;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
-  border: 1px solid $color-muted;
-
+  border: 1px solid $color-muted; // gebruik eigen grijstint voor rand
 }
+
+// 🔍 Zoekveld (input veld) styling
 .search-input {
-  border: 2px solid $color-muted; // jouw eigen SCSS kleurvariabelen
+  border: 2px solid $color-muted; // subtiele rand
+  color: $color-text; // primaire tekstkleur
+  background-color: $color-surface; // achtergronddesign
+  font-size: 1rem;
+
+  &::placeholder {
+    color: $color-muted; // placeholderkleur
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent; // highlightkleur
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // blauwe focusring
+  }
+}
+
+// 📋 Dropdown styling (voor merk en custom select)
+.filter-select {
+  border: 2px solid $color-muted;
   color: $color-text;
   background-color: $color-surface;
   font-size: 1rem;
@@ -23,6 +44,6 @@
   &:focus {
     outline: none;
     border-color: $color-accent;
-    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // lichte ring
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // zachte blauwe ring
   }
 }
