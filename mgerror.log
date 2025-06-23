@@ -156,3 +156,19 @@
  <571201527533305472> 21/06/2025 23:49:10.208     [Error  ] - Aborting context 571201527533305472
  <215407652234807904> 23/06/2025 08:17:55.894     [Error  ] - Aborting context 215407652234807904, Program: "Main Program".
  <144791744765737408> 23/06/2025 08:19:58.860     [Error  ] - Aborting context 144791744765737408, Program: "Main Program".
+ <209818505805845216> 23/06/2025 08:40:56.419     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <219116416890029792> 23/06/2025 08:41:14.719     [Error  ] - Failed to open, data source: Shoe_Type, Program: "Browse - Shoe_Type".
+ <5361653601011004> 23/06/2025 08:42:22.828     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <101488681880342992> 23/06/2025 08:43:58.672     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <227197783663483648> 23/06/2025 08:46:11.105     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <172503232646525408> 23/06/2025 08:46:59.013     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <268465490966959328> 23/06/2025 08:48:18.483     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <193560760553881856> 23/06/2025 08:49:01.054     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <269054877912271104> 23/06/2025 08:49:18.790     [Error  ] - Failed to open, data source: Brand, Program: "Browse - Brand".
+ <409643831856989248> 23/06/2025 08:51:21.275     [Error  ] - Failed to open, data source: Shoe_Type, Program: "Browse - Shoe_Type".
+ <312756622606494336> 23/06/2025 09:24:01.269     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "30"), Program: "Main Program".
+ <533357188456365312> 23/06/2025 09:24:05.136     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "33"), Program: "Main Program".
+ <398969705468571968> 23/06/2025 09:24:10.447     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "36"), Program: "Main Program".
+ <558612316178265024> 23/06/2025 09:24:15.722     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "39"), Program: "Main Program".
+ <101740445399153888> 23/06/2025 09:24:27.411     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "42"), Program: "Main Program".
+ <-1> 23/06/2025 09:25:48.217     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
