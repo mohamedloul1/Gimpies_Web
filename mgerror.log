@@ -172,3 +172,20 @@
  <558612316178265024> 23/06/2025 09:24:15.722     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "39"), Program: "Main Program".
  <101740445399153888> 23/06/2025 09:24:27.411     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "42"), Program: "Main Program".
  <-1> 23/06/2025 09:25:48.217     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <121474408788308704> 23/06/2025 09:27:22.591     [Error  ] - Aborting context 121474408788308704, Program: "Main Program".
+ <289876449096730048> 23/06/2025 09:51:09.571     [Error  ] - Aborting context 289876449096730048, Program: "Main Program".
+ <524406295659077504> 23/06/2025 09:51:09.587     [Error  ] - Aborting context 524406295659077504, Program: "Main Program".
+ <153978922117347904> 23/06/2025 09:53:14.645     [Error  ] - Aborting context 153978922117347904, Program: "Main Program".
+ <365266443615975360> 23/06/2025 10:07:24.306     [Error  ] - Aborting context 365266443615975360, Program: "Main Program".
+ <382875576737065280> 23/06/2025 10:11:18.443     [Error  ] - Aborting context 382875576737065280, Program: "Main Program".
+ <289907179232208512> 23/06/2025 10:50:15.582     [Error  ] - DataViewToJSON - Illegal task variables specified : Colo_Name  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.Shoe_View.CollectData".
+ <289907179232208512> 23/06/2025 10:50:28.059     [Error  ] - Aborting context 289907179232208512, Program: "Main Program".
+ <302914242341906368> 23/06/2025 10:52:09.125     [Error  ] - DataViewToJSON - Illegal task variables specified : Colo_Name  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.Shoe_View.CollectData".
+ <201031286980843392> 23/06/2025 10:52:27.048     [Error  ] - DataViewToJSON - Illegal task variables specified : Colo_Name  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.Shoe_View.CollectData".
+ <201031286980843392> 23/06/2025 10:53:20.257     [Error  ] - Aborting context 201031286980843392, Program: "Main Program".
+ <342355289663264704> 23/06/2025 10:54:42.373     [Error  ] - Aborting context 342355289663264704, Program: "Main Program".
+ <335381144008099072> 23/06/2025 10:55:20.079     [Error  ] - Aborting context 335381144008099072, Program: "Main Program".
+ <224414032679781440> 23/06/2025 10:56:06.508     [Error  ] - Aborting context 224414032679781440, Program: "Main Program".
+ <242652690497640608> 23/06/2025 11:06:22.377     [Error  ] - Aborting context 242652690497640608, Program: "Main Program".
+ <180922455626562720> 23/06/2025 11:14:06.935     [Error  ] - DataViewToJSON - Illegal task variables specified : value  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.Shoe_View.CollectData".
+ <180922455626562720> 23/06/2025 11:14:11.100     [Error  ] - Aborting context 180922455626562720, Program: "Main Program".

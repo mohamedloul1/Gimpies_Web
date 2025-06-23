@@ -47,6 +47,10 @@ export const routes: Routes = [
         component: RouterContainerMagicComponent
       },
       {
+        path: 'shoeview',
+        component: RouterContainerMagicComponent
+      },
+      {
         path: '**',
         component: RouterContainerMagicComponent // fallback binnen layout
       }

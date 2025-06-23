@@ -1,0 +1,31 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.Shoe_View"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label134217730"
+                class="lable_overflow mgFont1"
+            >
+                V_Test
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.V_V_Test"
+                            [formControlName]="mgc.V_V_Test"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_V_Test> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
