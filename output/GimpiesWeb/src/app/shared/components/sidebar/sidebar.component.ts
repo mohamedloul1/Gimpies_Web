@@ -4,6 +4,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
 
 
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -20,7 +21,7 @@ export class SidebarComponent implements OnInit {
   collapsed = false;
 
   @HostBinding('class') get hostClasses(): string {
-    return `transition-all duration-300 h-full ${this.collapsed ? 'w-16' : 'w-56'}`;
+    return `transition-all duration-300 h-full ${this.collapsed ? 'w-24' : 'w-56'}`;
   }
 
 

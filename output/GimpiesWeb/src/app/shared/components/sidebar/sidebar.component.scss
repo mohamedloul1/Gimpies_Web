@@ -1,3 +1,4 @@
+@import "../../styles/variables";
 nav {
   display: flex;
   flex-direction: column;
@@ -8,3 +9,114 @@ nav {
 :host {
   display: block;
 }
+.circle-toggle {
+  background-color: $color-primary;
+  color: $color-accent;
+  border: 2px solid $color-accent;
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color:  $color-hover-light;
+    border-color: $color-accent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.user-info {
+  @apply flex items-center justify-center space-x-3 mb-6;
+
+  .avatar {
+    @apply w-14 h-14 rounded-full;
+    border: 2px solid $color-accent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .username {
+    color: $color-surface;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+  }
+
+  .user-role {
+    color: $color-muted;
+    font-size: 0.85rem;
+    font-family: 'EB Garamond', serif;
+  }
+}
+
+.nav-link {
+  @apply flex items-center space-x-2 p-2 rounded transition-colors duration-200;
+  color: $color-surface;
+
+
+  &:hover {
+    background-color: $color-hover-light;
+    color: $color-primary;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    .nav-icon {
+      color: $color-accent;
+    }
+  }
+
+  .nav-icon {
+    color: $color-accent;
+  }
+}
+
+.nav-active {
+  background-color: $color-hover-light;
+  color: $color-primary;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  .nav-icon {
+    color: $color-accent;
+  }
+}
+
+.logout-button {
+  @apply flex items-center gap-2 transition-all duration-200 bg-transparent mb-5;
+  color: $color-accent;
+
+  &:hover {
+    background-color: $color-hover-light;
+    color: $color-primary;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    .logout-icon {
+      color: $color-primary;
+    }
+
+    .logout-text {
+      color: $color-primary;
+    }
+  }
+}
+
+.logout-icon {
+  color: $color-accent;
+  transition: color 0.3s ease;
+}
+
+.logout-text {
+  color: $color-accent;
+  font-weight: 500;
+  font-family: 'EB Garamond', serif;
+}
+

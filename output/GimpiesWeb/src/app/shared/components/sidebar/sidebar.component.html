@@ -1,87 +1,99 @@
 <div class="flex flex-col h-full">
   <!-- Toggle-knop bovenaan -->
-  <div class="mb-4 flex justify-end ">
+  <div
+    class="mb-4 px-3 mt-3"
+    [ngClass]="collapsed ? 'flex justify-center' : 'flex justify-end'"
+  >
     <button
-      mat-icon-button
       (click)="toggleSidebar()"
       matTooltip="Zijbalk in-/uitklappen"
+      class="circle-toggle"
     >
       <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
     </button>
   </div>
 
+
   <!-- 👤 Gebruiker info -->
-  <div class="flex items-center space-x-3 mb-6  justify-center">
+  <div class="user-info">
     <img
       src="https://as2.ftcdn.net/v2/jpg/02/45/56/35/1000_F_245563558_XH9Pe5LJI2kr7VQuzQKAjAbz9PAyejG1.jpg"
-      class="w-12 h-12 rounded-full"
+      class="avatar"
     />
     <div *ngIf="!collapsed">
-      <div class="font-semibold text-gray-800">{{ username }}</div>
-      <div class="text-sm text-gray-500">{{ userRole }}</div>
+      <div class="username">{{ username }}</div>
+      <div class="user-role">{{ userRole }}</div>
     </div>
   </div>
 
+
   <!-- Navigatie -->
-  <nav class="flex flex-col space-y-4 flex-grow px-3">
+  <nav class="flex flex-col space-y-4 flex-grow px-3 text-white">
     <a
       routerLink="/admin"
-      routerLinkActive="bg-blue-100 text-blue-700 font-semibold"
+      routerLinkActive="nav-active"
       [routerLinkActiveOptions]="{ exact: true }"
-      class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition"
-
+      class="nav-link"
       (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center ' : 'justify-start '"
+
     >
-      <mat-icon>dashboard</mat-icon>
+      <mat-icon class="nav-icon">dashboard</mat-icon>
       <span *ngIf="!collapsed">Dashboard</span>
     </a>
 
     <a
       routerLink="/"
-      routerLinkActive="bg-blue-100 text-blue-700 font-semibold"
+      routerLinkActive="nav-active"
       [routerLinkActiveOptions]="{ exact: true }"
-      class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition"
+      class="nav-link"
       (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
     >
-      <mat-icon>inventory_2</mat-icon>
+      <mat-icon class="nav-icon">inventory_2</mat-icon>
       <span *ngIf="!collapsed">Voorraad</span>
     </a>
 
     <a
       routerLink="/sales"
-      routerLinkActive="bg-blue-100 text-blue-700 font-semibold"
+      routerLinkActive="nav-active"
       [routerLinkActiveOptions]="{ exact: true }"
-      class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition"
+      class="nav-link"
       (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
     >
-      <mat-icon>shopping_cart</mat-icon>
+      <mat-icon class="nav-icon">shopping_cart</mat-icon>
       <span *ngIf="!collapsed">Verkopen</span>
     </a>
 
     <a
       routerLink="/"
-      routerLinkActive="bg-blue-100 text-blue-700 font-semibold"
+      routerLinkActive="nav-active"
       [routerLinkActiveOptions]="{ exact: true }"
-      class="flex items-center space-x-2 p-2 rounded hover:bg-gray-200 transition"
+      class="nav-link"
       (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
     >
-      <mat-icon>download</mat-icon>
+      <mat-icon class="nav-icon">download</mat-icon>
       <span *ngIf="!collapsed">Inkopen</span>
     </a>
   </nav>
 
+
   <!-- 🔒 Logout-knop -->
-  <div class="mt-10 flex justify-center">
+  <div class="mt-10 flex justify-center px-3">
     <button
       (click)="logout()"
-      class="flex items-center gap-2 transition-all duration-200"
+      class="logout-button"
       [ngClass]="collapsed
       ? 'mx-2 w-10 h-10 justify-center p-0 rounded-full'
       : 'w-full justify-center px-3 py-2 rounded-md'"
-
     >
-      <mat-icon class="text-red-600">logout</mat-icon>
-      <span *ngIf="!collapsed" class="text-red-600 font-medium">Uitloggen</span>
+      <mat-icon class="logout-icon">logout</mat-icon>
+      <span *ngIf="!collapsed" class="logout-text">Uitloggen</span>
     </button>
   </div>
 </div>
