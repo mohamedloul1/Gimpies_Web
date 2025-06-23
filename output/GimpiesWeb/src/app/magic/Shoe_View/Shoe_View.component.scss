@@ -1,0 +1,28 @@
+@import '../../shared/styles/variables';
+
+.shoe-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  border: 1px solid $color-muted;
+
+}
+.search-input {
+  border: 2px solid $color-muted; // jouw eigen SCSS kleurvariabelen
+  color: $color-text;
+  background-color: $color-surface;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: $color-muted;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // lichte ring
+  }
+}

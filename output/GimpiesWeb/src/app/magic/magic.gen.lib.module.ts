@@ -1,6 +1,6 @@
 import {NgModule, NgModuleRef} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from "@angular/common";
 
 
@@ -84,7 +84,8 @@ export const customCurrencyMaskConfig: CurrencyMaskConfig = {
         MatFormFieldModule,
         MagicAngularMaterialModule,
         MatAutocompleteModule,
-        MatIconModule
+        MatIconModule,
+        FormsModule
     ],
   providers: [ExitMagicService],
 })

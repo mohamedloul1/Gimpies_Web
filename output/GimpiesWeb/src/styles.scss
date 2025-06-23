@@ -16,6 +16,9 @@ html, body {
   height: 100%;
   margin: 0;
 }
+.main-container{
+  background-color: $color-hover-light;
+}
 ::ng-deep .custom-dialog-container .mat-dialog-container {
   border-radius: 12px;
   padding: 0;

@@ -71,6 +71,7 @@
 .login-page {
   @apply flex items-center justify-center p-4;
   min-height: 100vh;
+  background-color: $color-background;
 
   @media (max-width: 640px) {
     padding-top: 7rem; // ruimte onder zwevend logo
@@ -86,7 +87,7 @@
   max-width: 512px;
 
   .login-title {
-    color: $color-text;
+    color: $color-secondary;
   }
 
   .form-wrapper {
