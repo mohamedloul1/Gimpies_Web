@@ -29,11 +29,18 @@ export class Shoe_View extends TaskBaseMagicComponent {
   // 📋 Merkenfilter
   selectedBrand: string = '';
   uniqueBrands: string[] = [];
+  brandDropdownOpen = false;
+
 
   // 🎨 Kleurfilter
   selectedColor: string = '';
   uniqueColors: string[] = [];
   colorDropdownOpen = false;
+
+  //prijs range filter
+  maxPrice: number | null = null;
+
+
 
   constructor(
     ref: ChangeDetectorRef,
@@ -102,8 +109,11 @@ export class Shoe_View extends TaskBaseMagicComponent {
       const matchesSearch = terms.every(t => combined.includes(t));
       const matchesBrand = this.selectedBrand ? shoe.Brand_Name === this.selectedBrand : true;
       const matchesColor = this.selectedColor ? shoe.Color_Name === this.selectedColor : true;
+      const matchesPriceMax = this.maxPrice !== null ? shoe.Price <= this.maxPrice : true;
 
-      return matchesSearch && matchesBrand && matchesColor;
+
+
+      return matchesSearch && matchesBrand && matchesColor && matchesPriceMax;
     });
   }
 
@@ -122,6 +132,14 @@ export class Shoe_View extends TaskBaseMagicComponent {
   extractUniqueColors(): void {
     const colors = this.Shoe_Data.map(shoe => shoe.Color_Name);
     this.uniqueColors = Array.from(new Set(colors)).sort();
+  }
+  toggleBrandDropdown(): void {
+    this.brandDropdownOpen = !this.brandDropdownOpen;
+  }
+
+  selectBrand(brand: string): void {
+    this.selectedBrand = brand;
+    this.brandDropdownOpen = false;
   }
 
   // 🎛️ Custom dropdown toggle

@@ -7,7 +7,6 @@
 
 <!-- 🔍 Zoekveld + filters -->
 <div class="mb-6 flex flex-col sm:flex-row gap-4 items-center justify-center">
-
   <!-- 🔤 Zoekveld voor merk, type of kleur -->
   <input
     type="text"
@@ -17,13 +16,37 @@
   >
 
   <!-- 📋 Dropdown voor merkfilter -->
-  <select
-    [(ngModel)]="selectedBrand"
-    class="filter-select px-4 py-2 rounded-full shadow-sm transition w-full sm:w-60"
-  >
-    <option value="">Alle merken</option>
-    <option *ngFor="let brand of uniqueBrands" [value]="brand">{{ brand }}</option>
-  </select>
+  <!-- Custom dropdown voor merken -->
+  <div class="relative w-full sm:w-60">
+    <button
+      (click)="toggleBrandDropdown()"
+      class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
+    >
+      <span>{{ selectedBrand || 'Alle merken' }}</span>
+      <span>▼</span>
+    </button>
+
+    <div
+      *ngIf="brandDropdownOpen"
+      class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
+    >
+      <div
+        class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+        (click)="selectBrand('')"
+      >
+        Alle merken
+      </div>
+
+      <div
+        *ngFor="let brand of uniqueBrands"
+        class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+        (click)="selectBrand(brand)"
+      >
+        {{ brand }}
+      </div>
+    </div>
+  </div>
+
 
   <!-- 🎨 Custom dropdown voor kleurenfilter (met visuele blokjes) -->
   <div class="relative w-full sm:w-60">
@@ -70,21 +93,30 @@
       </div>
     </div>
   </div>
+  <!-- 💸 Max prijs slider -->
+  <div class="flex flex-col items-start w-full sm:w-60">
+    <label class="mb-1 text-sm font-medium">Max prijs: €{{ maxPrice || '∞' }}</label>
+    <mat-slider
+      [(ngModel)]="maxPrice"
+      [min]="0"
+      [max]="200"
+      [step]="5"
+      thumbLabel
+      class="w-full"
+    ></mat-slider>
+  </div>
+
 
 </div>
 
 <!-- 👟 Schoenen-cards overzicht -->
 <div *ngIf="Shoe_Data.length > 0" class="mt-6">
-
   <!-- 📐 Responsieve grid layout: max 4 per rij -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-
     <!-- 🔁 Itereer over gefilterde schoenen -->
     <div *ngFor="let shoe of filteredShoes" class="shoe-card p-4 bg-white rounded-xl shadow">
-
       <!-- 📦 Card-inhoud: tekst links, afbeelding rechts -->
       <div class="flex items-center justify-between w-full gap-4">
-
         <!-- 📃 Schoeninformatie links -->
         <div class="text-left flex-1">
           <h3 class="text-lg font-bold">{{ shoe.Brand_Name }} - {{ shoe.Type_Name }}</h3>
@@ -93,7 +125,6 @@
           <p>Voorraad: {{ shoe.Quantity }}</p>
           <p class="font-semibold">€{{ shoe.Price }}</p>
         </div>
-
         <!-- 🖼️ Afbeelding rechts -->
         <div class="flex-shrink-0">
           <img
@@ -103,9 +134,7 @@
             (click)="openImage(shoe.ImageUrl)"
           >
         </div>
-
       </div>
-
     </div>
   </div>
 

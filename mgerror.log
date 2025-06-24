@@ -190,3 +190,6 @@
  <180922455626562720> 23/06/2025 11:14:06.935     [Error  ] - DataViewToJSON - Illegal task variables specified : value  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.Shoe_View.CollectData".
  <180922455626562720> 23/06/2025 11:14:11.100     [Error  ] - Aborting context 180922455626562720, Program: "Main Program".
  <147183217916275360> 23/06/2025 11:45:17.613     [Error  ] - Aborting context 147183217916275360, Program: "Main Program".
+ <84118917872031312> 23/06/2025 16:28:09.085     [Error  ] - Aborting context 84118917872031312, Program: "Main Program".
+ <529519952612956544> 23/06/2025 16:28:09.090     [Error  ] - Aborting context 529519952612956544, Program: "Main Program".
+ <425596816376784192> 23/06/2025 16:28:09.097     [Error  ] - Aborting context 425596816376784192, Program: "Main Program".

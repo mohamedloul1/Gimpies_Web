@@ -21,6 +21,8 @@ import {MatCardModule} from "@angular/material/card";
 import { MatButtonModule } from '@angular/material/button';
 import { RedirectHomeComponent } from './components/redirect-home/redirect-home.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
+import { MatSliderModule } from '@angular/material/slider';
+
 
 
 
@@ -50,6 +52,7 @@ import {MatTooltipModule} from "@angular/material/tooltip";
     MatCardModule,
     MatButtonModule,
     MatTooltipModule,
+    MatSliderModule,
 
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],

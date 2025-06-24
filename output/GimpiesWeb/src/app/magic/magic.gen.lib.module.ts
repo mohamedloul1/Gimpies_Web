@@ -29,6 +29,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {CurrencyMaskConfig, CurrencyMaskInputMode, NgxCurrencyModule} from "ngx-currency";
 import {MatIconModule} from "@angular/material/icon";
+import {MatSliderModule} from "@angular/material/slider";
 
 export const customCurrencyMaskConfig: CurrencyMaskConfig = {
   align: "right",
@@ -85,7 +86,8 @@ export const customCurrencyMaskConfig: CurrencyMaskConfig = {
         MagicAngularMaterialModule,
         MatAutocompleteModule,
         MatIconModule,
-        FormsModule
+        FormsModule,
+        MatSliderModule
     ],
   providers: [ExitMagicService],
 })

@@ -11,11 +11,14 @@
 }
 
 // 🔍 Zoekveld (input veld) styling
-.search-input {
+.search-input,
+.filter-select{
   border: 2px solid $color-muted; // subtiele rand
   color: $color-text; // primaire tekstkleur
   background-color: $color-surface; // achtergronddesign
   font-size: 1rem;
+  transition: all 0.2s ease;
+
 
   &::placeholder {
     color: $color-muted; // placeholderkleur
@@ -26,24 +29,9 @@
     outline: none;
     border-color: $color-accent; // highlightkleur
     box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // blauwe focusring
+    //background-color: #fff;
+
   }
 }
 
-// 📋 Dropdown styling (voor merk en custom select)
-.filter-select {
-  border: 2px solid $color-muted;
-  color: $color-text;
-  background-color: $color-surface;
-  font-size: 1rem;
 
-  &::placeholder {
-    color: $color-muted;
-    opacity: 0.7;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: $color-accent;
-    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // zachte blauwe ring
-  }
-}
