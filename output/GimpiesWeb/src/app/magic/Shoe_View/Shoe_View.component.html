@@ -109,13 +109,18 @@
 
 </div>
 
+
 <!-- 👟 Schoenen-cards overzicht -->
 <div *ngIf="Shoe_Data.length > 0" class="mt-6">
   <!-- 📐 Responsieve grid layout: max 4 per rij -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <!-- 🔁 Itereer over gefilterde schoenen -->
-    <div *ngFor="let shoe of filteredShoes" class="shoe-card p-4 bg-white rounded-xl shadow">
-      <!-- 📦 Card-inhoud: tekst links, afbeelding rechts -->
+    <div
+      *ngFor="let shoe of filteredShoes"
+      class="shoe-card p-4 bg-white rounded-xl shadow cursor-pointer transition border-2"
+      [class.selected]="isSelected(shoe.ShoeID)"
+      (click)="toggleSelect(shoe.ShoeID)"
+    >      <!-- 📦 Card-inhoud: tekst links, afbeelding rechts -->
       <div class="flex items-center justify-between w-full gap-4">
         <!-- 📃 Schoeninformatie links -->
         <div class="text-left flex-1">
@@ -125,6 +130,7 @@
           <p>Voorraad: {{ shoe.Quantity }}</p>
           <p class="font-semibold">€{{ shoe.Price }}</p>
         </div>
+
         <!-- 🖼️ Afbeelding rechts -->
         <div class="flex-shrink-0">
           <img
@@ -151,3 +157,25 @@
     />
   </div>
 </div>
+
+<!-- 🛒 Zwevend selectie-icoon -->
+<div
+  *ngIf="selectedShoeIds.length > 0"
+  class="fixed bottom-6 right-6 z-50 cursor-pointer"
+>
+  <div class="relative bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition">
+    <!-- 🛒 Mandje icoon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5h10.9M7 13l-1.35 2.7M17 13l1.35 2.7M9 21h.01M15 21h.01" />
+    </svg>
+
+    <!-- 🔢 Aantal geselecteerde items -->
+    <span
+      class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow">
+      {{ selectedShoeIds.length }}
+    </span>
+  </div>
+</div>
+

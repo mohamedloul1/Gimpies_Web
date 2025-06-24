@@ -40,6 +40,9 @@ export class Shoe_View extends TaskBaseMagicComponent {
   //prijs range filter
   maxPrice: number | null = null;
 
+  selectedShoeIds: number[] = [];
+
+
 
 
   constructor(
@@ -152,4 +155,28 @@ export class Shoe_View extends TaskBaseMagicComponent {
     this.selectedColor = color;
     this.colorDropdownOpen = false;
   }
+
+  toggleSelect(shoeId: number): void {
+    const index = this.selectedShoeIds.indexOf(shoeId);
+
+    if (index > -1) {
+      // Verwijder selectie
+      this.selectedShoeIds.splice(index, 1);
+    } else {
+      // Voeg toe aan selectie
+      this.selectedShoeIds.push(shoeId);
+    }
+    console.log('✅ Geselecteerd:', this.getSelectedShoes());
+
+  }
+
+  isSelected(shoeId: number): boolean {
+    return this.selectedShoeIds.includes(shoeId);
+  }
+
+  getSelectedShoes(): Shoe[] {
+    return this.Shoe_Data.filter(shoe => this.selectedShoeIds.includes(shoe.ShoeID));
+  }
+
+
 }

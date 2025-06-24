@@ -8,7 +8,7 @@
 
   <Exe comp="-1"/>
 
-  <LastIsn val="9"/>
+  <LastIsn val="10"/>
 
   <LastIsnFolder val="0"/>
 
@@ -20,11 +20,12 @@
  
  
  
-<DataObject PhysicalName="Users" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="33554433" name="Users" offset="228" length="4484"/> 
-<DataObject PhysicalName="Brand" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217735" name="Brand" offset="4713" length="2523"/> 
-<DataObject PhysicalName="Shoe_Type" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217733" name="Shoe_Type" offset="7237" length="3195"/> 
-<DataObject PhysicalName="Shoe" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217734" name="Shoe" offset="10433" length="6349"/> 
-<DataObject PhysicalName="Color" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217736" name="Color" offset="16783" length="2523"/> 
-<DataObject PhysicalName="Size" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217737" name="Size" offset="19307" length="2643"/>  </DataObjects>
+<DataObject PhysicalName="Users" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="33554433" name="Users" offset="229" length="4484"/> 
+<DataObject PhysicalName="Brand" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217735" name="Brand" offset="4714" length="2523"/> 
+<DataObject PhysicalName="Shoe_Type" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217733" name="Shoe_Type" offset="7238" length="3195"/> 
+<DataObject PhysicalName="Shoe" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217734" name="Shoe" offset="10434" length="6349"/> 
+<DataObject PhysicalName="Color" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217736" name="Color" offset="16784" length="2523"/> 
+<DataObject PhysicalName="Size" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217737" name="Size" offset="19308" length="2643"/> 
+<DataObject PhysicalName="Selected_Shoes" Resident="N" UniqueISNConvState="12" data_source="Memory" id="134217738" name="Selected_Shoes" offset="21952" length="3169"/>  </DataObjects>
  </DataSourceRepository>
- <LastModified val="31187996-20202845"/>  </Application>
+ <LastModified val="31188200161996404"/>  </Application>

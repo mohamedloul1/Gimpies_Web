@@ -8,7 +8,7 @@
 
   <Exe comp="-1"/>
 
-  <LastIsn val="9"/>
+  <LastIsn val="10"/>
 
   <LastIsnFolder val="0"/>
 
@@ -726,6 +726,108 @@
         <Segment>
           <Size val="4"/>
           <Column val="134217730"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject PhysicalName="Selected_Shoes" Resident="N" UniqueISNConvState="12" data_source="Memory" id="134217738" name="Selected_Shoes">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="P"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <PositionIndex val="-1"/>
+
+  <IndexesLastIsn val="2"/>
+
+  <MetaTreeRTIndex val="-1"/>
+
+  <Columns>
+    <Column id="134217729" name="ShoeID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178"/>
+        <Type id="179"/>
+        <UserType id="180"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="9" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="134217730" name="Selected">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_LOGICAL" id="1"/>
+        <StoredAs id="173" val="15"/>
+        <Size id="174" val="1"/>
+        <Definition id="175" val="2"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="1" allowed_null="N" attribute="B" context_cookies="Y" database_definition="2" id="231" storage="15" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="134217731" name="QtySale">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" id="1"/>
+        <Picture id="157" valUnicode="5"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <_Dec id="181"/>
+        <_Whole id="182" val="5"/>
+        <_Negative id="192"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="5" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+        <_FieldStyle id="276" val="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="134217732" name="UserID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178"/>
+        <Type id="179"/>
+        <UserType id="180"/>
+        <_Flip id="194"/>
+        <_FieldPhysical PIC_U="9" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="134217730" name="ShoeID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="134217729"/>
           <Order val="A"/>
         </Segment>
       </Segments>
