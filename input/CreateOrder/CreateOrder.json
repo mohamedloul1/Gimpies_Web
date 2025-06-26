@@ -1,0 +1,35 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"CreateOrder",
+		"component_path":	"CreateOrder/",
+		"component_uniquename":	"CreateOrder_CreateOrder"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Btn_CreateOrder",
+				"format":	"Button",
+				"common_line_id":	"line230"
+			},
+			"coordinates":	{
+				"x":	294,
+				"y":	230,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

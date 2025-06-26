@@ -1,0 +1,19 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.CreateOrder"
+    >
+        <div style="display: flex; flex-direction: row">
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.Btn_CreateOrder"
+            >
+                Button
+            </button>
+        </div>
+    </div>
+</div>

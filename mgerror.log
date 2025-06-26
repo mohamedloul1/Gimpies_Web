@@ -194,3 +194,38 @@
  <529519952612956544> 23/06/2025 16:28:09.090     [Error  ] - Aborting context 529519952612956544, Program: "Main Program".
  <425596816376784192> 23/06/2025 16:28:09.097     [Error  ] - Aborting context 425596816376784192, Program: "Main Program".
  <134105082690277120> 24/06/2025 10:54:29.089     [Error  ] - Aborting context 134105082690277120, Program: "Main Program".
+ <-1> 24/06/2025 16:03:56.449     [Error  ] - Data Sources full open of "C:\Projects\GimpiesWeb\Source\DataSources.xml" ("C:\Projects\GimpiesWeb\Source\DataSourcesIndex.xml" is outdated! It is recommended to regenerate the project's 'Source' folder from an up-to-date export file.)
+ <154779992907154688> 24/06/2025 16:05:54.430     [Error  ] - Aborting context 154779992907154688, Program: "Main Program".
+ <118531768884056976> 24/06/2025 16:13:03.067     [Error  ] - Aborting context 118531768884056976, Program: "Main Program".
+ <442733221901836736> 24/06/2025 16:13:48.383     [Error  ] - Aborting context 442733221901836736, Program: "Main Program".
+ <-1> 24/06/2025 16:19:03.625     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <99102998674859088> 24/06/2025 16:22:10.043     [Error  ] - Aborting context 99102998674859088, Program: "Main Program".
+ <373110684650255744> 24/06/2025 16:23:40.975     [Error  ] - Aborting context 373110684650255744, Program: "Main Program".
+ <117309624484368720> 24/06/2025 16:24:43.244     [Error  ] - Aborting context 117309624484368720, Program: "Main Program".
+ <-1> 24/06/2025 16:25:48.187     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <-1> 26/06/2025 08:05:30.004     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <526345064032771648> 26/06/2025 08:17:15.316     [Error  ] - Aborting context 526345064032771648, Program: "Main Program".
+ <235770043902470880> 26/06/2025 08:44:28.058     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder".
+ <281600972031094272> 26/06/2025 08:46:10.456     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder".
+ <281600972031094272> 26/06/2025 08:47:12.237     [Error  ] - Aborting context 281600972031094272, Program: "Main Program".
+ <313706852710654272> 26/06/2025 08:52:58.758     [Error  ] - Aborting context 313706852710654272, Program: "Main Program".
+ <532682880983082176> 26/06/2025 08:54:23.696     [Error  ] - Aborting context 532682880983082176, Program: "Main Program".
+ <446136206297122112> 26/06/2025 08:58:11.384     [Error  ] - Aborting context 446136206297122112, Program: "Main Program".
+ <26753928357496116> 26/06/2025 08:59:18.034     [Error  ] - Aborting context 26753928357496116, Program: "Main Program".
+ <562371348824130496> 26/06/2025 09:21:39.036     [Error  ] - Aborting context 562371348824130496, Program: "Main Program".
+ <236905746682705696> 26/06/2025 09:28:45.047     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder".
+ <236905746682705696> 26/06/2025 09:28:45.053     [Error  ] - EndTaskRequest(): Constraint failure, data source: Orders : CreateOrder NOT NULL constraint failed: Orders.UserIDAborting context 236905746682705696 : "Routing.CreateOrder" ("GimpiesWeb")  (msgid "170"), Program: "Main Program".
+ <-1> 26/06/2025 09:29:33.451     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <429051630709240960> 26/06/2025 09:37:31.575     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <429051630709240960> 26/06/2025 09:38:30.460     [Error  ] - Aborting context 429051630709240960, Program: "Main Program".
+ <19902648999492276> 26/06/2025 09:42:50.719     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <19902648999492276> 26/06/2025 09:43:13.808     [Error  ] - Aborting context 19902648999492276, Program: "Main Program".
+ <287231897290397632> 26/06/2025 09:46:01.788     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <287231897290397632> 26/06/2025 09:46:14.574     [Error  ] - Aborting context 287231897290397632, Program: "Main Program".
+ <259129340644315072> 26/06/2025 09:49:38.249     [Error  ] - Duplicate index, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <259129340644315072> 26/06/2025 09:51:34.387     [Error  ] - Aborting context 259129340644315072, Program: "Main Program".
+ <91236632714181504> 26/06/2025 09:52:21.772     [Error  ] - Constraint failure, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <91236632714181504> 26/06/2025 09:52:28.507     [Error  ] - Aborting context 91236632714181504, Program: "Main Program".
+ <39920612529642352> 26/06/2025 09:55:07.976     [Error  ] - Aborting context 39920612529642352, Program: "Main Program".
+ <163839514534703968> 26/06/2025 09:56:11.562     [Error  ] - Duplicate index, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <163839514534703968> 26/06/2025 10:21:08.381     [Error  ] - Aborting context 163839514534703968, Program: "Main Program".

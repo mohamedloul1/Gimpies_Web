@@ -31,6 +31,12 @@
 				"ModuleName":	"",
 				"OutletName":	"",
 				"children":	null
+			},
+			{
+				"RouteName":	"create-order",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
 			}
 		]
 	}

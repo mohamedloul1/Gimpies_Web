@@ -1,0 +1,183 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"OrderCreate",
+		"component_path":	"OrderCreate/",
+		"component_uniquename":	"OrderCreate_OrderCreate"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label134217737",
+				"text":	"orderid",
+				"common_line_id":	"line63"
+			},
+			"coordinates":	{
+				"x":	101,
+				"y":	63,
+				"width":	34,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_orderid",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line63"
+			},
+			"coordinates":	{
+				"x":	141,
+				"y":	63,
+				"width":	146,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label134217739",
+				"text":	"userid",
+				"common_line_id":	"line89"
+			},
+			"coordinates":	{
+				"x":	106,
+				"y":	89,
+				"width":	30,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_userid",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line89"
+			},
+			"coordinates":	{
+				"x":	141,
+				"y":	89,
+				"width":	146,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label134217741",
+				"text":	"shoeid",
+				"common_line_id":	"line125"
+			},
+			"coordinates":	{
+				"x":	103,
+				"y":	125,
+				"width":	33,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_shoeid",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line125"
+			},
+			"coordinates":	{
+				"x":	141,
+				"y":	125,
+				"width":	146,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label134217743",
+				"text":	"testo",
+				"common_line_id":	"line175"
+			},
+			"coordinates":	{
+				"x":	111,
+				"y":	175,
+				"width":	25,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_testo",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line175"
+			},
+			"coordinates":	{
+				"x":	141,
+				"y":	175,
+				"width":	146,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"btn_makeOrder",
+				"format":	"Button",
+				"common_line_id":	"line243"
+			},
+			"coordinates":	{
+				"x":	265,
+				"y":	243,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

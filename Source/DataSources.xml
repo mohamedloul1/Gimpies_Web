@@ -8,7 +8,7 @@
 
   <Exe comp="-1"/>
 
-  <LastIsn val="10"/>
+  <LastIsn val="11"/>
 
   <LastIsnFolder val="0"/>
 
@@ -17,6 +17,7 @@
 <DataRepositoryProperties/>
  <DataSourceRepository>
   <DataObjects>
+ 
  
  
  
@@ -820,6 +821,94 @@
       <Order val="T"/>
       <Range val="Q"/>
       <IndexType val="R"/>
+      <HasHint val="Y"/>
+      <Clustered val="N"/>
+      <DropOnReindex val="N"/>
+      <Primary val="N"/>
+      <Segments>
+        <Segment>
+          <Size val="4"/>
+          <Column val="134217729"/>
+          <Order val="A"/>
+        </Segment>
+      </Segments>
+    </Index>
+  </Indexes>
+
+  <ForeignKeys/>
+
+  <WebS/>
+
+</DataObject> 
+<DataObject PhysicalName="Orders" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217739" name="Orders">
+
+  <Encrypt val="N"/>
+
+  <Cache val="D"/>
+
+  <IdentifyRowModifications val="U"/>
+
+  <HasHint val="Y"/>
+
+  <Cursor val="D"/>
+
+  <CheckExistence val="D"/>
+
+  <ObjectType val="T"/>
+
+  <Position val="D"/>
+
+  <PositionIndex val="-1"/>
+
+  <IndexesLastIsn val="1"/>
+
+  <MetaTreeRTIndex val="-1"/>
+
+  <Columns>
+    <Column id="134217729" name="OrderID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="OrderID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="OrderID" PIC_U="9" Size="4" allowed_null="N" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="134217730" name="UserID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="UserID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="UserID" PIC_U="9" Size="4" allowed_null="Y" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+      </PropertyList>
+    </Column>
+    <Column id="134217731" name="ShoeID">
+      <PropertyList model="FIELD">
+        <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+        <NullAllowed id="166" val="Y"/>
+        <StoredAs id="173" val="4"/>
+        <Size id="174" val="4"/>
+        <Definition id="175" val="2"/>
+        <DbColumnName id="178" val="ShoeID"/>
+        <_Flip id="194"/>
+        <_FieldPhysical Name="ShoeID" PIC_U="9" Size="4" allowed_null="Y" attribute="N" context_cookies="Y" database_definition="2" id="231" storage="4" translate="1"/>
+      </PropertyList>
+    </Column>
+  </Columns>
+
+  <Indexes>
+    <Index id="134217729" name="OrderID">
+      <Mode val="S"/>
+      <Order val="T"/>
+      <Range val="Q"/>
+      <IndexType val="R"/>
+      <PhysicalName val="OrderID"/>
       <HasHint val="Y"/>
       <Clustered val="N"/>
       <DropOnReindex val="N"/>

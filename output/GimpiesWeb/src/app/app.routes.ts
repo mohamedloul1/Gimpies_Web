@@ -51,6 +51,10 @@ export const routes: Routes = [
         component: RouterContainerMagicComponent
       },
       {
+        path: 'create-order',
+        component: RouterContainerMagicComponent
+      },
+      {
         path: '**',
         component: RouterContainerMagicComponent // fallback binnen layout
       }
