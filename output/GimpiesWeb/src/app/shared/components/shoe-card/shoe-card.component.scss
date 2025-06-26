@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.shoe-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  border: 1px solid $color-muted;
+  position: relative;
+}
+
+.shoe-card.selected {
+  border-color: $color-accent;
+  background-color: lighten($color-accent, 40%);
+}
+.shoe-card.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

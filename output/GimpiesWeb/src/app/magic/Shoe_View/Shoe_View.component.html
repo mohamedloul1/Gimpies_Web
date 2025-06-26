@@ -134,15 +134,16 @@
         <!-- 🖼️ Afbeelding rechts -->
         <div class="flex-shrink-0">
           <img
-            [src]="shoe.ImageUrl"
+            [src]="shoe.imageUrl"
             alt="{{ shoe.Brand_Name }} {{ shoe.Type_Name }}"
             class="w-32 h-32 object-contain rounded bg-white p-1 hover:scale-105 transition"
-            (click)="openImage(shoe.ImageUrl)"
+            (click)="openImage(shoe.imageUrl)"
           >
         </div>
       </div>
     </div>
   </div>
+
 
   <!-- 🔍 Vergrote afbeelding in overlay -->
   <div
@@ -162,6 +163,7 @@
 <div
   *ngIf="selectedShoeIds.length > 0"
   class="fixed bottom-6 right-6 z-50 cursor-pointer"
+  (click)="ContinueToOrder()"
 >
   <div class="relative bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition">
     <!-- 🛒 Mandje icoon -->
@@ -178,4 +180,5 @@
     </span>
   </div>
 </div>
+
 

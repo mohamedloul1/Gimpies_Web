@@ -5,6 +5,8 @@ import { Shoe } from '../../models/shoe.model';
 import { TaskBaseMagicComponent, magicProviders, MagicServices } from "@magic-xpa/angular";
 import { Router } from "@angular/router";
 import { UserSessionService } from "../../services/user-session.service";
+import { ShoeSelectionService } from '../../services/shoe-selection.service';
+
 
 @Component({
   selector: 'mga-Shoe_View',
@@ -14,33 +16,34 @@ import { UserSessionService } from "../../services/user-session.service";
 })
 export class Shoe_View extends TaskBaseMagicComponent {
 
-  // 🔗 Magic xpa controls
+  // Magic xpa controls
   mgc = MgControlName;
   mgcp = MgCustomProperties;
   mgfc!: MgFormControlsAccessor;
 
-  // 📦 Schoenendata + filters
-  Shoe_Data: any[] = [];
+  // Schoenendata + filters
+  Shoe_Data: Shoe[] = []; // <- weer met hoofdletters
   selectedImage: string | null = null;
 
-  // 🔍 Zoekterm
+  // Zoekterm
   searchTerm: string = '';
 
-  // 📋 Merkenfilter
+  // Merkenfilter
   selectedBrand: string = '';
   uniqueBrands: string[] = [];
   brandDropdownOpen = false;
 
 
-  // 🎨 Kleurfilter
+  // Kleurfilter
   selectedColor: string = '';
   uniqueColors: string[] = [];
   colorDropdownOpen = false;
 
-  //prijs range filter
+  // prijs range filter
   maxPrice: number | null = null;
 
   selectedShoeIds: number[] = [];
+  showCreateOrder = false;
 
 
 
@@ -49,17 +52,19 @@ export class Shoe_View extends TaskBaseMagicComponent {
     ref: ChangeDetectorRef,
     magicServices: MagicServices,
     private router: Router,
-    private sessionService: UserSessionService
+    private sessionService: UserSessionService,
+    private selectionService: ShoeSelectionService
+
   ) {
     super(ref, magicServices);
   }
 
-  // 🔧 Magic xpa formcontrols koppelen
+  // Magic xpa formcontrols koppelen
   override createFormControlsAccessor(formGroup: FormGroup) {
     this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
   }
 
-  // 📥 Schoenendata binnenhalen en verrijken met afbeelding + unieke filters
+  // Schoenendata binnenhalen en verrijken met afbeelding + unieke filters
   getShoeData(Shoe_Data: string): void {
     try {
       const parsed = JSON.parse(Shoe_Data);
@@ -72,7 +77,7 @@ export class Shoe_View extends TaskBaseMagicComponent {
 
         return {
           ...item,
-          ImageUrl: imageUrl
+          imageUrl: imageUrl
         };
       });
 
@@ -87,8 +92,8 @@ export class Shoe_View extends TaskBaseMagicComponent {
   }
 
   // 🔍 Vergrote afbeelding tonen
-  openImage(imageUrl: string): void {
-    this.selectedImage = imageUrl;
+  openImage(imageUrl: string | undefined): void {
+    this.selectedImage = imageUrl ?? null;
   }
 
   // ❌ Overlay sluiten
@@ -122,8 +127,16 @@ export class Shoe_View extends TaskBaseMagicComponent {
 
   // 🚀 Start lifecycle (optioneel uitbreidbaar)
   override ngOnInit(): void {
-    super.ngOnInit(); // Belangrijk voor Magic xpa
+    super.ngOnInit();
+
+    // 🧠 Herstel selectie-ids uit service
+    const restored = this.selectionService.getSelectedShoes();
+    this.selectedShoeIds = restored.map(shoe => shoe.ShoeID);
+
+    console.log("🔄 Geselecteerde IDs hersteld:", this.selectedShoeIds);
   }
+
+
 
   // 📋 Merken verzamelen voor dropdown
   extractUniqueBrands(): void {
@@ -160,15 +173,19 @@ export class Shoe_View extends TaskBaseMagicComponent {
     const index = this.selectedShoeIds.indexOf(shoeId);
 
     if (index > -1) {
-      // Verwijder selectie
+      // Verwijder uit selectie
       this.selectedShoeIds.splice(index, 1);
     } else {
       // Voeg toe aan selectie
       this.selectedShoeIds.push(shoeId);
     }
-    console.log('✅ Geselecteerd:', this.getSelectedShoes());
 
+    const geselecteerdeSchoenen = this.getSelectedShoes();
+    this.selectionService.setSelectedShoes(geselecteerdeSchoenen); // ✅ direct opslaan
+
+    console.log('✅ Geselecteerd & opgeslagen:', geselecteerdeSchoenen);
   }
+
 
   isSelected(shoeId: number): boolean {
     return this.selectedShoeIds.includes(shoeId);
@@ -176,6 +193,19 @@ export class Shoe_View extends TaskBaseMagicComponent {
 
   getSelectedShoes(): Shoe[] {
     return this.Shoe_Data.filter(shoe => this.selectedShoeIds.includes(shoe.ShoeID));
+  }
+
+  // Bij klikken op "Maak order"
+  ContinueToOrder(): void {
+    const geselecteerdeSchoenen = this.getSelectedShoes();
+    console.log('✅ Te versturen naar service:', geselecteerdeSchoenen);
+    this.showCreateOrder = true;
+
+    this.selectionService.setSelectedShoes(geselecteerdeSchoenen);
+    this.router.navigate(['/create-order']);
+  }
+  closeCreateOrder(): void {
+    this.showCreateOrder = false;
   }
 
 

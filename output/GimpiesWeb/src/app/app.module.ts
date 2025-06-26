@@ -22,6 +22,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RedirectHomeComponent } from './components/redirect-home/redirect-home.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { MatSliderModule } from '@angular/material/slider';
+import { ShoeCardComponent } from './shared/components/shoe-card/shoe-card.component';
 
 
 
@@ -37,6 +38,8 @@ import { MatSliderModule } from '@angular/material/slider';
     ConfirmDialogComponent,
     UnauthorizedComponent,
     RedirectHomeComponent,
+    ShoeCardComponent,
+
   ],
   imports: [
     BrowserModule,

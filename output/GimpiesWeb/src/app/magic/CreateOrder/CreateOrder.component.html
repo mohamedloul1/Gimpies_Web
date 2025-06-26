@@ -6,6 +6,75 @@
         style="display: flex; flex-direction: column"
         [magic]="mgc.CreateOrder"
     >
+
+      <!-- Hierna je formulier of lijst -->
+
+      <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label134217739"
+                class="lable_overflow mgFont1"
+            >
+                OrderID
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_OrderID"
+                            [formControlName]="mgc.V_OrderID"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_OrderID> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label134217741"
+                class="lable_overflow mgFont1"
+            >
+                UserID
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_UserID"
+                            [formControlName]="mgc.V_UserID"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_UserID> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Label134217743"
+                class="lable_overflow mgFont1"
+            >
+                ShoeID
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_ShoeID"
+                            [formControlName]="mgc.V_ShoeID"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_ShoeID> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
         <div style="display: flex; flex-direction: row">
             <button
                 mat-raised-button
@@ -15,5 +84,16 @@
                 Button
             </button>
         </div>
+      <div class="shoe-card" *ngFor="let shoe of selectedShoes">
+        <img [src]="shoe.imageUrl" alt="Schoen afbeelding" class="shoe-img" />
+        <div class="shoe-info">
+          <h3>{{ shoe.Brand_Name }}</h3>
+          <p>Type: {{ shoe.Type_Name }}</p>
+          <p>Kleur: {{ shoe.Color_Name }}</p>
+          <p>Prijs: €{{ shoe.Price }}</p>
+        </div>
+      </div>
+
+
     </div>
 </div>
