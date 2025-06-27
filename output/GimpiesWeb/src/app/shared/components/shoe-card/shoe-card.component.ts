@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Shoe } from '../../../models/shoe.model';
 
 @Component({
   selector: 'app-shoe-card',
@@ -6,14 +7,20 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./shoe-card.component.scss']
 })
 export class ShoeCardComponent {
-  @Input() shoe!: any; // eventueel met een Shoe-interface
-  selectedImage: string | null = null;
+  @Input() shoe!: Shoe;
+  @Input() selected: boolean = false;
+  @Input() readonly: boolean = false;
 
-  openImage(imageUrl: string | undefined): void {
-    this.selectedImage = imageUrl ?? null;
+
+  @Output() toggle = new EventEmitter<number>();
+  @Output() imageClick = new EventEmitter<string>();
+
+  onCardClick(): void {
+    this.toggle.emit(this.shoe.ShoeID);
   }
 
-  closeImage(): void {
-    this.selectedImage = null;
+  onImageClick(event: MouseEvent): void {
+    event.stopPropagation();
+    this.imageClick.emit(this.shoe.imageUrl);
   }
 }

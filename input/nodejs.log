@@ -19,9 +19,7 @@ generating components
 [>] generate component CreateOrder
 [>] Step 4: components-list.
 [>]  ********************************* E N D    GENERATE *********************************
-UPDATE src/app/magic/CreateOrder/CreateOrder.mg.controls.g.ts (605 bytes)
-UPDATE src/app/magic/CreateOrder/CreateOrder.component.ts (707 bytes)
-UPDATE src/app/magic/CreateOrder/CreateOrder.component.html (439 bytes)
+UPDATE src/app/magic/CreateOrder/CreateOrder.mg.controls.g.ts (1170 bytes)
 
 
 

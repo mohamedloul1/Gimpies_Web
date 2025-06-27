@@ -1,151 +1,123 @@
 <!-- Magic xpa formuliercontainer -->
 <div novalidate [formGroup]="screenFormGroup">
-  <div [magic]="mgc.Shoe_View">
-    <!-- Magic gegenereerde inhoud komt hier binnen -->
-  </div>
+  <div [magic]="mgc.Shoe_View"></div>
 </div>
 
-<!-- 🔍 Zoekveld + filters -->
-<div class="mb-6 flex flex-col sm:flex-row gap-4 items-center justify-center">
-  <!-- 🔤 Zoekveld voor merk, type of kleur -->
-  <input
-    type="text"
-    [(ngModel)]="searchTerm"
-    placeholder="Zoek op merk, type of kleur..."
-    class="search-input w-full sm:w-96 px-4 py-2 rounded-full shadow-sm transition"
-  >
 
-  <!-- 📋 Dropdown voor merkfilter -->
-  <!-- Custom dropdown voor merken -->
-  <div class="relative w-full sm:w-60">
-    <button
-      (click)="toggleBrandDropdown()"
-      class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
-    >
-      <span>{{ selectedBrand || 'Alle merken' }}</span>
-      <span>▼</span>
-    </button>
 
-    <div
-      *ngIf="brandDropdownOpen"
-      class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
-    >
-      <div
-        class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-        (click)="selectBrand('')"
+<!--Filter Container-->
+<div class="w-full max-w-screen-lg mx-auto">
+  <!-- Zoekveld + filters -->
+  <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+    <!-- Zoekveld -->
+    <div class="w-full">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        placeholder="Zoek op merk, type of kleur..."
+        class="search-input w-full px-4 py-2 rounded-full shadow-sm transition"
+      />
+    </div>
+
+    <!-- Merk dropdown -->
+    <div class="relative w-full">
+      <button
+        (click)="toggleBrandDropdown()"
+        class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
       >
-        Alle merken
-      </div>
-
+        <span class="truncate">{{ selectedBrand || 'Alle merken' }}</span>
+        <span>▼</span>
+      </button>
       <div
-        *ngFor="let brand of uniqueBrands"
-        class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-        (click)="selectBrand(brand)"
+        *ngIf="brandDropdownOpen"
+        class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
       >
-        {{ brand }}
+        <div
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          (click)="selectBrand('')"
+        >
+          Alle merken
+        </div>
+        <div
+          *ngFor="let brand of uniqueBrands"
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+          (click)="selectBrand(brand)"
+        >
+          {{ brand }}
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- 🎨 Custom dropdown voor kleurenfilter (met visuele blokjes) -->
-  <div class="relative w-full sm:w-60">
-    <button
-      (click)="toggleColorDropdown()"
-      class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
-    >
-      <!-- Geselecteerde kleur weergeven met blokje -->
-      <span class="flex items-center gap-2">
-        <span
-          class="inline-block w-4 h-4 rounded-full"
-          [style.backgroundColor]="selectedColor?.toLowerCase() || '#e5e7eb'"
-        ></span>
+    <!-- Kleur dropdown -->
+    <div class="relative w-full">
+      <button
+        (click)="toggleColorDropdown()"
+        class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
+      >
+      <span class="flex items-center gap-2 truncate">
+        <span class="inline-block w-4 h-4 rounded-full" [style.backgroundColor]="selectedColor?.toLowerCase() || '#e5e7eb'"></span>
         {{ selectedColor || 'Alle kleuren' }}
       </span>
-      <span>▼</span>
-    </button>
-
-    <!-- 📦 Dropdownlijst met kleuren -->
-    <div
-      *ngIf="colorDropdownOpen"
-      class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
-    >
-      <!-- Optie: alle kleuren -->
+        <span>▼</span>
+      </button>
       <div
-        class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-        (click)="selectColor('')"
+        *ngIf="colorDropdownOpen"
+        class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
       >
-        <span class="inline-block w-4 h-4 rounded-full bg-gray-200"></span>
-        <span>Alle kleuren</span>
-      </div>
-
-      <!-- Dynamisch gegenereerde kleuropties -->
-      <div
-        *ngFor="let color of uniqueColors"
-        class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-        (click)="selectColor(color)"
-      >
+        <div
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+          (click)="selectColor('')"
+        >
+          <span class="inline-block w-4 h-4 rounded-full bg-gray-200"></span>
+          <span>Alle kleuren</span>
+        </div>
+        <div
+          *ngFor="let color of uniqueColors"
+          class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+          (click)="selectColor(color)"
+        >
         <span
           class="inline-block w-4 h-4 rounded-full"
           [style.backgroundColor]="color.toLowerCase()"
         ></span>
-        <span>{{ color }}</span>
+          <span>{{ color }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- 💸 Max prijs slider -->
-  <div class="flex flex-col items-start w-full sm:w-60">
-    <label class="mb-1 text-sm font-medium">Max prijs: €{{ maxPrice || '∞' }}</label>
-    <mat-slider
-      [(ngModel)]="maxPrice"
-      [min]="0"
-      [max]="200"
-      [step]="5"
-      thumbLabel
-      class="w-full"
-    ></mat-slider>
-  </div>
 
-
+    <!-- Max prijs slider -->
+    <div class="flex flex-col w-full">
+      <label class="mb-1 text-sm font-medium">Max prijs: €{{ maxPrice || '∞' }}</label>
+      <mat-slider
+        [(ngModel)]="maxPrice"
+        [min]="0"
+        [max]="200"
+        [step]="5"
+        thumbLabel
+        class="w-full"
+      ></mat-slider>
+    </div>
+  </div>
 </div>
 
 
-<!-- 👟 Schoenen-cards overzicht -->
-<div *ngIf="Shoe_Data.length > 0" class="mt-6">
-  <!-- 📐 Responsieve grid layout: max 4 per rij -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-    <!-- 🔁 Itereer over gefilterde schoenen -->
-    <div
-      *ngFor="let shoe of filteredShoes"
-      class="shoe-card p-4 bg-white rounded-xl shadow cursor-pointer transition border-2"
-      [class.selected]="isSelected(shoe.ShoeID)"
-      (click)="toggleSelect(shoe.ShoeID)"
-    >      <!-- 📦 Card-inhoud: tekst links, afbeelding rechts -->
-      <div class="flex items-center justify-between w-full gap-4">
-        <!-- 📃 Schoeninformatie links -->
-        <div class="text-left flex-1">
-          <h3 class="text-lg font-bold">{{ shoe.Brand_Name }} - {{ shoe.Type_Name }}</h3>
-          <p>Maat: {{ shoe.Value }}</p>
-          <p>Kleur: {{ shoe.Color_Name }}</p>
-          <p>Voorraad: {{ shoe.Quantity }}</p>
-          <p class="font-semibold">€{{ shoe.Price }}</p>
-        </div>
+<div class="container mx-auto px-4 md:px-6">
 
-        <!-- 🖼️ Afbeelding rechts -->
-        <div class="flex-shrink-0">
-          <img
-            [src]="shoe.imageUrl"
-            alt="{{ shoe.Brand_Name }} {{ shoe.Type_Name }}"
-            class="w-32 h-32 object-contain rounded bg-white p-1 hover:scale-105 transition"
-            (click)="openImage(shoe.imageUrl)"
-          >
-        </div>
-      </div>
+<!-- 👟 Schoenen cards -->
+<div *ngIf="Shoe_Data.length > 0" class="mt-6">
+  <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+    <div *ngFor="let shoe of filteredShoes" class="h-full">
+      <app-shoe-card
+        class="h-full"
+        [shoe]="shoe"
+        [selected]="isSelected(shoe.ShoeID)"
+        (toggle)="toggleSelect($event)"
+        (imageClick)="openImage($event)"
+      ></app-shoe-card>
     </div>
   </div>
 
-
-  <!-- 🔍 Vergrote afbeelding in overlay -->
+  <!-- 📸 Vergrote afbeelding overlay -->
   <div
     *ngIf="selectedImage"
     class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
@@ -155,8 +127,9 @@
       [src]="selectedImage"
       class="max-w-[90%] max-h-[90%] rounded shadow-lg"
       (click)="$event.stopPropagation()"
-    />
+    >
   </div>
+</div>
 </div>
 
 <!-- 🛒 Zwevend selectie-icoon -->
@@ -166,19 +139,17 @@
   (click)="ContinueToOrder()"
 >
   <div class="relative bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition">
-    <!-- 🛒 Mandje icoon -->
     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
          viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5h10.9M7 13l-1.35 2.7M17 13l1.35 2.7M9 21h.01M15 21h.01" />
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5h10.9M7 13l-1.35 2.7M17 13l1.35 2.7M9 21h.01M15 21h.01"/>
     </svg>
 
-    <!-- 🔢 Aantal geselecteerde items -->
+    <!-- 🔢 Geselecteerde aantal -->
     <span
-      class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow">
+      class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow"
+    >
       {{ selectedShoeIds.length }}
     </span>
   </div>
 </div>
-
-

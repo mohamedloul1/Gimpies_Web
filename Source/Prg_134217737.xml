@@ -29,9 +29,9 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739428" _time="35735" date="26/06/2025" time="09:55:35"/>
+          <LastModified _date="739428" _time="46162" date="26/06/2025" time="12:49:22"/>
         </Header>
-        <ItemIsn val="11"/>
+        <ItemIsn val="13"/>
         <Resource>
           <Columns>
             <Column id="134217729" name="OrderID">
@@ -53,6 +53,23 @@
             <Column id="134217731" name="ShoeID">
               <PropertyList model="FIELD">
                 <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554433"/>
+                <DbColumnName id="178"/>
+                <Type id="179"/>
+                <UserType id="180"/>
+              </PropertyList>
+            </Column>
+            <Column id="134217732" name="Quantity">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554437"/>
+                <DbColumnName id="178"/>
+                <Type id="179"/>
+                <UserType id="180"/>
+              </PropertyList>
+            </Column>
+            <Column id="134217733" name="OrderType">
+              <PropertyList model="FIELD">
+                <Model attr_obj="FIELD_ALPHA" comp="-1" id="1" obj="33554434"/>
+                <StoredAs id="173" val="1"/>
                 <DbColumnName id="178"/>
                 <Type id="179"/>
                 <UserType id="180"/>
@@ -143,6 +160,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="2"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -156,6 +174,7 @@
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="3"/>
                   <DIFF_UPDATE val="T"/>
                   <PartOfDataview val="Y"/>
                   <Condition val="Y"/>
@@ -166,6 +185,33 @@
               <LogicLine>
                 <Select FieldID="134217739" FlowIsn="134217748" id="134217739">
                   <Column val="134217731"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <_DitIndexForToolkit val="6"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="134217740" FlowIsn="134217750" id="134217740">
+                  <Column val="134217732"/>
+                  <Type val="V"/>
+                  <ExposedToRoute val="N"/>
+                  <IsParameter val="N"/>
+                  <DIFF_UPDATE val="T"/>
+                  <PartOfDataview val="Y"/>
+                  <Condition val="Y"/>
+                  <Modifier val="S"/>
+                  <Direction val="C"/>
+                </Select>
+              </LogicLine>
+              <LogicLine>
+                <Select FieldID="134217741" FlowIsn="134217751" id="134217741">
+                  <Column val="134217733"/>
                   <Type val="V"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
@@ -213,12 +259,84 @@
           </LogicUnit>
         </TaskLogic>
         <TaskForms>
-          <FormEntry _last_isn="9" _last_test_id="9" id="1">
+          <FormEntry _last_isn="15" _last_test_id="15" id="1">
             <PropertyList model="FORM_WEB_CLIENT">
               <FormUnits id="33" val="4"/>
               <_Comment id="218"/>
               <FormName id="311" valUnicode="CreateOrder"/>
             </PropertyList>
+            <Control _test_id="11" id="134217739">
+              <PropertyList model="CTRL_WEB_CLIENT_LABEL">
+                <Text id="19" valUnicode="OrderID"/>
+                <X id="21" val="126"/>
+                <Y id="22" val="35"/>
+                <Width id="23" val="39"/>
+                <Height id="24" val="15"/>
+                <ControlName id="46" val="Label134217739"/>
+                <Font id="50" val="1"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="1" _test_id="10" id="134217738">
+              <PropertyList model="CTRL_WEB_CLIENT_EDIT">
+                <Model ID="MODEL_WEB_CLIENT" id="1">
+                  <Var FieldID="134217737"/>
+                </Model>
+                <X id="21" val="170"/>
+                <Y id="22" val="35"/>
+                <Width id="23" val="60"/>
+                <Height id="24" val="20"/>
+                <Data FieldID="134217737" id="43"/>
+                <ControlName id="46" val="V_OrderID"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="1" _test_id="12" id="134217740">
+              <PropertyList model="CTRL_WEB_CLIENT_EDIT">
+                <Model ID="MODEL_WEB_CLIENT" id="1">
+                  <Var FieldID="134217738"/>
+                </Model>
+                <X id="21" val="211"/>
+                <Y id="22" val="86"/>
+                <Width id="23" val="60"/>
+                <Height id="24" val="20"/>
+                <Data FieldID="134217738" id="43"/>
+                <ControlName id="46" val="V_UserID"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="13" id="134217741">
+              <PropertyList model="CTRL_WEB_CLIENT_LABEL">
+                <Text id="19" valUnicode="UserID"/>
+                <X id="21" val="170"/>
+                <Y id="22" val="91"/>
+                <Width id="23" val="35"/>
+                <Height id="24" val="15"/>
+                <ControlName id="46" val="Label134217741"/>
+                <Font id="50" val="1"/>
+              </PropertyList>
+            </Control>
+            <Control _test_id="15" id="134217743">
+              <PropertyList model="CTRL_WEB_CLIENT_LABEL">
+                <Text id="19" valUnicode="ShoeID"/>
+                <X id="21" val="101"/>
+                <Y id="22" val="124"/>
+                <Width id="23" val="38"/>
+                <Height id="24" val="15"/>
+                <ControlName id="46" val="Label134217743"/>
+                <Font id="50" val="1"/>
+              </PropertyList>
+            </Control>
+            <Control PDOD="1" _test_id="14" id="134217742">
+              <PropertyList model="CTRL_WEB_CLIENT_EDIT">
+                <Model ID="MODEL_WEB_CLIENT" id="1">
+                  <Var FieldID="134217739"/>
+                </Model>
+                <X id="21" val="144"/>
+                <Y id="22" val="124"/>
+                <Width id="23" val="60"/>
+                <Height id="24" val="20"/>
+                <Data FieldID="134217739" id="43"/>
+                <ControlName id="46" val="V_ShoeID"/>
+              </PropertyList>
+            </Control>
             <Control PDOD="128" _test_id="3" id="134217731">
               <PropertyList model="CTRL_WEB_CLIENT_BUTTON">
                 <X id="21" val="294"/>
@@ -253,9 +371,9 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739428" _time="35735" date="26/06/2025" time="09:55:35"/>
+            <LastModified _date="739428" _time="45073" date="26/06/2025" time="12:31:13"/>
           </Header>
-          <ItemIsn val="4"/>
+          <ItemIsn val="5"/>
           <Resource>
             <DB id="134217729">
               <DataObject comp="-1" obj="134217739"/>
@@ -344,7 +462,31 @@
                   </DATAVIEW_SRC>
                 </LogicLine>
                 <LogicLine>
-                  <LNK Direction="A" EVL_CND="R" FlowIsn="134217730" Key="134217729" Mode="A" SortType="134217731" VIEW="1" VIEWS="3">
+                  <LNK Direction="D" EVL_CND="R" FlowIsn="134217737" Key="134217729" Mode="R" SortType="134217738" VIEW="1" VIEWS="1">
+                    <DB comp="-1" obj="134217739"/>
+                    <Condition val="Y"/>
+                  </LNK>
+                </LogicLine>
+                <LogicLine>
+                  <Select FieldID="134217733" FlowIsn="134217739" id="134217733">
+                    <Column val="134217729"/>
+                    <Type val="R"/>
+                    <ExposedToRoute val="N"/>
+                    <IsParameter val="N"/>
+                    <INT_RCMP_INFO>
+                      <v>134217732</v>
+                    </INT_RCMP_INFO>
+                    <DIFF_UPDATE val="T"/>
+                    <Condition val="N"/>
+                    <Modifier val="S"/>
+                    <Direction val="C"/>
+                  </Select>
+                </LogicLine>
+                <LogicLine>
+                  <END_LINK FlowIsn="134217738"/>
+                </LogicLine>
+                <LogicLine>
+                  <LNK Direction="A" EVL_CND="R" FlowIsn="134217730" Key="134217729" Mode="A" SortType="134217731" VIEW="2" VIEWS="3">
                     <DB comp="-1" obj="134217739"/>
                     <Condition val="Y"/>
                   </LNK>
@@ -364,6 +506,7 @@
                 </LogicLine>
                 <LogicLine>
                   <Select FieldID="134217731" FlowIsn="134217734" id="134217731">
+                    <ASS val="134217730"/>
                     <Column val="134217730"/>
                     <Type val="R"/>
                     <ExposedToRoute val="N"/>
@@ -376,6 +519,7 @@
                 </LogicLine>
                 <LogicLine>
                   <Select FieldID="134217732" FlowIsn="134217735" id="134217732">
+                    <ASS val="134217731"/>
                     <Column val="134217731"/>
                     <Type val="R"/>
                     <ExposedToRoute val="N"/>
@@ -402,7 +546,15 @@
           </TaskForms>
           <Expressions>
             <Expression id="134217729">
-              <ExpSyntax val="7"/>
+              <ExpSyntax val="{0,134217733} + 1"/>
+              <ExpAttribute val="N"/>
+            </Expression>
+            <Expression id="134217730">
+              <ExpSyntax val="{1,134217738}"/>
+              <ExpAttribute val="N"/>
+            </Expression>
+            <Expression id="134217731">
+              <ExpSyntax val="{1,134217739}"/>
               <ExpAttribute val="N"/>
             </Expression>
           </Expressions>

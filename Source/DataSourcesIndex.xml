@@ -28,6 +28,6 @@
 <DataObject PhysicalName="Color" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217736" name="Color" offset="17180" length="2616"/> 
 <DataObject PhysicalName="Size" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217737" name="Size" offset="19797" length="2741"/> 
 <DataObject PhysicalName="Selected_Shoes" Resident="N" UniqueISNConvState="12" data_source="Memory" id="134217738" name="Selected_Shoes" offset="22539" length="3271"/> 
-<DataObject PhysicalName="Orders" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217739" name="Orders" offset="25811" length="2661"/>  </DataObjects>
+<DataObject PhysicalName="Orders" Resident="N" UniqueISNConvState="12" data_source="GimpiesWeb" id="134217739" name="Orders" offset="25811" length="3756"/>  </DataObjects>
  </DataSourceRepository>
- <LastModified val="31188591-203205868"/>  </Application>
+ <LastModified val="31188615147946658"/>  </Application>

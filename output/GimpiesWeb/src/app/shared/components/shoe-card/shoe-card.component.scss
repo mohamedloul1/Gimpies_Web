@@ -1,19 +1,24 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .shoe-card {
-  padding: 1rem;
-  border-radius: 0.75rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  border: 1px solid $color-muted;
+  height: 100%;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid $color-muted;
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .shoe-card.selected {
-  border-color: $color-accent;
-  background-color: lighten($color-accent, 40%);
+  border-color: #1C3A2B;
+  background-color: lighten($color-accent, 30%);
 }
+
 .shoe-card.selected::after {
   content: "✓";
   position: absolute;

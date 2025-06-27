@@ -22,7 +22,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { RedirectHomeComponent } from './components/redirect-home/redirect-home.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { MatSliderModule } from '@angular/material/slider';
-import { ShoeCardComponent } from './shared/components/shoe-card/shoe-card.component';
+import { ShoeCardModule } from './shared/components/shoe-card/shoe-card.module';
+
 
 
 
@@ -37,9 +38,7 @@ import { ShoeCardComponent } from './shared/components/shoe-card/shoe-card.compo
     SessionBridgeComponent,
     ConfirmDialogComponent,
     UnauthorizedComponent,
-    RedirectHomeComponent,
-    ShoeCardComponent,
-
+    RedirectHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +55,8 @@ import { ShoeCardComponent } from './shared/components/shoe-card/shoe-card.compo
     MatButtonModule,
     MatTooltipModule,
     MatSliderModule,
+    ShoeCardModule
+
 
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],

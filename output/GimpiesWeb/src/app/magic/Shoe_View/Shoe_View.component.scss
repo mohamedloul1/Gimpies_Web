@@ -1,38 +1,23 @@
-@import '../../shared/styles/variables'; // 🎨 Kleurvariabelen importeren
+@import '../../shared/styles/variables';
 
-// 👟 Styling voor de schoenencard
-.shoe-card {
-  padding: 1rem;
-  border-radius: 0.75rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  border: 1px solid $color-muted; // gebruik eigen grijstint voor rand
-  position: relative;
-
-}
-
-// 🔍 Zoekveld (input veld) styling
+// Zoekveld (input veld) styling
 .search-input,
 .filter-select{
-  border: 2px solid $color-muted; // subtiele rand
-  color: $color-text; // primaire tekstkleur
-  background-color: $color-surface; // achtergronddesign
+  border: 2px solid $color-muted;
+  color: $color-text;
+  background-color: $color-surface;
   font-size: 1rem;
   transition: all 0.2s ease;
 
-
   &::placeholder {
-    color: $color-muted; // placeholderkleur
+    color: $color-muted;
     opacity: 0.7;
   }
 
   &:focus {
     outline: none;
-    border-color: $color-accent; // highlightkleur
-    box-shadow: 0 0 0 3px rgba($color-accent, 0.3); // blauwe focusring
-    //background-color: #fff;
-
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.3);
   }
 }
 
@@ -40,15 +25,16 @@
   border-color: $color-accent;
   background-color: lighten($color-accent, 40%);
 }
-.shoe-card.selected::after {
-  content: "✓";
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  color: #3b82f6;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
+////Select Styling
+//.shoe-card.selected::after {
+//  content: "✓";
+//  position: absolute;
+//  top: 0.5rem;
+//  right: 0.5rem;
+//  color: #3b82f6;
+//  font-size: 1.2rem;
+//  font-weight: bold;
+//}
 
 
 

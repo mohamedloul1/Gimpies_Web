@@ -1,99 +1,114 @@
 <div
-    novalidate
-    [formGroup]="screenFormGroup"
+  novalidate
+  [formGroup]="screenFormGroup"
 >
-    <div
-        style="display: flex; flex-direction: column"
-        [magic]="mgc.CreateOrder"
-    >
+  <div
+    style="display: flex; flex-direction: column"
+    [magic]="mgc.CreateOrder"
+  >
 
-      <!-- Hierna je formulier of lijst -->
+    <!-- 🧾 Formulier -->
+    <div style="display: flex; flex-direction: row">
+      <label
+        [magic]="mgc.Label134217739"
+        class="lable_overflow mgFont1"
+      >
+        OrderID
+      </label>
+      <div>
+        <mat-form-field>
+          <div>
+            <input
+              matInput
+              type="number"
+              [magic]="mgc.V_OrderID"
+              [formControlName]="mgc.V_OrderID"
+              mgFormat
+            >
+            <mgError [magic]="mgc.V_OrderID"></mgError>
+          </div>
+        </mat-form-field>
+      </div>
+    </div>
 
-      <div style="display: flex; flex-direction: row">
-            <label
-                [magic]="mgc.Label134217739"
-                class="lable_overflow mgFont1"
+    <div style="display: flex; flex-direction: row">
+      <label
+        [magic]="mgc.Label134217741"
+        class="lable_overflow mgFont1"
+      >
+        UserID
+      </label>
+      <div>
+        <mat-form-field>
+          <div>
+            <input
+              matInput
+              type="number"
+              [magic]="mgc.V_UserID"
+              [formControlName]="mgc.V_UserID"
+              mgFormat
             >
-                OrderID
-            </label>
-            <div>
-                <mat-form-field>
-                    <div>
-                        <input
-                            matInput
-                            type='number'
-                            [magic]="mgc.V_OrderID"
-                            [formControlName]="mgc.V_OrderID"
-                            mgFormat
-                        >
-                        <mgError [magic]=mgc.V_OrderID> </mgError>
-                    </div>
-                </mat-form-field>
-            </div>
-        </div>
-        <div style="display: flex; flex-direction: row">
-            <label
-                [magic]="mgc.Label134217741"
-                class="lable_overflow mgFont1"
+            <mgError [magic]="mgc.V_UserID"></mgError>
+          </div>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row">
+      <label
+        [magic]="mgc.Label134217743"
+        class="lable_overflow mgFont1"
+      >
+        ShoeID
+      </label>
+      <div>
+        <mat-form-field>
+          <div>
+            <input
+              matInput
+              type="number"
+              [magic]="mgc.V_ShoeID"
+              [formControlName]="mgc.V_ShoeID"
+              mgFormat
             >
-                UserID
-            </label>
-            <div>
-                <mat-form-field>
-                    <div>
-                        <input
-                            matInput
-                            type='number'
-                            [magic]="mgc.V_UserID"
-                            [formControlName]="mgc.V_UserID"
-                            mgFormat
-                        >
-                        <mgError [magic]=mgc.V_UserID> </mgError>
-                    </div>
-                </mat-form-field>
-            </div>
-        </div>
-        <div style="display: flex; flex-direction: row">
-            <label
-                [magic]="mgc.Label134217743"
-                class="lable_overflow mgFont1"
-            >
-                ShoeID
-            </label>
-            <div>
-                <mat-form-field>
-                    <div>
-                        <input
-                            matInput
-                            type='number'
-                            [magic]="mgc.V_ShoeID"
-                            [formControlName]="mgc.V_ShoeID"
-                            mgFormat
-                        >
-                        <mgError [magic]=mgc.V_ShoeID> </mgError>
-                    </div>
-                </mat-form-field>
-            </div>
-        </div>
-        <div style="display: flex; flex-direction: row">
-            <button
-                mat-raised-button
-                color="primary"
-                [magic]="mgc.Btn_CreateOrder"
-            >
-                Button
-            </button>
-        </div>
-      <div class="shoe-card" *ngFor="let shoe of selectedShoes">
-        <img [src]="shoe.imageUrl" alt="Schoen afbeelding" class="shoe-img" />
-        <div class="shoe-info">
-          <h3>{{ shoe.Brand_Name }}</h3>
-          <p>Type: {{ shoe.Type_Name }}</p>
-          <p>Kleur: {{ shoe.Color_Name }}</p>
-          <p>Prijs: €{{ shoe.Price }}</p>
-        </div>
+            <mgError [magic]="mgc.V_ShoeID"></mgError>
+          </div>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: row">
+      <button
+        mat-raised-button
+        color="primary"
+        [magic]="mgc.Btn_CreateOrder"
+      >
+        Button
+      </button>
+    </div>
+
+    <!-- 🧾 Geselecteerde schoenen (cards) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mt-4">
+      <div *ngFor="let shoe of selectedShoes">
+        <app-shoe-card
+          [shoe]="shoe"
+          [selected]="false"
+          [readonly]="true"
+          (imageClick)="openImage($event)"
+
+        ></app-shoe-card>
+      </div>
+      <div *ngIf="selectedImage" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        (click)="selectedImage = null"
+      >
+        <img
+          [src]="selectedImage"
+          class="max-w-[90%] max-h-[90%] rounded shadow-lg"
+          (click)="$event.stopPropagation()"
+        >
       </div>
 
-
     </div>
+
+  </div>
 </div>

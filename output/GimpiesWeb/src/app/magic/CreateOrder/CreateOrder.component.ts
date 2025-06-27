@@ -22,6 +22,11 @@ export class CreateOrder extends TaskBaseMagicComponent implements OnInit {
 
   selectedShoes: Shoe[] = [];
 
+
+  //Cared img
+  selectedImage: string | null = null;
+
+
   constructor(
     ref: ChangeDetectorRef,
     magicServices: MagicServices,
@@ -37,13 +42,14 @@ export class CreateOrder extends TaskBaseMagicComponent implements OnInit {
   override ngOnInit(): void {
     super.ngOnInit();
 
-    // ✅ Geselecteerde schoenen ophalen uit service
+    //Geselecteerde schoenen ophalen uit service
     this.selectedShoes = this.selectionService.getSelectedShoes();
-
     console.log("🛒 Ontvangen selectie:", this.selectedShoes);
   }
-
-  protected readonly close = close;
+  openImage(imageUrl: string): void {
+    console.log('📸 Image clicked:', imageUrl);
+    this.selectedImage = imageUrl;
+  }
 
 
 }

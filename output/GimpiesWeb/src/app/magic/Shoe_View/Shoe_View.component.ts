@@ -14,6 +14,7 @@ import { ShoeSelectionService } from '../../services/shoe-selection.service';
   templateUrl: './Shoe_View.component.html',
   styleUrls: ['./Shoe_View.component.scss']
 })
+
 export class Shoe_View extends TaskBaseMagicComponent {
 
   // Magic xpa controls
@@ -22,7 +23,7 @@ export class Shoe_View extends TaskBaseMagicComponent {
   mgfc!: MgFormControlsAccessor;
 
   // Schoenendata + filters
-  Shoe_Data: Shoe[] = []; // <- weer met hoofdletters
+  Shoe_Data: Shoe[] = [];
   selectedImage: string | null = null;
 
   // Zoekterm
@@ -32,7 +33,6 @@ export class Shoe_View extends TaskBaseMagicComponent {
   selectedBrand: string = '';
   uniqueBrands: string[] = [];
   brandDropdownOpen = false;
-
 
   // Kleurfilter
   selectedColor: string = '';
@@ -81,7 +81,7 @@ export class Shoe_View extends TaskBaseMagicComponent {
         };
       });
 
-      // 🔄 Unieke waarden ophalen voor dropdowns
+      // Unieke waarden ophalen voor dropdowns
       this.extractUniqueBrands();
       this.extractUniqueColors();
 
@@ -91,23 +91,23 @@ export class Shoe_View extends TaskBaseMagicComponent {
     }
   }
 
-  // 🔍 Vergrote afbeelding tonen
+  // Vergrote afbeelding tonen
   openImage(imageUrl: string | undefined): void {
     this.selectedImage = imageUrl ?? null;
   }
 
-  // ❌ Overlay sluiten
+  // Overlay sluiten
   closeImage(): void {
     this.selectedImage = null;
   }
 
-  // 🔍 Combineer alle actieve filters (tekst, merk, kleur)
+  // Combineer alle actieve filters (tekst, merk, kleur)
   get filteredShoes() {
     const term = this.searchTerm.toLowerCase();
     const terms = term.split(' ').filter(t => t);
 
     return this.Shoe_Data.filter(shoe => {
-      // 🔤 Tekst zoeken op merk, type, kleur
+      // Tekst zoeken op merk, type, kleur
       const combined = [
         shoe.Brand_Name,
         shoe.Type_Name,
@@ -125,26 +125,24 @@ export class Shoe_View extends TaskBaseMagicComponent {
     });
   }
 
-  // 🚀 Start lifecycle (optioneel uitbreidbaar)
+  // Start lifecycle (optioneel uitbreidbaar)
   override ngOnInit(): void {
     super.ngOnInit();
 
-    // 🧠 Herstel selectie-ids uit service
+    // Herstel selectie-ids uit service
     const restored = this.selectionService.getSelectedShoes();
     this.selectedShoeIds = restored.map(shoe => shoe.ShoeID);
 
     console.log("🔄 Geselecteerde IDs hersteld:", this.selectedShoeIds);
   }
 
-
-
-  // 📋 Merken verzamelen voor dropdown
+  // Merken verzamelen voor dropdown
   extractUniqueBrands(): void {
     const brands = this.Shoe_Data.map(shoe => shoe.Brand_Name);
     this.uniqueBrands = Array.from(new Set(brands)).sort();
   }
 
-  // 🎨 Kleuren verzamelen voor dropdown
+  //  Kleuren verzamelen voor dropdown
   extractUniqueColors(): void {
     const colors = this.Shoe_Data.map(shoe => shoe.Color_Name);
     this.uniqueColors = Array.from(new Set(colors)).sort();
@@ -158,12 +156,12 @@ export class Shoe_View extends TaskBaseMagicComponent {
     this.brandDropdownOpen = false;
   }
 
-  // 🎛️ Custom dropdown toggle
+  // ️ Custom dropdown toggle
   toggleColorDropdown(): void {
     this.colorDropdownOpen = !this.colorDropdownOpen;
   }
 
-  // 🎯 Kleur selecteren
+  // Kleur selecteren
   selectColor(color: string): void {
     this.selectedColor = color;
     this.colorDropdownOpen = false;
@@ -181,7 +179,7 @@ export class Shoe_View extends TaskBaseMagicComponent {
     }
 
     const geselecteerdeSchoenen = this.getSelectedShoes();
-    this.selectionService.setSelectedShoes(geselecteerdeSchoenen); // ✅ direct opslaan
+    this.selectionService.setSelectedShoes(geselecteerdeSchoenen);
 
     console.log('✅ Geselecteerd & opgeslagen:', geselecteerdeSchoenen);
   }
@@ -207,6 +205,4 @@ export class Shoe_View extends TaskBaseMagicComponent {
   closeCreateOrder(): void {
     this.showCreateOrder = false;
   }
-
-
 }

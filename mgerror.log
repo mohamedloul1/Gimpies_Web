@@ -229,3 +229,6 @@
  <39920612529642352> 26/06/2025 09:55:07.976     [Error  ] - Aborting context 39920612529642352, Program: "Main Program".
  <163839514534703968> 26/06/2025 09:56:11.562     [Error  ] - Duplicate index, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
  <163839514534703968> 26/06/2025 10:21:08.381     [Error  ] - Aborting context 163839514534703968, Program: "Main Program".
+ <130580271440230752> 26/06/2025 12:18:16.463     [Error  ] - Aborting context 130580271440230752, Program: "Main Program".
+ <109140849821748768> 26/06/2025 12:51:54.558     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <76050885070378512> 27/06/2025 13:11:16.521     [Error  ] - Aborting context 76050885070378512, Program: "Main Program".
