@@ -22,14 +22,16 @@ export class Shoe_View extends TaskBaseMagicComponent {
   mgcp = MgCustomProperties;
   mgfc!: MgFormControlsAccessor;
 
-  // Schoenendata + filters
+  // Alle schoenen die geladen worden vanuit backend
   Shoe_Data: Shoe[] = [];
+  // Alleen de IDs van geselecteerde schoenen
+  selectedShoeIds: number[] = [];
+
+  //Voor vergroting van de afbeelding
   selectedImage: string | null = null;
 
-  // Zoekterm
+  // Gebruikte filters
   searchTerm: string = '';
-
-  // Merkenfilter
   selectedBrand: string = '';
   uniqueBrands: string[] = [];
   brandDropdownOpen = false;
@@ -41,8 +43,7 @@ export class Shoe_View extends TaskBaseMagicComponent {
 
   // prijs range filter
   maxPrice: number | null = null;
-
-  selectedShoeIds: number[] = [];
+ //Booleaanse toggle voor modale order-popup
   showCreateOrder = false;
 
 
@@ -63,8 +64,13 @@ export class Shoe_View extends TaskBaseMagicComponent {
   override createFormControlsAccessor(formGroup: FormGroup) {
     this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
   }
-
-  // Schoenendata binnenhalen en verrijken met afbeelding + unieke filters
+  // Wordt aangeroepen vanuit Magic ([magic]="mgc.Shoe_View")
+  //
+  // Parseert JSON → vult Shoe_Data
+  //
+  // Berekent afbeelding URL op basis van type + kleur
+  //
+  // ✅ Herstelt ook amount van eerder geselecteerde schoenen
   getShoeData(Shoe_Data: string): void {
     try {
       const parsed = JSON.parse(Shoe_Data);
@@ -75,9 +81,15 @@ export class Shoe_View extends TaskBaseMagicComponent {
         const color = (item.Color_Name || '').toLowerCase().replace(/\s+/g, '');
         const imageUrl = `/assets/images/${type}-${color}.jpg`;
 
+        // ✅ herstel amount uit eerdere selectie
+        const restored = this.selectionService.getSelectedShoes();
+        const matching = restored.find(s => s.ShoeID === item.ShoeID);
+
         return {
           ...item,
-          imageUrl: imageUrl
+          imageUrl: imageUrl,
+          amount: matching?.amount || 1  // ✅ amount behouden
+
         };
       });
 
@@ -196,21 +208,23 @@ export class Shoe_View extends TaskBaseMagicComponent {
   // Bij klikken op "Maak order"
   ContinueToOrder(): void {
     const geselecteerdeSchoenen = this.getSelectedShoes();
-    console.log('✅ Te versturen naar service:', geselecteerdeSchoenen);
+    console.log('Te versturen naar service:', geselecteerdeSchoenen);
     this.showCreateOrder = true;
 
     this.selectionService.setSelectedShoes(geselecteerdeSchoenen);
     this.router.navigate(['/create-order']);
   }
-  closeCreateOrder(): void {
-    this.showCreateOrder = false;
-  }
-  updateAmount(shoeId: number, newAmount: number): void {
-    const target = this.Shoe_Data.find(s => s.ShoeID === shoeId);
-    if (target) {
-      target.amount = newAmount;
-      this.selectionService.setSelectedShoes(this.getSelectedShoes());
+  // closeCreateOrder(): void {
+  //   this.showCreateOrder = false;
+  // }
+  updateAmount(shoeId: number, amount: number): void {
+    const selected = this.getSelectedShoes(); // haalt actuele selectie op
+    const found = selected.find(s => s.ShoeID === shoeId);
+    if (found) {
+      found.amount = amount;
+      this.selectionService.setSelectedShoes(selected); // slaat nieuwe selectie op
     }
   }
+
 
 }

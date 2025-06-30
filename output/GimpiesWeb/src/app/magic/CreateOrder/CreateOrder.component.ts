@@ -56,11 +56,13 @@ export class CreateOrder extends TaskBaseMagicComponent implements OnInit {
     this.selectedImage = imageUrl;
   }
   updateAmount(shoeId: number, newAmount: number): void {
-    const shoe = this.selectedShoes.find(s => s.ShoeID === shoeId);
-    if (shoe) {
-      shoe.amount = newAmount;
+    const found = this.selectedShoes.find(s => s.ShoeID === shoeId);
+    if (found) {
+      found.amount = newAmount;
+      this.selectionService.setSelectedShoes(this.selectedShoes); // ✅ update opslag
     }
   }
+
   removeShoe(shoeId: number): void {
     this.selectedShoes = this.selectedShoes.filter(shoe => shoe.ShoeID !== shoeId);
     this.selectionService.setSelectedShoes(this.selectedShoes); // ✅ ook updaten in de service

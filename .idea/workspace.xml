@@ -6,23 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GimpiesWeb.optback" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/DataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/DataSourcesIndex.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_134217737.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_134217737.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Prg_134217739.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/models/shoe.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/models/shoe.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/services/shoe-selection.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/services/shoe-selection.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite.SQLite" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite.SQLite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +76,7 @@
       <workItem from="1750752191105" duration="6525000" />
       <workItem from="1750916645627" duration="23216000" />
       <workItem from="1751005458309" duration="23868000" />
-      <workItem from="1751270220268" duration="2127000" />
+      <workItem from="1751270220268" duration="9027000" />
     </task>
     <servers />
   </component>
