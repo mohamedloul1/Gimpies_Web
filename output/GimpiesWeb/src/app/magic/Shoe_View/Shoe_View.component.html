@@ -111,6 +111,9 @@
         class="h-full"
         [shoe]="shoe"
         [selected]="isSelected(shoe.ShoeID)"
+        [amount]="shoe.amount || 1"
+        (amountChange)="updateAmount(shoe.ShoeID, $event)"
+
         (toggle)="toggleSelect($event)"
         (imageClick)="openImage($event)"
       ></app-shoe-card>

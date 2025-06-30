@@ -5,6 +5,9 @@ import { Shoe } from '../../models/shoe.model';
 import { ShoeSelectionService } from '../../services/shoe-selection.service';
 import { TaskBaseMagicComponent, magicProviders, MagicServices } from "@magic-xpa/angular";
 import { ShoeCardComponent } from '../../shared/components/shoe-card/shoe-card.component';
+import {ConfirmDialogComponent} from "../../shared/components/confirm-dialog/confirm-dialog.component";
+import {MatDialog} from '@angular/material/dialog';
+
 
 
 
@@ -30,7 +33,9 @@ export class CreateOrder extends TaskBaseMagicComponent implements OnInit {
   constructor(
     ref: ChangeDetectorRef,
     magicServices: MagicServices,
-    private selectionService: ShoeSelectionService
+    private selectionService: ShoeSelectionService,
+    private dialog: MatDialog,
+
   ) {
     super(ref, magicServices);
   }
@@ -50,6 +55,36 @@ export class CreateOrder extends TaskBaseMagicComponent implements OnInit {
     console.log('📸 Image clicked:', imageUrl);
     this.selectedImage = imageUrl;
   }
+  updateAmount(shoeId: number, newAmount: number): void {
+    const shoe = this.selectedShoes.find(s => s.ShoeID === shoeId);
+    if (shoe) {
+      shoe.amount = newAmount;
+    }
+  }
+  removeShoe(shoeId: number): void {
+    this.selectedShoes = this.selectedShoes.filter(shoe => shoe.ShoeID !== shoeId);
+    this.selectionService.setSelectedShoes(this.selectedShoes); // ✅ ook updaten in de service
+  }
+
+  confirmAndRemove(shoeId: number): void {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '400px',
+      panelClass: 'custom-dialog-container',
+      data: {
+        title: 'Schoen verwijderen',
+        message: 'Weet je zeker dat je deze schoen uit de selectie wilt verwijderen?'
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.removeShoe(shoeId); // ✅ centrale logica
+      }
+    });
+  }
+
+
+
 
 
 }

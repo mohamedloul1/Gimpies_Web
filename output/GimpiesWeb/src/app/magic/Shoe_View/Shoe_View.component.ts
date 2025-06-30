@@ -205,4 +205,12 @@ export class Shoe_View extends TaskBaseMagicComponent {
   closeCreateOrder(): void {
     this.showCreateOrder = false;
   }
+  updateAmount(shoeId: number, newAmount: number): void {
+    const target = this.Shoe_Data.find(s => s.ShoeID === shoeId);
+    if (target) {
+      target.amount = newAmount;
+      this.selectionService.setSelectedShoes(this.getSelectedShoes());
+    }
+  }
+
 }

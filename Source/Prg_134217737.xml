@@ -29,7 +29,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739428" _time="46162" date="26/06/2025" time="12:49:22"/>
+          <LastModified _date="739429" _time="51435" date="27/06/2025" time="14:17:15"/>
         </Header>
         <ItemIsn val="13"/>
         <Resource>
@@ -60,10 +60,15 @@
             </Column>
             <Column id="134217732" name="Quantity">
               <PropertyList model="FIELD">
-                <Model attr_obj="FIELD_NUMERIC" comp="-1" id="1" obj="33554437"/>
+                <Model attr_obj="FIELD_NUMERIC" id="1"/>
+                <Picture id="157" valUnicode="9"/>
                 <DbColumnName id="178"/>
                 <Type id="179"/>
                 <UserType id="180"/>
+                <_Dec id="181"/>
+                <_Whole id="182" val="9"/>
+                <_Negative id="192"/>
+                <_FieldStyle id="276" val="1"/>
               </PropertyList>
             </Column>
             <Column id="134217733" name="OrderType">
@@ -371,12 +376,12 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739428" _time="45073" date="26/06/2025" time="12:31:13"/>
+            <LastModified _date="739429" _time="51435" date="27/06/2025" time="14:17:15"/>
           </Header>
-          <ItemIsn val="5"/>
+          <ItemIsn val="14"/>
           <Resource>
-            <DB id="134217729">
-              <DataObject comp="-1" obj="134217739"/>
+            <DB id="134217730">
+              <DataObject comp="-1" obj="134217740"/>
               <Access val="W"/>
               <Share val="W"/>
               <Open val="N"/>
@@ -462,19 +467,19 @@
                   </DATAVIEW_SRC>
                 </LogicLine>
                 <LogicLine>
-                  <LNK Direction="D" EVL_CND="R" FlowIsn="134217737" Key="134217729" Mode="R" SortType="134217738" VIEW="1" VIEWS="1">
-                    <DB comp="-1" obj="134217739"/>
+                  <LNK Direction="D" EVL_CND="R" FlowIsn="134217758" Key="134217729" Mode="R" SortType="134217759" VIEW="1" VIEWS="1">
+                    <DB comp="-1" obj="134217740"/>
                     <Condition val="Y"/>
                   </LNK>
                 </LogicLine>
                 <LogicLine>
-                  <Select FieldID="134217733" FlowIsn="134217739" id="134217733">
+                  <Select FieldID="134217742" FlowIsn="134217760" id="134217742">
                     <Column val="134217729"/>
                     <Type val="R"/>
                     <ExposedToRoute val="N"/>
                     <IsParameter val="N"/>
                     <INT_RCMP_INFO>
-                      <v>134217732</v>
+                      <v>134217752</v>
                     </INT_RCMP_INFO>
                     <DIFF_UPDATE val="T"/>
                     <Condition val="N"/>
@@ -483,16 +488,16 @@
                   </Select>
                 </LogicLine>
                 <LogicLine>
-                  <END_LINK FlowIsn="134217738"/>
+                  <END_LINK FlowIsn="134217759"/>
                 </LogicLine>
                 <LogicLine>
-                  <LNK Direction="A" EVL_CND="R" FlowIsn="134217730" Key="134217729" Mode="A" SortType="134217731" VIEW="2" VIEWS="3">
-                    <DB comp="-1" obj="134217739"/>
+                  <LNK Direction="A" EVL_CND="R" FlowIsn="134217730" Key="134217729" Mode="A" SortType="134217731" VIEW="2" VIEWS="5">
+                    <DB comp="-1" obj="134217740"/>
                     <Condition val="Y"/>
                   </LNK>
                 </LogicLine>
                 <LogicLine>
-                  <Select FieldID="134217729" FlowIsn="134217732" id="134217729">
+                  <Select FieldID="134217737" FlowIsn="134217752" id="134217737">
                     <ASS val="134217729"/>
                     <Column val="134217729"/>
                     <Type val="R"/>
@@ -505,7 +510,7 @@
                   </Select>
                 </LogicLine>
                 <LogicLine>
-                  <Select FieldID="134217731" FlowIsn="134217734" id="134217731">
+                  <Select FieldID="134217738" FlowIsn="134217753" id="134217738">
                     <ASS val="134217730"/>
                     <Column val="134217730"/>
                     <Type val="R"/>
@@ -518,9 +523,33 @@
                   </Select>
                 </LogicLine>
                 <LogicLine>
-                  <Select FieldID="134217732" FlowIsn="134217735" id="134217732">
+                  <Select FieldID="134217739" FlowIsn="134217754" id="134217739">
                     <ASS val="134217731"/>
                     <Column val="134217731"/>
+                    <Type val="R"/>
+                    <ExposedToRoute val="N"/>
+                    <IsParameter val="N"/>
+                    <DIFF_UPDATE val="T"/>
+                    <Condition val="N"/>
+                    <Modifier val="S"/>
+                    <Direction val="C"/>
+                  </Select>
+                </LogicLine>
+                <LogicLine>
+                  <Select FieldID="134217740" FlowIsn="134217755" id="134217740">
+                    <Column val="134217732"/>
+                    <Type val="R"/>
+                    <ExposedToRoute val="N"/>
+                    <IsParameter val="N"/>
+                    <DIFF_UPDATE val="T"/>
+                    <Condition val="N"/>
+                    <Modifier val="S"/>
+                    <Direction val="C"/>
+                  </Select>
+                </LogicLine>
+                <LogicLine>
+                  <Select FieldID="134217741" FlowIsn="134217756" id="134217741">
+                    <Column val="134217733"/>
                     <Type val="R"/>
                     <ExposedToRoute val="N"/>
                     <IsParameter val="N"/>
@@ -546,7 +575,7 @@
           </TaskForms>
           <Expressions>
             <Expression id="134217729">
-              <ExpSyntax val="{0,134217733} + 1"/>
+              <ExpSyntax val="{0,134217742} + 1"/>
               <ExpAttribute val="N"/>
             </Expression>
             <Expression id="134217730">

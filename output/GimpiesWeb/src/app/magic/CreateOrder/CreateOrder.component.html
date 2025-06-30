@@ -92,8 +92,12 @@
       <div *ngFor="let shoe of selectedShoes">
         <app-shoe-card
           [shoe]="shoe"
-          [selected]="false"
-          [readonly]="true"
+          [selected]="true"
+          [removable]="true"
+          [readonly]="false"
+          [amount]="shoe.amount || 1"
+          (amountChange)="updateAmount(shoe.ShoeID, $event)"
+          (remove)="confirmAndRemove(shoe.ShoeID)"
           (imageClick)="openImage($event)"
 
         ></app-shoe-card>

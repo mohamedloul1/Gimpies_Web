@@ -9,4 +9,8 @@ export interface Shoe {
   Quantity: number;
   imageUrl?: string; // bijv. '/assets/images/shoe1.jpg'
 
+
+  amount?: number; // 👈 toevoegen
+
+
 }

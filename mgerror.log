@@ -232,3 +232,26 @@
  <130580271440230752> 26/06/2025 12:18:16.463     [Error  ] - Aborting context 130580271440230752, Program: "Main Program".
  <109140849821748768> 26/06/2025 12:51:54.558     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
  <76050885070378512> 27/06/2025 13:11:16.521     [Error  ] - Aborting context 76050885070378512, Program: "Main Program".
+ <495741064745401984> 27/06/2025 13:23:44.260     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <3513147905120143> 27/06/2025 13:24:50.102     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <3513147905120143> 27/06/2025 13:25:00.558     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <3513147905120143> 27/06/2025 13:25:48.030     [Error  ] - Aborting context 3513147905120143, Program: "Main Program".
+ <231264146519161920> 27/06/2025 13:28:56.864     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <231264146519161920> 27/06/2025 13:29:15.061     [Error  ] - Aborting context 231264146519161920, Program: "Main Program".
+ <89565735999990896> 27/06/2025 13:31:38.030     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <89565735999990896> 27/06/2025 13:31:55.196     [Error  ] - Aborting context 89565735999990896, Program: "Main Program".
+ <232729090617888288> 27/06/2025 13:36:05.876     [Error  ] - Update operation failed, data source: Orders  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.CreateOrderBatch".
+ <232729090617888288> 27/06/2025 13:36:20.923     [Error  ] - Aborting context 232729090617888288, Program: "Main Program".
+ <83490949208287392> 27/06/2025 13:41:45.834     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <396689852164534336> 27/06/2025 13:43:13.768     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <149312339845109952> 27/06/2025 13:43:53.661     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <189260296162663776> 27/06/2025 13:47:23.964     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <32148113261031920> 27/06/2025 13:55:39.659     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <142868091637087600> 27/06/2025 13:56:55.888     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <402064984426414784> 27/06/2025 13:57:33.208     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <304642578229403520> 27/06/2025 14:00:53.439     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <326498365470270144> 27/06/2025 14:01:56.823     [Error  ] - Failed to open, data source: Orders, Program: "Browse - Orders".
+ <385302516622393792> 27/06/2025 14:05:31.232     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "423"), Program: "Main Program".
+ <240490061388060128> 27/06/2025 14:05:35.713     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "426"), Program: "Main Program".
+ <-1> 27/06/2025 14:06:41.280     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <453146926926900736> 27/06/2025 14:15:55.635     [Error  ] - Aborting context 453146926926900736, Program: "Main Program".
