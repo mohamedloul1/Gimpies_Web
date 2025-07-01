@@ -39,6 +39,7 @@ export class SidebarComponent implements OnInit {
   clearMagicCookies(): void {
     document.cookie = 'userName=; Max-Age=0; path=/;';
     document.cookie = 'userRole=; Max-Age=0; path=/;';
+    document.cookie = 'userID=; Max-Age=0; path=/;';
   }
 
   logout(): void {

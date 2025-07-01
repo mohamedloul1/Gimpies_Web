@@ -21,9 +21,10 @@ export class SessionBridgeComponent extends TaskBaseMagicComponent {
 
     const userName = this.mg.GetCookie('userName');
     const userRole = this.mg.GetCookie('userRole');
+    const userID:any = this.mg.GetCookie('userID');
 
-    if (userName && userRole) {
-      this.sessionService.setSession(userName, userRole);
+    if (userName && userRole && userID) {
+      this.sessionService.setSession(userName, userRole,userID);
     }
   }
 }

@@ -255,3 +255,17 @@
  <240490061388060128> 27/06/2025 14:05:35.713     [Error  ] - EndTaskRequest(): Error: "Web client requests cannot be handled when the online MDI is open" (-276) : " [WebC session started.]" ("GimpiesWeb")  (msgid "426"), Program: "Main Program".
  <-1> 27/06/2025 14:06:41.280     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
  <453146926926900736> 27/06/2025 14:15:55.635     [Error  ] - Aborting context 453146926926900736, Program: "Main Program".
+ <260254009217486880> 30/06/2025 14:14:09.830     [Error  ] - Aborting context 260254009217486880, Program: "Main Program".
+ <169132220341729728> 30/06/2025 16:00:35.228     [Error  ] - Aborting context 169132220341729728, Program: "Main Program".
+ <485331776218393792> 30/06/2025 16:03:51.339     [Error  ] - Aborting context 485331776218393792, Program: "Main Program".
+ <73086752065458112> 30/06/2025 16:11:51.304     [Error  ] - Aborting context 73086752065458112, Program: "Main Program".
+ <493639890254436800> 01/07/2025 10:22:42.580     [Error  ] - Aborting context 493639890254436800, Program: "Main Program".
+ <565983583681627904> 01/07/2025 10:26:43.768     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <60945049485101944> 01/07/2025 10:29:01.956     [Error  ] - Aborting context 60945049485101944, Program: "Main Program".
+ <29608432024322332> 01/07/2025 12:32:59.021     [Error  ] - Aborting context 29608432024322332, Program: "Main Program".
+ <401201302954608192> 01/07/2025 12:48:22.652     [Error  ] - Aborting context 401201302954608192, Program: "Main Program".
+ <82432115781794992> 01/07/2025 12:49:26.642     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <285875259979901152> 01/07/2025 12:54:32.683     [Error  ] - Aborting context 285875259979901152, Program: "Main Program".
+ <485165053074192704> 01/07/2025 13:50:44.893     [Error  ] - Aborting context 485165053074192704, Program: "Main Program".
+ <152045176674934464> 01/07/2025 13:57:53.499     [Error  ] - Aborting context 152045176674934464, Program: "Main Program".
+ <188091525602644672> 01/07/2025 14:24:19.541     [Error  ] - Aborting context 188091525602644672, Program: "Main Program".

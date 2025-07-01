@@ -10,10 +10,13 @@ export class UserSessionService {
   constructor(private router: Router) {}
   private _userName$ = new BehaviorSubject<string>('');
   private _userRole$ = new BehaviorSubject<string>('');
+  private _userID$ = new BehaviorSubject<number | null>(null);
 
-  setSession(userName: string, userRole: string) {
+
+  setSession(userName: string, userRole: string, userID: number): void {
     this._userName$.next(userName);
     this._userRole$.next(userRole);
+    this._userID$.next(userID);
   }
 
   get userName$() {
@@ -23,6 +26,9 @@ export class UserSessionService {
   get userRole$() {
     return this._userRole$.asObservable();
   }
+  get userID$() {
+    return this._userID$.asObservable();
+  }
 
   getUserName(): string {
     return this._userName$.getValue();
@@ -31,10 +37,15 @@ export class UserSessionService {
   getUserRole(): string {
     return this._userRole$.getValue();
   }
+  getUserID(): any {
+    return this._userID$.getValue();
+  }
+
 
   clearSession(): void {
     this._userName$.next('');
     this._userRole$.next('');
+    this._userID$.next(null);
   }
 
   redirectToHome(): void {
