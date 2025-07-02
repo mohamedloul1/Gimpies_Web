@@ -269,3 +269,38 @@
  <485165053074192704> 01/07/2025 13:50:44.893     [Error  ] - Aborting context 485165053074192704, Program: "Main Program".
  <152045176674934464> 01/07/2025 13:57:53.499     [Error  ] - Aborting context 152045176674934464, Program: "Main Program".
  <188091525602644672> 01/07/2025 14:24:19.541     [Error  ] - Aborting context 188091525602644672, Program: "Main Program".
+ <103096728470648592> 01/07/2025 15:01:13.842     [Error  ] - Aborting context 103096728470648592, Program: "Main Program".
+ <308132503092904512> 01/07/2025 15:01:52.272     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <290994101063788224> 01/07/2025 15:03:10.952     [Error  ] - Aborting context 290994101063788224, Program: "Main Program".
+ <339877750244082560> 01/07/2025 15:05:23.293     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <439501692389742464> 01/07/2025 15:05:43.973     [Error  ] - Dataview cannot be locked outside the scope of a transaction  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.UpdateAmount".
+ <331732436670370> 01/07/2025 15:06:18.180     [Error  ] - Aborting context 331732436670370, Program: "Main Program".
+ <8515220603111791> 01/07/2025 15:08:21.790     [Error  ] - Aborting context 8515220603111791, Program: "Main Program".
+ <101390907803376304> 01/07/2025 15:10:13.206     [Error  ] - Aborting context 101390907803376304, Program: "Main Program".
+ <494240840800736320> 01/07/2025 15:14:11.386     [Error  ] - Aborting context 494240840800736320, Program: "Main Program".
+ <36062024734270592> 01/07/2025 15:26:53.963     [Error  ] - Aborting context 36062024734270592, Program: "Main Program".
+ <268393430089973120> 01/07/2025 15:28:41.242     [Error  ] - Aborting context 268393430089973120, Program: "Main Program".
+ <82367097680948400> 01/07/2025 15:32:46.033     [Error  ] - Aborting context 82367097680948400, Program: "Main Program".
+ <556080566396768512> 01/07/2025 15:33:02.270     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <10288463969075548> 01/07/2025 15:35:18.009     [Error  ] - Aborting context 10288463969075548, Program: "Main Program".
+ <558522435377115904> 01/07/2025 15:35:55.406     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <-1> 01/07/2025 15:47:16.289     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <207387620860851168> 01/07/2025 16:04:41.747     [Error  ] - Execution Path: Main Program, Program: "Main Program".
+ <207387620860851168> 01/07/2025 16:04:41.749     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Main Program".
+ <207387620860851168> 01/07/2025 16:04:41.751     [Error  ] - End Task Tree, Program: "Main Program".
+ <207387620860851168> 01/07/2025 16:04:41.756     [Error  ] - EndTaskRequest(): Main ProgramERR-THREAD-ABORTED (-139) : "Routing.CreateOrder" ("GimpiesWeb")  (msgid "814")
+ <497425293322422144> 01/07/2025 16:04:44.591     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <12638403915197994> 01/07/2025 16:08:03.719     [Error  ] - Execution Path: , Program: "".
+ <12638403915197994> 01/07/2025 16:08:03.720     [Error  ] - EndTaskRequest(): ERR-THREAD-ABORTED (-139) : " [WebC session started.]" ("GimpiesWeb")  (msgid "822")
+ <383031564581426752> 01/07/2025 16:09:06.634     [Error  ] - Cannot modify Read Only, data source: Shoe  >> Application: "C:\Projects\GimpiesWeb\", Program: "Routing.CreateOrder.UpdateAmount".
+ <-1> 01/07/2025 16:10:03.165     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <525484766983253632> 01/07/2025 16:16:10.335     [Error  ] - Execution Path: Main Program, Program: "Main Program".
+ <525484766983253632> 01/07/2025 16:16:10.339     [Error  ] -  Task Name: Main Program, Tag: 2, Program: "Main Program".
+ <525484766983253632> 01/07/2025 16:16:10.342     [Error  ] - End Task Tree, Program: "Main Program".
+ <525484766983253632> 01/07/2025 16:16:10.345     [Error  ] - EndTaskRequest(): Main ProgramERR-THREAD-ABORTED (-139) : "Routing.CreateOrder" ("GimpiesWeb")  (msgid "836")
+ <474444088259705216> 01/07/2025 16:16:12.933     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <-1> 01/07/2025 16:18:35.627     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <-1> 01/07/2025 16:19:22.231     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <114862941548865344> 02/07/2025 08:57:22.965     [Error  ] - Aborting context 114862941548865344, Program: "Main Program".
+ <357818154364872064> 02/07/2025 09:05:01.012     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <515680195060950720> 02/07/2025 09:05:52.680     [Error  ] - Aborting context 515680195060950720, Program: "Main Program".
