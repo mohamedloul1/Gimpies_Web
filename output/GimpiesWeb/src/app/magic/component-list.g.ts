@@ -5,10 +5,12 @@ import { Sales as Sales_Sales } from './Sales/Sales.component';
 import { LogOut as LogOut_LogOut } from './LogOut/LogOut.component';
 import { Shoe_View as Shoe_View_Shoe_View } from './Shoe_View/Shoe_View.component';
 import { CreateOrder as CreateOrder_CreateOrder } from './CreateOrder/CreateOrder.component';
+import { CreateOrder as Shoe_View_CreateOrder_CreateOrder } from './Shoe_View/CreateOrder/CreateOrder.component';
 
 export const title = "";
 
-export const magicGenCmpsHash = {               CreateOrder_CreateOrder:CreateOrder_CreateOrder,
+export const magicGenCmpsHash = {               Shoe_View_CreateOrder_CreateOrder:Shoe_View_CreateOrder_CreateOrder,
+                      CreateOrder_CreateOrder:CreateOrder_CreateOrder,
                       Shoe_View_Shoe_View:Shoe_View_Shoe_View,
                       LogOut_LogOut:LogOut_LogOut,
                       Sales_Sales:Sales_Sales,
@@ -18,7 +20,7 @@ export const magicGenCmpsHash = {               CreateOrder_CreateOrder:CreateOr
        
 };
 
-export const magicGenComponents = [ CreateOrder_CreateOrder ,  Shoe_View_Shoe_View ,  LogOut_LogOut ,  Sales_Sales ,  Admin_Admin ,  Routing_Routing ,  Login_Login 
+export const magicGenComponents = [ Shoe_View_CreateOrder_CreateOrder ,  CreateOrder_CreateOrder ,  Shoe_View_Shoe_View ,  LogOut_LogOut ,  Sales_Sales ,  Admin_Admin ,  Routing_Routing ,  Login_Login 
 ];
 
 

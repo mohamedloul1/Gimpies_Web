@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class LayoutComponent {
   mobileSidebarOpen = false;
 
+
+
   closeMobileSidebar() {
     this.mobileSidebarOpen = false;
   }
@@ -15,6 +17,7 @@ export class LayoutComponent {
   openMobileSidebar() {
     this.mobileSidebarOpen = true;
   }
+
 
 }
 

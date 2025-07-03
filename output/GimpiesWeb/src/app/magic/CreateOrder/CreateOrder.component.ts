@@ -12,7 +12,7 @@ import { ElementRef, ViewChild } from '@angular/core';
 
 
 @Component({
-  selector: 'mga-CreateOrder',
+  selector: 'mga-Create-Order',
   providers: [...magicProviders],
   templateUrl: './CreateOrder.component.html',
   styleUrls: ['./CreateOrder.component.scss']

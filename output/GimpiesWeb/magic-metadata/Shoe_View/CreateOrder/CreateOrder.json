@@ -2,8 +2,8 @@
 	"style":	null,
 	"props":	{
 		"id":	"CreateOrder",
-		"component_path":	"CreateOrder/",
-		"component_uniquename":	"CreateOrder_CreateOrder"
+		"component_path":	"Shoe_View/CreateOrder/",
+		"component_uniquename":	"Shoe_View_CreateOrder_CreateOrder"
 	},
 	"coordinates":	{
 		"x":	0,

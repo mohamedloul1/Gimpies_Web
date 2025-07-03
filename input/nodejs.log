@@ -12,14 +12,14 @@ generating components
    Number of modules to be check for generate: 1
 [>]           ******    Start Web Module name : []    *******
 *** Step 1: Loading JSON files ***
-[>] Loading JSON file .//magic-metadata/CreateOrder/CreateOrder.json
+[>] Loading JSON file .//magic-metadata/Shoe_View/Shoe_View.json
 *** Step 2: Processing JSON files -  (1 components) ***
-[>] Processing JSON file for component CreateOrder
+[>] Processing JSON file for component Shoe_View
 *** Step 3: generate components. (1 components) ***
-[>] generate component CreateOrder
+[>] generate component Shoe_View
 [>] Step 4: components-list.
 [>]  ********************************* E N D    GENERATE *********************************
-UPDATE src/app/magic/CreateOrder/CreateOrder.mg.controls.g.ts (1345 bytes)
+UPDATE src/app/magic/Shoe_View/Shoe_View.mg.controls.g.ts (1544 bytes)
 
 
 

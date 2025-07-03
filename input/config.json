@@ -16,7 +16,7 @@
 			"module_name":	"",
 			"load_on_demand":	false,
 			"form_files":	[
-				"CreateOrder/CreateOrder"
+				"Shoe_View/Shoe_View"
 			]
 		}
 	],

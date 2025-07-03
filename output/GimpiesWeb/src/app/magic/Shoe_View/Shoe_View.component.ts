@@ -30,6 +30,9 @@ export class Shoe_View extends TaskBaseMagicComponent {
   //Voor vergroting van de afbeelding
   selectedImage: string | null = null;
 
+  // Deze variabele bepaalt of het mobiele formulier zichtbaar is
+  showMobileOrderForm: boolean = false;
+
   // Gebruikte filters
   searchTerm: string = '';
   selectedBrand: string = '';
@@ -225,6 +228,24 @@ export class Shoe_View extends TaskBaseMagicComponent {
       this.selectionService.setSelectedShoes(selected); // slaat nieuwe selectie op
     }
   }
+
+  // callCreateOrder(){
+  //   this.mg.simulateClick(this.mgc.Bt_CreateOrder)
+  // }
+  // 👇 Wordt aangeroepen bij klikken op het 🛒 icoon
+  openMobileOrderForm(): void {
+    this.showMobileOrderForm = true;
+    // Optioneel: voorkom scrollen op achtergrond
+    document.body.classList.add('overflow-hidden');
+  }
+
+  // 👇 Wordt aangeroepen bij klikken op de ✕ knop in overlay
+  closeMobileOrderForm(): void {
+    this.showMobileOrderForm = false;
+    document.body.classList.remove('overflow-hidden');
+  }
+
+
 
 
 }
