@@ -3,9 +3,9 @@
 // Zoekveld (input veld) styling
 .search-input,
 .filter-select{
-  border: 2px solid $color-muted;
+  border: 1px solid $color-border;
   color: $color-text;
-  background-color: $color-surface;
+  background-color: $ui-bg;
   font-size: 1rem;
   transition: all 0.2s ease;
 
@@ -38,7 +38,13 @@
 body.overflow-hidden {
   overflow: hidden;
 }
-
+.side-panel{
+  border: 2px solid $color-border;
+}
+.create-order{
+  background-color: $color-primary;
+  color: $ui-bg;
+}
 
 
 

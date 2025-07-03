@@ -81,8 +81,8 @@
 .login-form-container {
   @apply rounded-xl p-8;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-  background-color: $color-surface;
-  border: 1px solid $color-accent;
+  background-color: $ui-bg;
+  border: 1px solid $color-border;
   width: 100%;
   max-width: 512px;
 
@@ -108,9 +108,9 @@
   }
 
   .login-input {
-    background-color: $color-surface;
+    background-color: $ui-bg;
     color: $color-text;
-    border: 1px solid $color-muted;
+    border: 1px solid $color-border;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;

@@ -103,6 +103,7 @@
             (toggle)="toggleSelect($event)"
             (imageClick)="openImage($event)"
           ></app-shoe-card>
+
         </div>
       </div>
 
@@ -122,67 +123,64 @@
 
     <!-- 🖥️ DESKTOP: Order formulier paneel (zichtbaar bij selectie) -->
     <div
-      class="hidden lg:block w-full lg:w-1/4 bg-white p-4 rounded shadow sticky top-6 h-fit"
+      class="side-panel hidden lg:block w-full lg:w-1/4 bg-white rounded-xl  shadow sticky top-0"
+      style="height: 90vh"
       *ngIf="selectedShoeIds.length > 0"
     >
+      <div class="h-full overflow-y-auto px-4 py-4 box-border">
+
       <ng-container *ngTemplateOutlet="orderForm"></ng-container>
+      </div>
     </div>
   </div>
 
   <!-- 📱 MOBIEL: Order formulier fullscreen overlay -->
   <div
     *ngIf="showMobileOrderForm"
-    class="fixed inset-0 bg-white z-50 overflow-y-auto p-4"
+    class="fixed inset-0 bg-white z-50 flex flex-col"
   >
-    <div class="flex justify-between items-center mb-4">
+    <!-- 🔝 Header -->
+    <div class="p-4 border-b flex justify-between items-center">
       <h2 class="text-xl font-bold">Plaats bestelling</h2>
       <button (click)="closeMobileOrderForm()" class="text-gray-500 text-xl">✕</button>
     </div>
-    <ng-container *ngTemplateOutlet="orderForm"></ng-container>
+
+    <!-- 📜 Scrollbare inhoud -->
+    <div class="flex-1 overflow-y-auto p-4">
+      <ng-container *ngTemplateOutlet="orderForm"></ng-container>
+    </div>
   </div>
+
 
   <!-- 🧾 Herbruikbare formulier template -->
   <ng-template #orderForm>
+    <!-- 🧾 Geselecteerde schoenen -->
     <div class="space-y-4">
-      <div>
-        <label [magic]="mgc.Lb_UserID" class="block text-sm font-medium">UserID</label>
-        <mat-form-field appearance="fill" class="w-full">
-          <input matInput type="number" [magic]="mgc.V_V_UserID" [formControlName]="mgc.V_V_UserID" mgFormat />
-          <mgError [magic]="mgc.V_V_UserID"></mgError>
-        </mat-form-field>
+      <div class="flex flex-col gap-3">
+        <app-shoe-mini-card
+          *ngFor="let shoe of selectedShoes"
+          [shoe]="shoe"
+          [removable]="true"
+          [readonly]="false"
+          (remove)="confirmAndRemove(shoe.ShoeID)"
+          (amountChanged)="updateAmount(shoe.ShoeID, $event)"
+        ></app-shoe-mini-card>
       </div>
 
+      <!-- 📦 Bestelknop -->
       <div>
-        <label [magic]="mgc.Lb_ShoeID" class="block text-sm font-medium">ShoeID</label>
-        <mat-form-field appearance="fill" class="w-full">
-          <input matInput type="number" [magic]="mgc.V_V_ShoeID" [formControlName]="mgc.V_V_ShoeID" mgFormat />
-          <mgError [magic]="mgc.V_V_ShoeID"></mgError>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <label [magic]="mgc.Lb_Amount" class="block text-sm font-medium">Amount</label>
-        <mat-form-field appearance="fill" class="w-full">
-          <input matInput type="number" [magic]="mgc.V_V_Amount" [formControlName]="mgc.V_V_Amount" mgFormat />
-          <mgError [magic]="mgc.V_V_Amount"></mgError>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <label [magic]="mgc.Lb_OrderTpe" class="block text-sm font-medium">Order Type</label>
-        <mat-form-field appearance="fill" class="w-full">
-          <input matInput [magic]="mgc.V_V_OrderType" [formControlName]="mgc.V_V_OrderType" mgFormat />
-          <mgError [magic]="mgc.V_V_OrderType"></mgError>
-        </mat-form-field>
-      </div>
-
-      <div>
-        <button mat-raised-button color="primary" class="w-full" [magic]="mgc.Btn_CreateOrder">
+        <button
+          mat-raised-button
+          class="create-order w-full"
+          (click)="confirmAndCreateOrder()"
+        >
           Plaats bestelling
         </button>
       </div>
     </div>
   </ng-template>
+
+
 
   <!-- 🛒 Zwevend winkelmandje (alleen op mobiel) -->
   <div

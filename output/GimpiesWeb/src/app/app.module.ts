@@ -23,7 +23,7 @@ import { RedirectHomeComponent } from './components/redirect-home/redirect-home.
 import {MatTooltipModule} from "@angular/material/tooltip";
 import { MatSliderModule } from '@angular/material/slider';
 import { ShoeCardModule } from './shared/components/shoe-card/shoe-card.module';
-
+import { ShoeMiniCardComponent } from './shared/components/shoe-mini-card/shoe-mini-card.component';
 
 
 
@@ -56,7 +56,6 @@ import { ShoeCardModule } from './shared/components/shoe-card/shoe-card.module';
     MatTooltipModule,
     MatSliderModule,
     ShoeCardModule
-
 
   ],
   providers: [{ provide: MagicLazyLoaderService, useClass: LazyLoaderService }],

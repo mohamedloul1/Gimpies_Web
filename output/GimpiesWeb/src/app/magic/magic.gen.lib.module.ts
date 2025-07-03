@@ -31,6 +31,7 @@ import {CurrencyMaskConfig, CurrencyMaskInputMode, NgxCurrencyModule} from "ngx-
 import {MatIconModule} from "@angular/material/icon";
 import {MatSliderModule} from "@angular/material/slider";
 import {ShoeCardModule} from "../shared/components/shoe-card/shoe-card.module";
+import {ShoeMiniCardComponent} from "../shared/components/shoe-mini-card/shoe-mini-card.component";
 
 export const customCurrencyMaskConfig: CurrencyMaskConfig = {
   align: "right",
@@ -49,7 +50,8 @@ export const customCurrencyMaskConfig: CurrencyMaskConfig = {
 
 @NgModule({
   declarations: [
-    ...magicGenComponents
+    ...magicGenComponents,
+    ShoeMiniCardComponent
   ],
   exports: [
     ...magicGenComponents,

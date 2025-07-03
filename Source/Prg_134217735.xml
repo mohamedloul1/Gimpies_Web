@@ -13,7 +13,7 @@
   <ProgramsRepository>
     <Programs>
       <Task MainProgram="N">
-        <Header Description="Shoe_View" ISN_2="1" LastIsn="16" id="134217735">
+        <Header Description="Shoe_View" ISN_2="1" LastIsn="19" id="134217735">
           <ExecutionRight comp="-1"/>
           <Resident val="N"/>
           <SQL val="N"/>
@@ -29,7 +29,7 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739435" _time="3827" date="03/07/2025" time="01:03:47"/>
+          <LastModified _date="739435" _time="56243" date="03/07/2025" time="15:37:23"/>
         </Header>
         <ItemIsn val="21"/>
         <Resource>
@@ -551,7 +551,7 @@
                   <SyncData val="N"/>
                   <IsRoute val="N"/>
                   <RetainFocus val="N"/>
-                  <Condition val="Y"/>
+                  <Condition Exp="167772165"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
                 </CallTask>
@@ -568,7 +568,7 @@
                   <SyncData val="N"/>
                   <IsRoute val="N"/>
                   <RetainFocus val="N"/>
-                  <Condition val="Y"/>
+                  <Condition Exp="167772165"/>
                   <Modifier val="B"/>
                   <Direction val="C"/>
                 </CallTask>
@@ -741,10 +741,6 @@
             <ExpSyntax val="{0,167772181} = 'sales' OR {0,167772181} = 'purchase'"/>
             <ExpAttribute val="B"/>
           </Expression>
-          <Expression id="167772166">
-            <ExpSyntax val="{0,167772181} = 'sales'"/>
-            <ExpAttribute val="B"/>
-          </Expression>
         </Expressions>
         <EVNT DESC="Btn_CreateOrder" FORCE_EXIT="N" id="167772161">
           <Event>
@@ -752,7 +748,7 @@
           </Event>
         </EVNT>
         <Task MainProgram="N">
-          <Header Description="CreateOrderBatch" ISN_2="167772176" LastIsn="16" id="134217735">
+          <Header Description="CreateOrderBatch" ISN_2="167772176" LastIsn="19" id="134217735">
             <ExecutionRight comp="-1"/>
             <Resident val="N"/>
             <SQL val="N"/>
@@ -988,7 +984,7 @@
           </Expressions>
         </Task>
         <Task MainProgram="N">
-          <Header Description="UpdateAmountSales" ISN_2="167772174" LastIsn="16" id="134217735">
+          <Header Description="UpdateAmountSales" ISN_2="167772174" LastIsn="19" id="134217735">
             <ExecutionRight comp="-1"/>
             <Resident val="N"/>
             <SQL val="N"/>
@@ -1001,10 +997,18 @@
             <External val="N"/>
             <FormType val="N"/>
             <DotNetObjectExists val="N"/>
-            <LastModified _date="739435" _time="2124" date="03/07/2025" time="00:35:24"/>
+            <LastModified _date="739435" _time="56243" date="03/07/2025" time="15:37:23"/>
           </Header>
-          <ItemIsn val="9"/>
+          <ItemIsn val="11"/>
           <Resource>
+            <DB id="167772163">
+              <DataObject comp="-1" obj="33554433"/>
+              <Access val="R"/>
+              <Share val="W"/>
+              <Open val="N"/>
+              <Cache val="Y"/>
+              <IdentifyRowModifications val="84"/>
+            </DB>
             <DB id="134217730">
               <DataObject comp="-1" obj="134217734"/>
               <Access val="W"/>
@@ -1117,6 +1121,40 @@
                     <Direction val="C"/>
                   </Select>
                 </LogicLine>
+                <LogicLine>
+                  <LNK Direction="A" EVL_CND="R" FlowIsn="167772177" Key="33554433" Mode="R" SortType="167772178" VIEW="3" VIEWS="2">
+                    <DB comp="-1" obj="33554433"/>
+                    <Condition val="Y"/>
+                  </LNK>
+                </LogicLine>
+                <LogicLine>
+                  <Select FieldID="167772170" FlowIsn="167772179" id="167772170">
+                    <Column val="33554433"/>
+                    <Type val="R"/>
+                    <ExposedToRoute val="N"/>
+                    <IsParameter val="N"/>
+                    <Locate MAX="167772166" MIN="167772166"/>
+                    <DIFF_UPDATE val="T"/>
+                    <Condition val="N"/>
+                    <Modifier val="S"/>
+                    <Direction val="C"/>
+                  </Select>
+                </LogicLine>
+                <LogicLine>
+                  <Select FieldID="167772171" FlowIsn="167772180" id="167772171">
+                    <Column val="33554436"/>
+                    <Type val="R"/>
+                    <ExposedToRoute val="N"/>
+                    <IsParameter val="N"/>
+                    <DIFF_UPDATE val="T"/>
+                    <Condition val="N"/>
+                    <Modifier val="S"/>
+                    <Direction val="C"/>
+                  </Select>
+                </LogicLine>
+                <LogicLine>
+                  <END_LINK FlowIsn="167772178"/>
+                </LogicLine>
               </LogicLines>
             </LogicUnit>
             <LogicUnit id="134217730" propagate="78">
@@ -1136,7 +1174,18 @@
                     <WithValue val="134217729"/>
                     <Incremental val="N"/>
                     <ForcedUpdate val="Y"/>
-                    <Condition val="Y"/>
+                    <Condition Exp="167772164"/>
+                    <Modifier val="B"/>
+                    <Direction val="C"/>
+                  </Update>
+                </LogicLine>
+                <LogicLine>
+                  <Update FlowIsn="167772176">
+                    <FieldID val="134217737"/>
+                    <WithValue val="167772163"/>
+                    <Incremental val="N"/>
+                    <ForcedUpdate val="Y"/>
+                    <Condition Exp="167772165"/>
                     <Modifier val="B"/>
                     <Direction val="C"/>
                   </Update>
@@ -1158,6 +1207,22 @@
               <ExpAttribute val="N"/>
             </Expression>
             <Expression id="134217730">
+              <ExpSyntax val="{1,167772177}"/>
+              <ExpAttribute val="N"/>
+            </Expression>
+            <Expression id="167772163">
+              <ExpSyntax val="{0,134217737} + {1,167772178}"/>
+              <ExpAttribute val="N"/>
+            </Expression>
+            <Expression id="167772164">
+              <ExpSyntax val="{0,167772171} = 'sales'"/>
+              <ExpAttribute val="B"/>
+            </Expression>
+            <Expression id="167772165">
+              <ExpSyntax val="{0,167772171} = 'purchase'"/>
+              <ExpAttribute val="B"/>
+            </Expression>
+            <Expression id="167772166">
               <ExpSyntax val="{1,167772176}"/>
               <ExpAttribute val="N"/>
             </Expression>
@@ -1165,7 +1230,7 @@
           <VarRangeInfo Mode="E" VarRangeVeeIsn="134217736" id="1"/>
         </Task>
         <Task MainProgram="N">
-          <Header Description="CollectData" ISN_2="134217733" LastIsn="16" id="134217735">
+          <Header Description="CollectData" ISN_2="134217733" LastIsn="19" id="134217735">
             <ExecutionRight comp="-1"/>
             <Resident val="N"/>
             <SQL val="N"/>

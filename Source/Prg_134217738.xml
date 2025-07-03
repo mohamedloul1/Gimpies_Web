@@ -14,6 +14,7 @@
     <Programs>
       <Task MainProgram="N">
         <Header Description="CreateOrderBatch" ISN_2="1" LastIsn="1" id="134217738">
+          <Public val="Test App"/>
           <ExecutionRight comp="-1"/>
           <Resident val="N"/>
           <SQL val="N"/>
@@ -27,18 +28,10 @@
           <Offline val="N"/>
           <FormType val="N"/>
           <DotNetObjectExists val="N"/>
-          <LastModified _date="739428" _time="35360" date="26/06/2025" time="09:49:20"/>
+          <LastModified _date="739435" _time="55613" date="03/07/2025" time="15:26:53"/>
         </Header>
         <ItemIsn val="3"/>
         <Resource>
-          <DB id="134217729">
-            <DataObject comp="-1" obj="134217739"/>
-            <Access val="W"/>
-            <Share val="W"/>
-            <Open val="N"/>
-            <Cache val="Y"/>
-            <IdentifyRowModifications val="84"/>
-          </DB>
           <Columns/>
         </Resource>
         <Information>
@@ -118,15 +111,14 @@
                 </DATAVIEW_SRC>
               </LogicLine>
               <LogicLine>
-                <LNK Direction="A" EVL_CND="R" FlowIsn="134217731" Key="134217729" Mode="A" SortType="134217732" VIEW="1" VIEWS="3">
-                  <DB comp="-1" obj="134217739"/>
+                <LNK Direction="A" EVL_CND="R" FlowIsn="134217731" Mode="A" SortType="134217732" VIEW="1" VIEWS="3">
+                  <DB comp="-1"/>
                   <Condition val="Y"/>
                 </LNK>
               </LogicLine>
               <LogicLine>
                 <Select FieldID="134217729" FlowIsn="134217733" id="134217729">
                   <ASS val="134217729"/>
-                  <Column val="134217729"/>
                   <Type val="R"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
@@ -139,7 +131,6 @@
               <LogicLine>
                 <Select FieldID="134217730" FlowIsn="134217735" id="134217730">
                   <ASS val="134217729"/>
-                  <Column val="134217730"/>
                   <Type val="R"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>
@@ -152,7 +143,6 @@
               <LogicLine>
                 <Select FieldID="134217731" FlowIsn="134217736" id="134217731">
                   <ASS val="134217729"/>
-                  <Column val="134217731"/>
                   <Type val="R"/>
                   <ExposedToRoute val="N"/>
                   <IsParameter val="N"/>

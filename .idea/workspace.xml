@@ -6,24 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/GimpiesWeb/v14/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GimpiesWeb.optback" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GimpiesWeb.opt" beforeDir="false" afterPath="$PROJECT_DIR$/GimpiesWeb.opt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Prg_134217735.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_134217735.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Prg_134217738.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Prg_134217738.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/ProgramHeaders.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ProgramHeaders.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/CreateOrder/CreateOrder.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/input/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/nodejs.log" beforeDir="false" afterPath="$PROJECT_DIR$/input/nodejs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mgerror.log" beforeDir="false" afterPath="$PROJECT_DIR$/mgerror.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/Shoe_View/Shoe_View.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/Shoe_View/Shoe_View.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/magic-metadata/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/layout/layout.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/CreateOrder/CreateOrder.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/Login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Login/login.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.mg.controls.g.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/Shoe_View/Shoe_View.mg.controls.g.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/component-list.g.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/component-list.g.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/magic.gen.lib.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/magic/magic.gen.lib.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/components/shoe-card/shoe-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/app/shared/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +94,7 @@
       <workItem from="1751350175494" duration="27211000" />
       <workItem from="1751436609992" duration="1705000" />
       <workItem from="1751495820463" duration="2098000" />
-      <workItem from="1751523290788" duration="4733000" />
+      <workItem from="1751523290788" duration="23516000" />
     </task>
     <servers />
   </component>
