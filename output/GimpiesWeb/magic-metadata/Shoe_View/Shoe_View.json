@@ -215,6 +215,23 @@
 			"hint":	null,
 			"controlType":	"B",
 			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"pb_Refresh",
+				"format":	"Button",
+				"common_line_id":	"line390"
+			},
+			"coordinates":	{
+				"x":	447,
+				"y":	390,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
 		}
 	]
 }

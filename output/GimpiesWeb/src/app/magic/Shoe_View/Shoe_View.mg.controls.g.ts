@@ -18,6 +18,7 @@ export enum MgControlName {
         Lb_OrderTpe = "Lb_OrderTpe",
         V_V_OrderType = "V_V_OrderType",
         Btn_CreateOrder = "Btn_CreateOrder",
+        pb_Refresh = "pb_Refresh",
 }
 export enum MgCustomProperties {}
 export class MgFormControlsAccessor {

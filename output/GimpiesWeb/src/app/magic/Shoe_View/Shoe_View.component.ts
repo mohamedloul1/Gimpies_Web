@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import {ChangeDetectorRef, Component, SimpleChanges} from '@angular/core';
 import { FormGroup } from "@angular/forms";
 import { MgFormControlsAccessor, MgControlName, MgCustomProperties } from "./Shoe_View.mg.controls.g";
 import { Shoe } from '../../models/shoe.model';
@@ -8,6 +8,7 @@ import { UserSessionService } from "../../services/user-session.service";
 import { ShoeSelectionService } from '../../services/shoe-selection.service';
 import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog/confirm-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'mga-Shoe_View',
@@ -42,6 +43,9 @@ export class Shoe_View extends TaskBaseMagicComponent {
   maxPrice: number | null = null;
   showCreateOrder = false;
 
+  sidebarWidth = 336; // standaard breedte in px
+  private isResizing = false;
+
   constructor(
     ref: ChangeDetectorRef,
     magicServices: MagicServices,
@@ -53,11 +57,18 @@ export class Shoe_View extends TaskBaseMagicComponent {
     super(ref, magicServices);
   }
 
+
+  private shoeDataSubject = new BehaviorSubject<Shoe[]>([]);
+  shoeData$ = this.shoeDataSubject.asObservable();
+
   override createFormControlsAccessor(formGroup: FormGroup) {
     this.mgfc = new MgFormControlsAccessor(formGroup, this.magicServices);
   }
 
+
   getShoeData(Shoe_Data: string): void {
+
+    console.log('TEST',Shoe_Data);
     try {
       const parsed = JSON.parse(Shoe_Data);
       this.Shoe_Data = (parsed as any[]).map(item => {
@@ -107,10 +118,17 @@ export class Shoe_View extends TaskBaseMagicComponent {
 
   override ngOnInit(): void {
     super.ngOnInit();
+
+    this.shoeData$.subscribe(data => {
+      this.Shoe_Data = data;
+      console.log('Shoe_Data changed via observable:', this.Shoe_Data);
+    });
+
     const restored = this.selectionService.getSelectedShoes();
     this.selectedShoeIds = restored.map(shoe => shoe.ShoeID);
     this.selectedShoes = restored;
   }
+
 
   extractUniqueBrands(): void {
     const brands = this.Shoe_Data.map(shoe => shoe.Brand_Name);
@@ -231,13 +249,14 @@ export class Shoe_View extends TaskBaseMagicComponent {
       this.mg.setValueToControl(this.mgc.V_V_Amount, amount);
       this.mg.setValueToControl(this.mgc.V_V_UserID, userId);
       this.mg.setValueToControl(this.mgc.V_V_OrderType, userRole);
-
       this.mg.simulateClick(this.mgc.Btn_CreateOrder);
     });
 
     this.selectionService.clear();
     this.selectedShoeIds = [];
     this.selectedShoes = [];
+    // EVENT MAGIC
+    this.mg.simulateClick(this.mgc.pb_Refresh);
     this.closeMobileOrderForm();
   }
 
@@ -250,6 +269,29 @@ export class Shoe_View extends TaskBaseMagicComponent {
     this.showMobileOrderForm = false;
     document.body.classList.remove('overflow-hidden');
   }
+  refreshJsonArray(): void {
+    this.mg.simulateClick(this.mgc.pb_Refresh);
+  }
+
+  startResizing(event: MouseEvent): void {
+    this.isResizing = true;
+    document.addEventListener('mousemove', this.resizeSidebar);
+    document.addEventListener('mouseup', this.stopResizing);
+  }
+
+  resizeSidebar = (event: MouseEvent): void => {
+    if (!this.isResizing) return;
+    const minWidth = 330;
+    const maxWidth = 600;
+    const newWidth = window.innerWidth - event.clientX;
+    this.sidebarWidth = Math.min(Math.max(newWidth, minWidth), maxWidth);
+  };
+
+  stopResizing = (): void => {
+    this.isResizing = false;
+    document.removeEventListener('mousemove', this.resizeSidebar);
+    document.removeEventListener('mouseup', this.stopResizing);
+  };
 
 
 }
