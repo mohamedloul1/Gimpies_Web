@@ -1,0 +1,10 @@
+@import "../shared/styles/variables";
+.sidebar{
+  background: linear-gradient(
+      to bottom,
+      #014421,
+      #0F3D2E,
+      #1C3A2B
+  );
+  color: $color-surface;
+}

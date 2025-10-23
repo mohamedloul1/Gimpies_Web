@@ -7,6 +7,36 @@
 				"ModuleName":	"",
 				"OutletName":	"",
 				"children":	null
+			},
+			{
+				"RouteName":	"admin",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"sales",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"logout",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"shoeview",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
+			},
+			{
+				"RouteName":	"create-order",
+				"ModuleName":	"",
+				"OutletName":	"",
+				"children":	null
 			}
 		]
 	}

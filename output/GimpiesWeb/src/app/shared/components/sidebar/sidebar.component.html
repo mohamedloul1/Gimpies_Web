@@ -1,0 +1,99 @@
+<div class="flex flex-col h-full">
+  <!-- Toggle-knop bovenaan -->
+  <div
+    class="mb-4 px-3 mt-3"
+    [ngClass]="collapsed ? 'flex justify-center' : 'flex justify-end'"
+  >
+    <button
+      (click)="toggleSidebar()"
+      matTooltip="Zijbalk in-/uitklappen"
+      class="circle-toggle"
+    >
+      <mat-icon>{{ collapsed ? 'chevron_right' : 'chevron_left' }}</mat-icon>
+    </button>
+  </div>
+
+
+  <!-- 👤 Gebruiker info -->
+  <div class="user-info">
+    <img
+      src="https://as2.ftcdn.net/v2/jpg/02/45/56/35/1000_F_245563558_XH9Pe5LJI2kr7VQuzQKAjAbz9PAyejG1.jpg"
+      class="avatar"
+    />
+    <div *ngIf="!collapsed">
+      <div class="username">{{ username }}</div>
+      <div class="user-role">{{ userRole }}</div>
+    </div>
+  </div>
+
+
+  <!-- Navigatie -->
+  <nav class="flex flex-col space-y-4 flex-grow px-3 text-white">
+    <a
+      routerLink="/admin"
+      routerLinkActive="nav-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-link"
+      (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center ' : 'justify-start '"
+
+    >
+      <mat-icon class="nav-icon">dashboard</mat-icon>
+      <span *ngIf="!collapsed">Dashboard</span>
+    </a>
+
+    <a
+      routerLink="/shoeview"
+      routerLinkActive="nav-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-link"
+      (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
+    >
+      <mat-icon class="nav-icon">inventory_2</mat-icon>
+      <span *ngIf="!collapsed">Voorraad</span>
+    </a>
+
+    <a
+      routerLink="/sales"
+      routerLinkActive="nav-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-link"
+      (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
+    >
+      <mat-icon class="nav-icon">shopping_cart</mat-icon>
+      <span *ngIf="!collapsed">Verkopen</span>
+    </a>
+
+    <a
+      routerLink="/"
+      routerLinkActive="nav-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="nav-link"
+      (click)="onLinkClick()"
+      [ngClass]="collapsed ? 'justify-center' : 'justify-start'"
+
+    >
+      <mat-icon class="nav-icon">download</mat-icon>
+      <span *ngIf="!collapsed">Inkopen</span>
+    </a>
+  </nav>
+
+
+  <!-- 🔒 Logout-knop -->
+  <div class="mt-10 flex justify-center px-3">
+    <button
+      (click)="logout()"
+      class="logout-button"
+      [ngClass]="collapsed
+      ? 'mx-2 w-10 h-10 justify-center p-0 rounded-full'
+      : 'w-full justify-center px-3 py-2 rounded-md'"
+    >
+      <mat-icon class="logout-icon">logout</mat-icon>
+      <span *ngIf="!collapsed" class="logout-text">Uitloggen</span>
+    </button>
+  </div>
+</div>

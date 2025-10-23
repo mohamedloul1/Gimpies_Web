@@ -1,0 +1,220 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"Shoe_View",
+		"component_path":	"Shoe_View/",
+		"component_uniquename":	"Shoe_View_Shoe_View"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	524,
+		"height":	460
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Label134217730",
+				"text":	"V_Test",
+				"common_line_id":	"line28"
+			},
+			"coordinates":	{
+				"x":	30,
+				"y":	28,
+				"width":	36,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_Test",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line28"
+			},
+			"coordinates":	{
+				"x":	71,
+				"y":	28,
+				"width":	181,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_UserID",
+				"text":	"V_UserID",
+				"common_line_id":	"line74"
+			},
+			"coordinates":	{
+				"x":	139,
+				"y":	74,
+				"width":	48,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_UserID",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line74"
+			},
+			"coordinates":	{
+				"x":	192,
+				"y":	74,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_ShoeID",
+				"text":	"V_ShoeID",
+				"common_line_id":	"line115"
+			},
+			"coordinates":	{
+				"x":	136,
+				"y":	115,
+				"width":	51,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_ShoeID",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line115"
+			},
+			"coordinates":	{
+				"x":	192,
+				"y":	115,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_Amount",
+				"text":	"V_Amount",
+				"common_line_id":	"line152"
+			},
+			"coordinates":	{
+				"x":	136,
+				"y":	152,
+				"width":	51,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_Amount",
+				"mgformat":	"mgFormat",
+				"attribute":	"N",
+				"common_line_id":	"line152"
+			},
+			"coordinates":	{
+				"x":	192,
+				"y":	152,
+				"width":	60,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_OrderTpe",
+				"text":	"V_OrderType",
+				"common_line_id":	"line193"
+			},
+			"coordinates":	{
+				"x":	66,
+				"y":	193,
+				"width":	65,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_OrderType",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line193"
+			},
+			"coordinates":	{
+				"x":	136,
+				"y":	193,
+				"width":	216,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"Btn_CreateOrder",
+				"format":	"Button",
+				"common_line_id":	"line346"
+			},
+			"coordinates":	{
+				"x":	447,
+				"y":	346,
+				"width":	41,
+				"height":	22
+			},
+			"hint":	null,
+			"controlType":	"B",
+			"children":	null
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"style":	null,
+	"props":	{
+		"id":	"Testo",
+		"component_path":	"Testo/",
+		"component_uniquename":	"Testo_Testo"
+	},
+	"coordinates":	{
+		"x":	0,
+		"y":	0,
+		"width":	0,
+		"height":	0
+	},
+	"hint":	null,
+	"controlType":	null,
+	"children":	[
+		{
+			"style":	{
+				"font":	1
+			},
+			"props":	{
+				"id":	"Lb_testo",
+				"text":	"V_Testo",
+				"common_line_id":	"line76"
+			},
+			"coordinates":	{
+				"x":	68,
+				"y":	76,
+				"width":	42,
+				"height":	15
+			},
+			"hint":	null,
+			"controlType":	"L",
+			"children":	null
+		},
+		{
+			"style":	null,
+			"props":	{
+				"id":	"V_V_Testo",
+				"mgformat":	"mgFormat",
+				"attribute":	"A",
+				"common_line_id":	"line76"
+			},
+			"coordinates":	{
+				"x":	115,
+				"y":	76,
+				"width":	216,
+				"height":	20
+			},
+			"hint":	null,
+			"controlType":	"T",
+			"children":	null
+		}
+	]
+}

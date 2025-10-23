@@ -1,0 +1,49 @@
+<div novalidate [formGroup]="screenFormGroup">
+  <div  [magic]="mgc.CreateOrder">
+
+
+    <div style="margin-top: 1rem;">
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="createOrderWithLines()"
+      >
+        Create Order with Orderlines
+      </button>
+    </div>
+
+
+
+    <div class="container mx-auto px-4 md:px-6">
+    <!-- 🧾 Geselecteerde schoenen -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+      <div *ngFor="let shoe of selectedShoes">
+        <app-shoe-card
+          [shoe]="shoe"
+          [selected]="true"
+          [removable]="true"
+          [readonly]="false"
+          [amount]="shoe.amount || 1"
+          (amountChange)="updateAmount(shoe.ShoeID, $event)"
+          (remove)="confirmAndRemove(shoe.ShoeID)"
+          (imageClick)="openImage($event)"
+        ></app-shoe-card>
+      </div>
+    </div>
+
+    <!-- 🖼️ Vergrote afbeelding -->
+    <div
+      *ngIf="selectedImage"
+      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+      (click)="selectedImage = null"
+    >
+      <img
+        [src]="selectedImage"
+        class="max-w-[90%] max-h-[90%] rounded shadow-lg"
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+  </div>
+
+  </div>
+</div>

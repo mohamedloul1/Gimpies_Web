@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.shoe-card {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid $color-muted;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.shoe-card.selected {
+  border-color: #1C3A2B;
+  background-color: lighten($color-accent, 30%);
+}
+
+.shoe-card.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #3b82f6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.remove-select{
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid $color-muted;
+}

@@ -1,0 +1,34 @@
+<!-- Mobile overlay -->
+<div
+  class="fixed inset-0 bg-black bg-opacity-40 z-40 md:hidden"
+  *ngIf="mobileSidebarOpen"
+  (click)="closeMobileSidebar()"
+></div>
+
+<div class="flex h-screen relative">
+  <!-- Sidebar (hidden on mobile unless open) -->
+  <aside
+    class="sidebar p-0 z-50 fixed md:static h-full transition-transform duration-300"
+    [ngClass]="{
+      'translate-x-0': mobileSidebarOpen,
+      '-translate-x-full': !mobileSidebarOpen
+    }"
+    [class.md:translate-x-0]="true"
+  >
+    <app-sidebar (closeSidebar)="closeMobileSidebar()"></app-sidebar>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-container overflow-auto  flex-1 p-4 w-full">
+    <!-- Mobile hamburger -->
+    <div class="md:hidden mb-4">
+      <button mat-icon-button (click)="openMobileSidebar()" aria-label="Menu openen">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <!-- Router content -->
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

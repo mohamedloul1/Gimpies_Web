@@ -1,6 +1,6 @@
 import {NgModule, NgModuleRef} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from "@angular/common";
 
 
@@ -29,6 +29,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {CurrencyMaskConfig, CurrencyMaskInputMode, NgxCurrencyModule} from "ngx-currency";
 import {MatIconModule} from "@angular/material/icon";
+import {MatSliderModule} from "@angular/material/slider";
+import {ShoeCardModule} from "../shared/components/shoe-card/shoe-card.module";
+import {ShoeMiniCardComponent} from "../shared/components/shoe-mini-card/shoe-mini-card.component";
 
 export const customCurrencyMaskConfig: CurrencyMaskConfig = {
   align: "right",
@@ -47,7 +50,8 @@ export const customCurrencyMaskConfig: CurrencyMaskConfig = {
 
 @NgModule({
   declarations: [
-    ...magicGenComponents
+    ...magicGenComponents,
+    ShoeMiniCardComponent
   ],
   exports: [
     ...magicGenComponents,
@@ -84,7 +88,10 @@ export const customCurrencyMaskConfig: CurrencyMaskConfig = {
         MatFormFieldModule,
         MagicAngularMaterialModule,
         MatAutocompleteModule,
-        MatIconModule
+        MatIconModule,
+        FormsModule,
+        MatSliderModule,
+        ShoeCardModule
     ],
   providers: [ExitMagicService],
 })

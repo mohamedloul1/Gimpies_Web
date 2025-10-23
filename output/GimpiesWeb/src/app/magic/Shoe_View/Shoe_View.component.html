@@ -1,0 +1,215 @@
+<!-- Magic xpa formuliercontainer -->
+<div novalidate [formGroup]="screenFormGroup">
+  <div [magic]="mgc.Shoe_View"></div>
+
+  <!-- 🔁 Hoofdinhoud container: filters + schoenen -->
+  <div
+    class="flex flex-col gap-6 px-4 mx-auto mt-6 transition-all duration-300 "
+    [ngClass]="{ 'lg:mr-[21rem]': selectedShoeIds.length > 0 }"
+  >
+    <!-- 🧭 Filter & schoenen kolom -->
+    <div class="w-full max-w-screen-xl mx-auto">
+      <!-- 🔎 Filters -->
+      <div class="mb-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div>
+          <input
+            type="text"
+            [(ngModel)]="searchTerm"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Zoek op merk, type of kleur..."
+            class="search-input w-full px-4 py-2 rounded-full shadow-sm transition"
+          />
+        </div>
+
+        <!-- Merk dropdown -->
+        <div class="relative">
+          <button
+            (click)="toggleBrandDropdown()"
+            class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
+          >
+            <span class="truncate">{{ selectedBrand || 'Alle merken' }}</span>
+            <span>▼</span>
+          </button>
+          <div
+            *ngIf="brandDropdownOpen"
+            class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
+          >
+            <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer" (click)="selectBrand('')">
+              Alle merken
+            </div>
+            <div
+              *ngFor="let brand of uniqueBrands"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              (click)="selectBrand(brand)"
+            >
+              {{ brand }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Kleur dropdown -->
+        <div class="relative">
+          <button
+            (click)="toggleColorDropdown()"
+            class="filter-select w-full px-4 py-2 rounded-full shadow-sm flex justify-between items-center"
+          >
+            <span class="flex items-center gap-2 truncate">
+              <span class="inline-block w-4 h-4 rounded-full"
+                    [style.backgroundColor]="selectedColor?.toLowerCase() || '#e5e7eb'"></span>
+              {{ selectedColor || 'Alle kleuren' }}
+            </span>
+            <span>▼</span>
+          </button>
+          <div
+            *ngIf="colorDropdownOpen"
+            class="absolute mt-1 w-full bg-white border rounded shadow z-10 max-h-60 overflow-auto"
+          >
+            <div class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2" (click)="selectColor('')">
+              <span class="inline-block w-4 h-4 rounded-full bg-gray-200"></span>
+              <span>Alle kleuren</span>
+            </div>
+            <div
+              *ngFor="let color of uniqueColors"
+              class="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
+              (click)="selectColor(color)"
+            >
+              <span class="inline-block w-4 h-4 rounded-full" [style.backgroundColor]="color.toLowerCase()"></span>
+              <span>{{ color }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Max prijs slider -->
+        <div class="flex flex-col">
+          <label class="mb-1 text-sm font-medium">Max prijs: €{{ maxPrice || '∞' }}</label>
+          <mat-slider
+            [(ngModel)]="maxPrice"
+            [ngModelOptions]="{ standalone: true }"
+            [min]="0"
+            [max]="200"
+            [step]="5"
+            thumbLabel
+            class="w-full"
+          ></mat-slider>
+        </div>
+      </div>
+
+      <!-- 👟 Schoenen -->
+      <div
+        *ngIf="Shoe_Data.length > 0"
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4"
+      >
+        <div *ngFor="let shoe of filteredShoes">
+          <app-shoe-card
+            [shoe]="shoe"
+            [selected]="isSelected(shoe.ShoeID)"
+            [amount]="shoe.amount || 1"
+            (amountChange)="updateAmount(shoe.ShoeID, $event)"
+            (toggle)="toggleSelect($event)"
+            (imageClick)="openImage($event)"
+          ></app-shoe-card>
+        </div>
+      </div>
+
+      <!-- 📸 Vergrote afbeelding -->
+      <div
+        *ngIf="selectedImage"
+        class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        (click)="closeImage()"
+      >
+        <img
+          [src]="selectedImage"
+          class="max-w-[90%] max-h-[90%] rounded shadow-lg"
+          (click)="$event.stopPropagation()"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- 🖥️ DESKTOP: Orderformulier met resizable rechter-sidebar -->
+  <div
+    *ngIf="selectedShoeIds.length > 0"
+    class="hidden lg:flex fixed top-0 right-0 h-full z-40"
+    [ngStyle]="{ width: sidebarWidth + 'px' }"
+  >
+    <!-- 🪟 Draggable divider -->
+    <div
+      class="w-2 cursor-col-resize bg-gray-200 hover:bg-gray-400 transition"
+      (mousedown)="startResizing($event)"
+    ></div>
+
+    <!-- 📦 Sidebar inhoud -->
+    <div
+      class="flex flex-col bg-white shadow-xl border-l overflow-y-auto transition-all duration-200 ease-in-out px-4 py-4"
+      [ngClass]="{
+    'opacity-0 pointer-events-none select-none': sidebarWidth <= 10
+  }"
+      [class.opacity-0]="sidebarWidth <= 10"
+      [class.pointer-events-none]="sidebarWidth <= 10"
+      [class.select-none]="sidebarWidth <= 10"
+      [ngStyle]="{ width: '100%' }"
+    >
+      <ng-container *ngIf="sidebarWidth > 10">
+        <ng-container *ngTemplateOutlet="orderForm"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+
+  <!-- 📱 MOBIEL: Fullscreen overlay formulier -->
+  <div
+    *ngIf="showMobileOrderForm"
+    class="fixed inset-0 bg-white z-50 flex flex-col"
+  >
+    <div class="p-4 border-b flex justify-between items-center">
+      <h2 class="text-xl font-bold">Plaats bestelling</h2>
+      <button (click)="closeMobileOrderForm()" class="text-gray-500 text-xl">✕</button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-4">
+      <ng-container *ngTemplateOutlet="orderForm"></ng-container>
+    </div>
+  </div>
+
+  <!-- 🧾 Herbruikbare formulier template -->
+  <ng-template #orderForm>
+    <div class="space-y-4">
+      <div class="flex flex-col gap-3 min-w-0 w-full">
+        <app-shoe-mini-card
+          *ngFor="let shoe of selectedShoes"
+          [shoe]="shoe"
+          [removable]="true"
+          [readonly]="false"
+          (remove)="confirmAndRemove(shoe.ShoeID)"
+          (amountChanged)="updateAmount(shoe.ShoeID, $event)"
+        ></app-shoe-mini-card>
+      </div>
+      <div>
+        <button
+          mat-raised-button
+          class="create-order w-full"
+          (click)="confirmAndCreateOrder()"
+        >
+          Plaats bestelling
+        </button>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- 🛒 Zwevend winkelmandje (alleen mobiel) -->
+  <div
+    *ngIf="selectedShoeIds.length > 0"
+    class="fixed bottom-6 right-6 z-50 cursor-pointer lg:hidden"
+    (click)="openMobileOrderForm()"
+  >
+    <div class="relative bg-blue-600 text-white rounded-full p-4 shadow-lg hover:bg-blue-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7a1 1 0 00.9 1.5h10.9M7 13l-1.35 2.7M17 13l1.35 2.7M9 21h.01M15 21h.01"/>
+      </svg>
+      <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow">
+        {{ selectedShoeIds.length }}
+      </span>
+    </div>
+  </div>
+</div>

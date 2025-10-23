@@ -1,0 +1,107 @@
+<div
+    novalidate
+    [formGroup]="screenFormGroup"
+    class="OrderCreatePannel"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        [magic]="mgc.CreateOrder"
+    >
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_UserID"
+                class="lable_overflow mgFont1"
+            >
+                UserID
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_UserID"
+                            [formControlName]="mgc.V_UserID"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_UserID> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_ShoID"
+                class="lable_overflow mgFont1"
+            >
+                ShoeID
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_ShoeID"
+                            [formControlName]="mgc.V_ShoeID"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_ShoeID> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_Amount"
+                class="lable_overflow mgFont1"
+            >
+                V_Amount
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            type='number'
+                            [magic]="mgc.V_V_Amount"
+                            [formControlName]="mgc.V_V_Amount"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_V_Amount> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <label
+                [magic]="mgc.Lb_OrderType"
+                class="lable_overflow mgFont1"
+            >
+                V_OrderType
+            </label>
+            <div>
+                <mat-form-field>
+                    <div>
+                        <input
+                            matInput
+                            [magic]="mgc.V_V_OrderType"
+                            [formControlName]="mgc.V_V_OrderType"
+                            mgFormat
+                        >
+                        <mgError [magic]=mgc.V_V_OrderType> </mgError>
+                    </div>
+                </mat-form-field>
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                mat-raised-button
+                color="primary"
+                [magic]="mgc.Btn_CreateOrder"
+            >
+                Button
+            </button>
+        </div>
+    </div>
+</div>
