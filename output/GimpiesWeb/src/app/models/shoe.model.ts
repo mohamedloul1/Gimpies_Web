@@ -10,7 +10,7 @@ export interface Shoe {
   imageUrl?: string; // bijv. '/assets/images/shoe1.jpg'
 
 
-  amount?: number; // 👈 toevoegen
+  amount?: number;
 
 
 }
