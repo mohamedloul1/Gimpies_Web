@@ -321,3 +321,20 @@
  <360031188660877248> 03/07/2025 15:32:15.554     [Error  ] - Aborting context 360031188660877248, Program: "Main Program".
  <528412955728981312> 03/07/2025 15:45:21.676     [Error  ] - Aborting context 528412955728981312, Program: "Main Program".
  <382979511550366592> 23/10/2025 21:27:07.645     [Error  ] - Aborting context 382979511550366592, Program: "Main Program".
+ <106056892367137664> 25/10/2025 15:40:14.165     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:21.121     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:21.543     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:21.796     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:22.423     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:35.806     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:36.273     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:36.848     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:40:38.035     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:41:15.094     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <106056892367137664> 25/10/2025 15:41:15.648     [Error  ] - Duplicate index, data source: Size, Program: "Browse - Size".
+ <-1> 25/10/2025 15:46:35.530     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <120376289816137888> 25/10/2025 15:46:48.600     [Error  ] - This session was closed by the server(-197). Application : GimpiesWeb
+ <391404057751503232> 25/10/2025 19:12:55.071     [Error  ] - Aborting context 391404057751503232, Program: "Main Program".
+ <-1> 25/10/2025 19:13:39.064     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <-1> 25/10/2025 19:13:39.079     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <-1> 25/10/2025 19:29:26.523     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
