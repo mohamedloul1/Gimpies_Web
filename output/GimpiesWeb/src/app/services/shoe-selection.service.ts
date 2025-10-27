@@ -12,9 +12,7 @@ export class ShoeSelectionService {
   private selectedShoes: Shoe[] = [];
   //Constructor laadt opgeslagen selectie
   //Zodra deze service wordt aangemaakt, wordt de selectie uit localStorage gelezen.
-  constructor() {
-    this.loadFromStorage();
-  }
+  constructor() {this.loadFromStorage();}
 // Opslaan van selectie
   //Wordt gebruikt wanneer je schoenen selecteert of een amount aanpast.
   setSelectedShoes(shoes: Shoe[]): void {

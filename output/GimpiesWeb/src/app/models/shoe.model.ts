@@ -8,9 +8,5 @@ export interface Shoe {
   Price: number;
   Quantity: number;
   imageUrl?: string; // bijv. '/assets/images/shoe1.jpg'
-
-
   amount?: number;
-
-
 }

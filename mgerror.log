@@ -338,3 +338,5 @@
  <-1> 25/10/2025 19:13:39.064     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
  <-1> 25/10/2025 19:13:39.079     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
  <-1> 25/10/2025 19:29:26.523     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
+ <455269289170887488> 26/10/2025 21:05:57.918     [Error  ] - Aborting context 455269289170887488, Program: "Main Program".
+ <-1> 26/10/2025 21:07:02.029     [Error  ] - Error - run-time engine was not found. Please restart the studio in order to run the application
