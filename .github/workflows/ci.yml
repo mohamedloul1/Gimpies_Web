@@ -7,80 +7,43 @@ on:
 
 env:
   NODE_VERSION: '18'
-  # Relatief t.o.v. de map waar package.json staat
-  ANGULAR_DIST_DIR: dist/gimpies-web
+  WORKDIR: output/GimpiesWeb
+  ANGULAR_DIST_DIR: dist/gimpies-web   # uit angular.json
 
 jobs:
   install:
     runs-on: ubuntu-latest
-    outputs:
-      WORKDIR: ${{ steps.detect.outputs.workdir }}
-      DIST_DIR_PATH: ${{ steps.detect.outputs.dist_dir_path }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-
-      - name: Detect workdir (where package.json lives)
-        id: detect
-        shell: bash
+      - name: Show working dir
         run: |
-          set -e
-          echo "Repo root: $(pwd)"
-          echo "Listing root:"
+          echo "GITHUB_WORKSPACE=$(pwd)"
           ls -la
-          if [ -f package.json ]; then
-            WORKDIR="."
-          else
-            CANDIDATE="$(find . -maxdepth 3 -type f -name package.json | head -n1)"
-            if [ -z "$CANDIDATE" ]; then
-              echo "❌ No package.json found within 3 levels."
-              exit 1
-            fi
-            WORKDIR="$(dirname "$CANDIDATE")"
-          fi
-          DIST_DIR_PATH="$WORKDIR/${ANGULAR_DIST_DIR}"
-          echo "Detected WORKDIR: $WORKDIR"
-          echo "DIST_DIR_PATH: $DIST_DIR_PATH"
-          echo "workdir=$WORKDIR" >> "$GITHUB_OUTPUT"
-          echo "dist_dir_path=$DIST_DIR_PATH" >> "$GITHUB_OUTPUT"
-
-      - name: Install deps (works with or without lockfile)
-        working-directory: ${{ steps.detect.outputs.workdir }}
+          echo "Entering $WORKDIR"
+          ls -la "$WORKDIR"
+      - name: Install deps (ci if lockfile, else install)
+        working-directory: ${{ env.WORKDIR }}
         run: |
           if [ -f package-lock.json ]; then
-            echo "Found lockfile → npm ci"
             npm ci
           else
-            echo "No lockfile → npm install"
             npm install --no-audit --no-fund --legacy-peer-deps
           fi
 
   build:
     runs-on: ubuntu-latest
     needs: install
-    env:
-      WORKDIR: ${{ needs.install.outputs.WORKDIR }}
-      DIST_DIR_PATH: ${{ needs.install.outputs.DIST_DIR_PATH }}
-    defaults:
-      run:
-        working-directory: ${{ env.WORKDIR }}
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: Confirm paths
-        run: |
-          echo "WORKDIR=${WORKDIR}"
-          echo "DIST_DIR_PATH=${DIST_DIR_PATH}"
-          ls -la
-
       - name: Install deps (reuse)
+        working-directory: ${{ env.WORKDIR }}
         run: |
           if [ -f package-lock.json ]; then
             npm ci
@@ -89,16 +52,17 @@ jobs:
           fi
 
       - name: Build
+        working-directory: ${{ env.WORKDIR }}
         run: npm run build || npm run build --if-present
 
       - name: List build output
-        run: ls -la "${DIST_DIR_PATH}" || (echo "Check ANGULAR_DIST_DIR relative to WORKDIR=${WORKDIR}" && exit 1)
+        run: ls -la "${{ env.WORKDIR }}/${{ env.ANGULAR_DIST_DIR }}"
 
       - name: Upload artifact (dist)
         uses: actions/upload-artifact@v4
         with:
           name: angular-dist
-          path: ${{ env.DIST_DIR_PATH }}
+          path: ${{ env.WORKDIR }}/${{ env.ANGULAR_DIST_DIR }}
 
   deploy_placeholder:
     runs-on: ubuntu-latest
