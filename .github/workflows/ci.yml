@@ -6,7 +6,7 @@ on:
   workflow_dispatch: {}
 
 env:
-  ANGULAR_DIST_DIR: dist/GimpiesWeb
+  ANGULAR_DIST_DIR: dist/gimpies-web
   NODE_VERSION: '20'
 
 jobs:
