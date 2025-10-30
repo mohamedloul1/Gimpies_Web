@@ -1,6 +1,5 @@
 @import '../../shared/styles/variables';
 
-// Zoekveld (input veld) styling
 .search-input,
 .filter-select{
   border: 1px solid $color-border;
@@ -25,16 +24,7 @@
   border-color: $color-accent;
   background-color: lighten($color-accent, 40%);
 }
-////Select Styling
-//.shoe-card.selected::after {
-//  content: "✓";
-//  position: absolute;
-//  top: 0.5rem;
-//  right: 0.5rem;
-//  color: #3b82f6;
-//  font-size: 1.2rem;
-//  font-weight: bold;
-//}
+
 body.overflow-hidden {
   overflow: hidden;
 }

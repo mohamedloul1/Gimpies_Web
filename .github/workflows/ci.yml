@@ -18,15 +18,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+
       - name: Show env
         run: |
           node -v
           npm -v
           echo "Repo root:" && ls -la
           echo "App dir ($WORKDIR):" && ls -la "$WORKDIR"
+
       - name: Install deps (robust)
         working-directory: ${{ env.WORKDIR }}
-        run: npm install --no-audit --no-fund --legacy-peer-deps
+        run: |
+          npm install --no-audit --no-fund --legacy-peer-deps
+          # ⬇️ zorg dat de SCSS-compiler er is
+          npm ls sass --depth=0 || npm install -D sass --no-audit --no-fund
 
   build:
     runs-on: ubuntu-latest
@@ -39,7 +44,9 @@ jobs:
 
       - name: Install deps (reuse)
         working-directory: ${{ env.WORKDIR }}
-        run: npm install --no-audit --no-fund --legacy-peer-deps
+        run: |
+          npm install --no-audit --no-fund --legacy-peer-deps
+          npm ls sass --depth=0 || npm install -D sass --no-audit --no-fund
 
       - name: Build
         working-directory: ${{ env.WORKDIR }}

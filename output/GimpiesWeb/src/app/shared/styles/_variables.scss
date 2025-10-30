@@ -1,21 +1,17 @@
-/* SCSS-variabelen voor gebruik met $color-xyz */
-$color-background: #F5EFE0;   // Wordt gebruikt als algemene page achtergrond
-$color-primary: #014421;      // Wordt gebruikt voor primaire knoppen en sidebar
-$color-secondary: #002147;    // Wordt gebruikt voor de topbar en hoverstijlen
-$color-muted: #C2B280;        // Wordt gebruikt voor zachte achtergronden of borders
-$color-alert: #58181F;        // Wordt gebruikt voor foutmeldingen en waarschuwingen
-$color-accent: #BFA06B;       // Wordt gebruikt voor subtiele accenten (lijnen, icons)
-$color-text: #333333;         // Wordt gebruikt als standaard tekstkleur
-$color-surface: #FAF2E6;      // Wordt gebruikt als kaart- of inputachtergrond
+$color-background: #F5EFE0;
+$color-primary: #014421;
+$color-secondary: #002147;
+$color-muted: #C2B280;
+$color-alert: #58181F;
+$color-accent: #BFA06B;
+$color-text: #333333;
+$color-surface: #FAF2E6;
 $color-label: #5A5A5A;
-$color-hover-light: #EDE8DB; // warm beige-ivoor
+$color-hover-light: #EDE8DB;
 $color-border:#1C3A2B;
 
-
-
-
-$ui-border: #cbd5e1;          // zachte blauwgrijs (voor randen) muted
-$ui-text: #1e293b;            // donkerblauwgrijs (primaire tekst) text
-$ui-bg: #f8fafc;              // bijna wit (lichte input achtergrond)surf
-$ui-focus: #3b82f6;           // helder blauw (focusring)acc
-$ui-hover-bg: #e0f2fe;        // lichtblauw (hover effect)
+$ui-border: #cbd5e1;
+$ui-text: #1e293b;
+$ui-bg: #f8fafc;
+$ui-focus: #3b82f6;
+$ui-hover-bg: #e0f2fe;
