@@ -2,7 +2,7 @@ name: CI (Angular demo)
 
 on:
   push:
-    branches: [ feature/ci-demo ]
+    branches: [ feature/cli-demo ]
   workflow_dispatch: {}
 
 env:
@@ -45,7 +45,7 @@ jobs:
   deploy_placeholder:
     runs-on: ubuntu-latest
     needs: build
-    if: ${{ github.ref == 'refs/heads/feature/ci-demo' }}
+    if: ${{ startsWith(github.ref, 'refs/heads/feature/cli-demo') }}
     steps:
       - name: Manual deploy placeholder
         run: echo "Manual/placeholder deploy – geen echte uitrol."
