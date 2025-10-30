@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd5b1d34-663a-4c4c-8217-446edd1e03e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/GimpiesWeb/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/output/GimpiesWeb/angular.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
