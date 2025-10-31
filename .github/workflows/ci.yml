@@ -30,7 +30,6 @@ jobs:
         working-directory: ${{ env.WORKDIR }}
         run: |
           npm install --no-audit --no-fund --legacy-peer-deps
-          # ⬇️ zorg dat de SCSS-compiler er is
           npm ls sass --depth=0 || npm install -D sass --no-audit --no-fund
 
   build:
